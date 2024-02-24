@@ -5,17 +5,13 @@
 
 /*PALETA DE CORES*/
 
-element {
-    --main-bg-color: #080807;
-
-  }
-
 /*HEADER DA PAGINA*/
 
 * {
     margin: 0;
     padding: 0;
     font-family: "Fredoka", sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -28,6 +24,10 @@ h1, h2 {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
     font-family: "Oswald", sans-serif;
+}
+
+#header-mobile {
+  display: none;
 }
 
 header {
@@ -213,7 +213,7 @@ main {
     box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.484);
   }
   .swiper-navBtn:hover{
-    color: #4070F4;
+    color: #000000;
   }
   .swiper-navBtn::before,
   .swiper-navBtn::after{

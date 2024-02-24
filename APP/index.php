@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/Desktop.css">
     <link rel="stylesheet" href="assets/js/script.js">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/800px.css">
+    <link rel="stylesheet" href="assets/js/carrousel.js">
     <title>Hotel Club</title>
 </head>
 
@@ -16,8 +18,11 @@
 
     <?php include './models/body_1.php'?>
 
+    <section class="overlay-header"></section>
+
 </body>
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/carrousel.js"></script>
 
 </html>
