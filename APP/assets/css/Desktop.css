@@ -38,6 +38,7 @@ header {
     color: rgb(255, 255, 255);
     background-color: black;
     width: 100%;
+    position: fixed;
 }
 
 #icon-login {
@@ -80,7 +81,7 @@ main {
     background-size: cover;
     background-position: center;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .txt-box-main {
@@ -131,10 +132,12 @@ main {
     margin: 0 40px;
     overflow: hidden;
     border-radius: 25px;
+    margin-bottom: 30px;
   }
   .card{
     border-radius: 25px;
     background-color: #FFF;
+    border: 1px solid #0808077e;
   }
   .image-content,
   .card-content{
@@ -156,21 +159,10 @@ main {
     height: 100%;
     width: 100%;
     background-color: #4070F4;
-    border-radius: 25px 25px 0 25px;
-  }
-  .overlay::before,
-  .overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070F4;
-  }
-  .overlay::after{
-    border-radius: 0 25px 0 0;
-    background-color: #FFF;
+    background-image: url(../imagens/resort-tororomba-1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
   }
   .card-image{
     position: relative;
@@ -215,6 +207,10 @@ main {
   .swiper-navBtn{
     color: #6E93f7;
     transition: color 0.3s ease;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.484);
   }
   .swiper-navBtn:hover{
     color: #4070F4;
@@ -234,7 +230,7 @@ main {
     opacity: 1;
   }
   .swiper-pagination-bullet-active{
-    background-color: #4070F4;
+    background-color: #6E93f7;
   }
 
   .box-h1-card {
@@ -255,13 +251,47 @@ main {
     color: #333;
   }
 
-  .box-h1-card > h2 {
+  .box-h1-card > a {
     font-size: 1.5em;
   }
+
+  .description {
+    z-index: 99;
+  }
+
+  .valor-original {
+    font-size: .8em;
+    text-decoration: line-through;
+    font-weight: lighter;
+  }
   
+  .valor-promocional {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  .valor-promocional > p {
+    font-size: .6em;
+  }
+
+  .titulo-reservas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
   @media screen and (max-width: 768px) {
     .slide-content{
-      margin: 0 10px;
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+
     }
     .swiper-navBtn{
       display: none;
