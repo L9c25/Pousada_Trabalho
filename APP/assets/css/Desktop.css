@@ -281,9 +281,9 @@ main {
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-left: 50px;
     font-size: 3em;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   @media screen and (max-width: 768px) {
