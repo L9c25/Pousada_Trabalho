@@ -297,3 +297,8 @@ main {
       display: none;
     }
   }
+
+.user_name{
+  margin-right: 1em;
+  color: white;
+}

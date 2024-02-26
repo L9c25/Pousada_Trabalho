@@ -92,4 +92,9 @@
         align-self: flex-end;
     }
     
+    
+    .user_name{
+        margin-right: 1em;
+        color: black;
+    }
 }
