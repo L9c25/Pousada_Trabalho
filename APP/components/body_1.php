@@ -7,6 +7,69 @@
     </div>
 </main>
 
+<div class="filtro-reserva">
+    <form action="#" method="post" class="form-reserva">
+            <div class="filtro-box">
+                <label for="data_reserva">Data da Reserva:</label>
+                <input type="date" id="data_reserva" name="data_reserva" required><br><br>
+            </div>
+
+            <span class="space"></span>
+
+    
+            <div class="filtro-box">
+            <i class="fa-solid fa-person" style="padding-right: 10px; font-size: 1.4em;"></i>
+                <label for="num_adultos">Número de Adultos</label>
+                <select id="num_adultos" name="num_adultos" class="num-adulto"required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select><br><br>
+            </div>
+
+            <span class="space"></span>
+    
+            <div class="filtro-box">
+            <i class="fa-solid fa-child" style="padding-right: 10px; font-size: 1.2em;"></i>
+                <label for="num_criancas">Número de Crianças</label>
+                <select id="num_criancas" name="num_criancas"  class="num-crianca" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select><br><br>
+            </div>
+
+            <span class="space"></span>
+
+    
+            <input type="submit" value="Reservar" class="btn-reservar">
+        </form>
+</div>
+
+<div id="formulario-overlay" onclick="fecharFormulario()">
+    <div id="formulario-container" onclick="event.stopPropagation()">
+        <form action="#" method="post">
+            <h2>Reserva de Hotel</h2>
+            <label for="data_reserva">Data da Reserva:</label>
+            <input type="date" id="data_reserva" name="data_reserva" required>
+
+            <label for="num_adultos">Número de Adultos (até 2):</label>
+            <select id="num_adultos" name="num_adultos" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+
+            <label for="num_criancas">Número de Crianças (até 2):</label>
+            <select id="num_criancas" name="num_criancas" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+
+            <input type="submit" value="Reservar">
+        </form>
+    </div>
+</div>
+
 <h1 class="titulo-reservas">reservas mais populares</h1>
 
 <div class="slide-container swiper">

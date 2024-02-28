@@ -25,14 +25,15 @@
 			<a href="" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
 			<a href="" class="nav-link">reservas</a>
-			<a href="" class="nav-link" id="nav-link-last">suporte</a>
+			<a href="" class="nav-link">suporte</a>
+			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<a href="" class="nav-link" id="nav-link-last">
 				<?= $_SESSION['username']; ?>
-				<i class="fa-regular fa-user" id="icon-login" style="padding-left: 10px;"></i>
-			</a>
-			<a href="logout.php" style="padding-left: 1em;" class="nav-link" id="nav-link-last">Logout<i class="fa fa-chevron-left" style="color: black"></i>
+				<i class="fa-solid fa-user" id="icon-login" style="padding-left: 10px;"></i>
 			</a>
 		</div>
+			<a href="logout.php" class="nav-link-logout">Logout<i class="fa fa-chevron-left" style="color: #ff3434; margin-left: 10px;" ></i>
+			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>
 </header>
