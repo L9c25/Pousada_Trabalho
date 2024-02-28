@@ -74,9 +74,9 @@ header {
 
   /*FILTRO DE RESERVA*/
 
-  .container {
+  #formulario-container, #formulario-overlay {
     display: none;
-    
+
   }
 
   .filtro-reserva {
