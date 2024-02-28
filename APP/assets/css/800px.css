@@ -114,6 +114,11 @@
         align-self: flex-end;
     }
 
+    .titulo-reservas{
+        font-size: 2em;
+
+    }
+    
     .user_name{
         margin-right: 1em;
         color: black;
@@ -165,7 +170,7 @@
         input[type="submit"] {
             width: 100%;
             padding: 10px;
-            background-color: #007bff;
+            background-color: #111111;
             color: #fff;
             border: none;
             border-radius: 4px;

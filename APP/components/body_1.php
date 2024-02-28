@@ -10,8 +10,11 @@
 <div class="filtro-reserva">
     <form action="#" method="post" class="form-reserva">
             <div class="filtro-box">
-                <label for="data_reserva">Data da Reserva:</label>
-                <input type="date" id="data_reserva" name="data_reserva" required><br><br>
+            <label for="check_in">Check-in:</label>
+            <input type="date" id="check_in" name="check_in" required style="margin-right: 10px">
+
+            <label for="check_out">Check-out:</label>
+            <input type="date" id="check_out" name="check_out" required style="margin-right: 10px">
             </div>
 
             <span class="space"></span>
@@ -49,8 +52,11 @@
     <div id="formulario-container" onclick="event.stopPropagation()">
         <form action="#" method="post">
             <h2>Reserva de Hotel</h2>
-            <label for="data_reserva">Data da Reserva:</label>
-            <input type="date" id="data_reserva" name="data_reserva" required>
+            <label for="check_in">Check-in:</label>
+            <input type="date" id="check_in" name="check_in" required>
+
+            <label for="check_out">Check-out:</label>
+            <input type="date" id="check_out" name="check_out" required>
 
             <label for="num_adultos">Número de Adultos (até 2):</label>
             <select id="num_adultos" name="num_adultos" required>
@@ -70,14 +76,14 @@
     </div>
 </div>
 
-<h1 class="titulo-reservas">reservas mais populares</h1>
+<h1 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas mais populares</h1>
 
 <div class="slide-container swiper">
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-1"></span>
 
 
                 </div>
@@ -102,7 +108,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-2"></span>
 
 
                 </div>
@@ -127,7 +133,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-3"></span>
 
 
                 </div>
@@ -152,7 +158,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-4"></span>
 
 
                 </div>
@@ -177,7 +183,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-5"></span>
 
 
                 </div>
@@ -202,7 +208,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-6"></span>
 
 
                 </div>
@@ -227,7 +233,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-7"></span>
 
 
                 </div>
@@ -252,7 +258,7 @@
             </div>
             <div class="card swiper-slide">
                 <div class="image-content">
-                    <span class="overlay"></span>
+                    <span class="overlay" id="ap-8"></span>
 
 
                 </div>

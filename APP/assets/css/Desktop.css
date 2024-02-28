@@ -169,7 +169,7 @@ main {
     text-align: center;
     font-weight: lighter;
     font-size: .9em;
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .txt-box-main > a {
@@ -231,6 +231,39 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 25px 25px 0px 0px;
+  }
+
+  #ap-1 {
+    background-image: url(../imagens/ap-1.jpg);
+  }
+
+  #ap-2 {
+    background-image: url(../imagens/ap-2.jpg);
+  }
+
+  #ap-3 {
+    background-image: url(../imagens/ap-3.jpg);
+  }
+
+  #ap-4 {
+    background-image: url(../imagens/ap-4.jpg);
+  }
+
+  #ap-5 {
+    background-image: url(../imagens/ap-5.jpg);
+  }
+
+  #ap-6 {
+    background-image: url(../imagens/ap-6.webp);
+  }
+  
+  #ap-7 {
+    background-image: url(../imagens/ap-7.webp);
+  }
+  
+  #ap-8 {
+    background-image: url(../imagens/ap-8.jpg);
+
   }
   .card-image{
     position: relative;
@@ -369,7 +402,13 @@ main {
   @media screen and (max-width: 1300px) {
     .form-reserva {
       width: 100%;
+      height: 130px;
       border-radius: none;
+      flex-wrap: wrap;
+    }
+
+    .filtro-box {
+      padding-top: 10px;
     }
     .filtro-box > label {
       padding-right: 0px;
