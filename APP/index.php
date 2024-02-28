@@ -3,7 +3,7 @@
     session_start();
 
     // Verifica se a variável de sessão está definida
-    if (!isset($_SESSION['username'])) {
+    if (!isset($_SESSION['logado'])) {
         // Redireciona o usuário para a página de login ou outra página de sua escolha
         header("Location: login.php");
         // Termina o script para garantir que o redirecionamento funcione corretamente
