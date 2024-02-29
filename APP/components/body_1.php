@@ -1,3 +1,4 @@
+<!-- INICIO DA PAGINA -->
 <main>
     <div class="txt-box-main">
         <h1>HOTEL CLUB</h1>
@@ -6,6 +7,8 @@
         <a href="">NOSSOS SERVIÇOS</a>
     </div>
 </main>
+
+<!-- FILTRO DESKTOP -->
 
 <div class="filtro-reserva">
     <form action="#" method="post" class="form-reserva">
@@ -48,11 +51,13 @@
         </form>
 </div>
 
+<!-- FILTRO MOBILE -->
+
 <div id="formulario-overlay" onclick="fecharFormulario()">
     <div id="formulario-container" onclick="event.stopPropagation()">
         <form action="#" method="post">
             <h2>Reserva de Hotel</h2>
-            <label for="check_in">Check-in:</label>
+            <label for="check_in" style="padding: 0px">Check-in:</label>
             <input type="date" id="check_in" name="check_in" required>
 
             <label for="check_out">Check-out:</label>
@@ -75,6 +80,8 @@
         </form>
     </div>
 </div>
+
+<!-- CARROUSEL DAS ACOMODAÇÕES -->
 
 <h1 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas mais populares</h1>
 
@@ -288,6 +295,25 @@
     <div class="swiper-button-prev swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
 </div>
+
+<!-- GALERIA DE FOTOS DA POUSADA -->
+
+<section class="galeria-container">
+      <div class="container-1">
+        <picture class="img-maior-1" id="img-1"></picture>
+        <div class="container-img-1">
+            <picture id="img-2"></picture>
+            <picture class="img-bottom" id="img-3"></picture>
+        </div>
+      </div>
+      <div class="container-2">
+        <picture class="img-maior-1" id="img-4"></picture>
+        <div class="container-img-2">
+            <picture id="img-5"></picture>
+            <picture class="img-bottom" id="img-6"></picture>
+        </div>
+      </div>
+</section>
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>

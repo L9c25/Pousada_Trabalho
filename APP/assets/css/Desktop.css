@@ -39,6 +39,7 @@ header {
     background-color: black;
     width: 100%;
     position: fixed;
+    z-index: 1000;
 }
 
 #icon-login {
@@ -383,8 +384,99 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 3em;
+    margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  /*galeria*/
+
+  .galeria-container {
+    display: flex;
+    max-width: 100%;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .container-1, .container-2 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .container-2 {
+    flex-direction: row-reverse;
+  }
+
+  .img-maior-1 {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    background-color: #c9c9c98f;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #img-1 {
+    background-image: url(../imagens/galeria-piscina.jpg);
+  }
+  
+  #img-2 {
+    background-image: url(../imagens/mercado.jpg);
+
+  }
+
+  #img-3{
+    background-image: url(../imagens/area-churrasco.jpg);
+  }
+  
+  #img-4{
+    background-image: url(../imagens/playground.jpg);
+  }
+
+  #img-5 {
+    background-image: url(../imagens/restaurante.jpg);
+  }
+
+  #img-6 {
+    background-image: url(../imagens/area-de-lazer.jpg);
+  }
+  .container-img-1, .container-img-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+  }
+
+  .container-img-1 {
+    margin-left: 10px;
+  }
+
+  .container-img-2 {
+    margin-right: 10px;
+  }
+
+  .container-img-1 > picture, .container-img-2 > picture {
+    width: 100%;
+    height: 50%;
+    background-color: #000000;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-bottom {
+    margin-top: 10px;
   }
 
   @media screen and (max-width: 768px) {
