@@ -83,7 +83,7 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h1 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas mais populares</h1>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas mais populares</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -296,7 +296,14 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<div class="espacamento"><span></span></div>
+
 <!-- GALERIA DE FOTOS DA POUSADA -->
+
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas">nossas fotos internas</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.</p>
+</div>
 
 <section class="galeria-container">
       <div class="container-1">

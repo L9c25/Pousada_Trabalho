@@ -181,6 +181,30 @@
             background-color: #0056b3;
         }
 
+        .cx-txt-galeria > p {
+            width: 90%;
+            font-size: .8em;
+        }
+
+        .container-1, .container-2 {
+            flex-direction: column;
+            width: 90%;
+        }
+
+        .container-img-1, .container-img-2 {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .container-img-1 > picture, .container-img-2 > picture {
+            margin: 10px 0px 0px 0px;
+        }
+
+        .img-maior-1 {
+            width: 100%;
+        }
+
 /*Inicio da pagina mobile*/
 
 }
