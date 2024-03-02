@@ -3,7 +3,7 @@
 session_start();
 
 // Verifique se o usuário já está logado, em caso afirmativo, redirecione-o para a página principal
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] === true) {
     header("location: index.php");
     exit;
 }
@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo '<div class="alert alert-danger">' . $login_err . '</div>';
                 }
                 ?>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <form action="" method="POST">
                     <div class="form-group">
                         <label>Nome do usuário</label>
                         <input type="text" name="username"

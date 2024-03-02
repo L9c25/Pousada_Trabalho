@@ -12,43 +12,42 @@
 
 <div class="filtro-reserva">
     <form action="#" method="post" class="form-reserva">
-            <div class="filtro-box">
-            <label for="check_in">Check-in:</label>
-            <input type="date" id="check_in" name="check_in" required style="margin-right: 10px">
 
-            <label for="check_out">Check-out:</label>
-            <input type="date" id="check_out" name="check_out" required style="margin-right: 10px">
-            </div>
+        <div class="input-daterange" id="datepicker">
+            <input type="text" class="" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" />
 
-            <span class="space"></span>
+            <input type="text" class="" name="end" placeholder="CHEK-OUT" />
+        </div>
 
-    
-            <div class="filtro-box">
+        <span class="space"></span>
+
+
+        <div class="filtro-box">
             <i class="fa-solid fa-person" style="padding-right: 10px; font-size: 1.4em;"></i>
-                <label for="num_adultos">Número de Adultos</label>
-                <select id="num_adultos" name="num_adultos" class="num-adulto"required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select><br><br>
-            </div>
+            <label for="num_adultos">Número de Adultos</label>
+            <select id="num_adultos" name="num_adultos" class="num-adulto" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select><br><br>
+        </div>
 
-            <span class="space"></span>
-    
-            <div class="filtro-box">
+        <span class="space"></span>
+
+        <div class="filtro-box">
             <i class="fa-solid fa-child" style="padding-right: 10px; font-size: 1.2em;"></i>
-                <label for="num_criancas">Número de Crianças</label>
-                <select id="num_criancas" name="num_criancas"  class="num-crianca" required>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select><br><br>
-            </div>
+            <label for="num_criancas">Número de Crianças</label>
+            <select id="num_criancas" name="num_criancas" class="num-crianca" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select><br><br>
+        </div>
 
-            <span class="space"></span>
+        <span class="space"></span>
 
-    
-            <input type="submit" value="Reservar" class="btn-reservar">
-        </form>
+
+        <input type="submit" value="Reservar" class="btn-reservar">
+    </form>
 </div>
 
 <!-- FILTRO MOBILE -->
@@ -83,7 +82,8 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas mais populares</h2>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas
+    mais populares</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -106,7 +106,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -131,7 +132,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -156,7 +158,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -181,7 +184,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -206,7 +210,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -231,7 +236,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -256,7 +262,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -281,7 +288,8 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1> <p>/valor diária</p>
+                            <R1>350,00</R1>
+                            <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -302,25 +310,43 @@
 
 <div class="cx-txt-galeria">
     <h2 class="titulo-reservas">nossas fotos internas</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda
+        unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.
+    </p>
 </div>
 
 <section class="galeria-container">
-      <div class="container-1">
+    <div class="container-1">
         <picture class="img-maior-1" id="img-1"></picture>
         <div class="container-img-1">
             <picture id="img-2"></picture>
             <picture class="img-bottom" id="img-3"></picture>
         </div>
-      </div>
-      <div class="container-2">
+    </div>
+    <div class="container-2">
         <picture class="img-maior-1" id="img-4"></picture>
         <div class="container-img-2">
             <picture id="img-5"></picture>
             <picture class="img-bottom" id="img-6"></picture>
         </div>
-      </div>
+    </div>
 </section>
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
+<!-- jquery -->
+<script src="assets/bootstrap/js/jquery-3.7.1.slim.min.js"></script>
+<!-- datepicker &  bootstrap-->
+<script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstra/js/popper.min.js"></script>
+
+<script>
+    $('.input-daterange').datepicker({
+        language: "pt-BR",
+        clearBtn: true,
+        format: "yyyy/mm/dd",
+        todayHighlight: true,
+        startDate: '-1',
+    });
+</script>
