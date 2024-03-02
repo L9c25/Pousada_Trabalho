@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imagens/background-login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    font-size: 1em;
+    width: 200px;
+    height: 40px;
+}
+
+#btn-group {
+    display: flex;
+    width: 100%;
+    
+}
+
+
+.wrapper {
+    
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    margin-left: 12em;
+}
+

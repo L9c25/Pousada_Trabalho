@@ -5,6 +5,21 @@
 
 /*PALETA DE CORES*/
 
+.espacamento {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  content: "";
+}
+
+.espacamento > span{
+  margin-top: 40px;
+  width: 80%;
+  height: 1px;
+  background-color: #0808077c;
+  align-self: center;
+}
+
 /*HEADER DA PAGINA*/
 
 * {
@@ -39,6 +54,7 @@ header {
     background-color: black;
     width: 100%;
     position: fixed;
+    z-index: 1000;
 }
 
 #icon-login {
@@ -55,6 +71,10 @@ header {
     padding-right: 20px;
 }
 
+.menu-content {
+  height: 100%;
+}
+
 .nav-link:hover, .nav-link-last:hover {
     color: rgb(221, 221, 221);
 }
@@ -68,6 +88,71 @@ header {
     background-size: cover;
 }
 
+  /*FILTRO DE RESERVA*/
+
+  #formulario-container, #formulario-overlay {
+    display: none;
+
+  }
+
+  .filtro-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #080807;
+    height: 200px;
+  }
+
+  .form-reserva {
+    display: flex;
+    border-radius: 20px;
+    font-size: 1.2em;
+    padding: 20px;
+    width: min(90%, 1200px);
+    height: 80px;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    top: 20px
+  }
+
+  .filtro-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-reservar {
+    color: white;
+    background-color: #080807;
+    padding: 10px;
+    border: none;
+    width: 90px;
+    border-radius: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+  }
+
+  .space {
+    display: flex;
+    content: "";
+    background-color: #080807;
+    width: 1px;
+    height: 50px;
+  }
+
+  .num-crianca, .num-adulto {
+    width: 40px;
+    border: none;
+  }
+
+  .filtro-box > label {
+    padding-right: 20px;
+  }
+
 /*COMEÇO DA PAGINA*/
 
 main {
@@ -76,12 +161,11 @@ main {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 60vh;
+    height: min(80vh, 600px);
     background-image: url(../imagens/resort-tororomba-1.jpg);
     background-size: cover;
     background-position: center;
     color: white;
-    margin-bottom: 30px;
 }
 
 .txt-box-main {
@@ -101,6 +185,7 @@ main {
     text-align: center;
     font-weight: lighter;
     font-size: .9em;
+    max-width: 100%;
 }
 
 .txt-box-main > a {
@@ -127,10 +212,10 @@ main {
     max-width: 1120px;
     width: 100%;
     padding: 40px 0;
+    margin-top: 30px;
   }
   .slide-content{
     margin: 0 40px;
-    overflow: hidden;
     border-radius: 25px;
     margin-bottom: 30px;
   }
@@ -163,6 +248,39 @@ main {
     background-size: cover;
     background-position: center;
     border-radius: 25px 25px 0px 0px;
+  }
+
+  #ap-1 {
+    background-image: url(../imagens/ap-1.jpg);
+  }
+
+  #ap-2 {
+    background-image: url(../imagens/ap-2.jpg);
+  }
+
+  #ap-3 {
+    background-image: url(../imagens/ap-3.jpg);
+  }
+
+  #ap-4 {
+    background-image: url(../imagens/ap-4.jpg);
+  }
+
+  #ap-5 {
+    background-image: url(../imagens/ap-5.jpg);
+  }
+
+  #ap-6 {
+    background-image: url(../imagens/ap-6.webp);
+  }
+  
+  #ap-7 {
+    background-image: url(../imagens/ap-7.webp);
+  }
+  
+  #ap-8 {
+    background-image: url(../imagens/ap-8.jpg);
+
   }
   .card-image{
     position: relative;
@@ -282,8 +400,113 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 3em;
-    margin-bottom: 30px;
+    margin-top: 30px;
+
     text-align: center;
+  }
+
+  /*galeria*/
+
+  .cx-txt-galeria {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .cx-txt-galeria > p {
+    width: min(50vw, 800px);
+    text-align: center;
+  }
+
+  .galeria-container {
+    display: flex;
+    width: 100%;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .container-1, .container-2 {
+    display: flex;
+    align-items: center;
+    width: min(90%, 1600px);
+    height: 50%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .container-2 {
+    flex-direction: row-reverse;
+  }
+
+  .img-maior-1 {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    background-color: #c9c9c98f;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #img-1 {
+    background-image: url(../imagens/galeria-piscina.jpg);
+  }
+  
+  #img-2 {
+    background-image: url(../imagens/mercado.jpg);
+
+  }
+
+  #img-3{
+    background-image: url(../imagens/area-churrasco.jpg);
+  }
+  
+  #img-4{
+    background-image: url(../imagens/playground.jpg);
+  }
+
+  #img-5 {
+    background-image: url(../imagens/restaurante.jpg);
+  }
+
+  #img-6 {
+    background-image: url(../imagens/area-de-lazer.jpg);
+  }
+
+  .container-img-1, .container-img-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+  }
+
+  .container-img-1 {
+    margin-left: 10px;
+  }
+
+  .container-img-2 {
+    margin-right: 10px;
+  }
+
+  .container-img-1 > picture, .container-img-2 > picture {
+    width: 100%;
+    height: 50%;
+    background-color: #000000;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-bottom {
+    margin-top: 10px;
   }
 
   @media screen and (max-width: 768px) {
@@ -298,7 +521,28 @@ main {
     }
   }
 
+  @media screen and (max-width: 1300px) {
+    .form-reserva {
+      width: 100%;
+      height: 130px;
+      border-radius: none;
+      flex-wrap: wrap;
+    }
+
+    .filtro-box {
+      padding-top: 10px;
+    }
+    .filtro-box > label {
+      padding-right: 0px;
+      width: 100px;
+  }
+  }
+
 .user_name{
   margin-right: 1em;
   color: white;
+}
+
+table, td, th{
+  font-family: sans-serif;
 }
