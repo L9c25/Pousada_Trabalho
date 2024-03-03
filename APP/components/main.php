@@ -11,12 +11,11 @@
 <!-- FILTRO DESKTOP -->
 
 <div class="filtro-reserva">
-    <form action="#" method="post" class="form-reserva">
+    <form action="acomodacoes.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
-            <input type="text" class="" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" />
-
-            <input type="text" class="" name="end" placeholder="CHEK-OUT" />
+            <input type="text" class="" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" required />
+            <input type="" class="" name="end" placeholder="CHEK-OUT" required />
         </div>
 
         <span class="space"></span>
@@ -89,219 +88,49 @@
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-1"></span>
 
 
-                </div>
 
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
+                <?php
+                $d = new daoMysql($pdo);
+                $dados = $d->listar();
+                foreach ($dados as $apt):
+                ?>
+                    <div class="image-content">
+                        <span class="overlay" id="<?php $apt->getImg1()?>"></span>
                     </div>
+                    <div class="card-content">
+                        <div class="box-h1-card">
+                            <a href="" class="name">
+                                <?php $apt->getNome() ?>
+                            </a>
+                            <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
+                        </div>
 
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                        <div class="txt-price-diaria">
+                            <p class="valor-original">
+                                <R1>
+                                    <?php ($apt->getPreco() * 1.1) ?>
+                                </R1>
+                            </p>
+                            <div class="valor-promocional">
+                                <R1>
+                                    <?php $apt->getPreco() ?>
+                                </R1>
+                                <p>/valor diária</p>
+                            </div>
                         </div>
                     </div>
+                <?php endforeach ?>
 
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-2"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-3"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-4"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-5"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-6"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-7"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="card swiper-slide">
-                <div class="image-content">
-                    <span class="overlay" id="ap-8"></span>
-
-
-                </div>
-
-                <div class="card-content">
-                    <div class="box-h1-card">
-                        <a href="" class="name">lorem ipsum</a>
-                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                    </div>
-
-                    <div class="txt-price-diaria">
-                        <p class="valor-original">
-                            <R1>450,00</R1>
-                        </p>
-                        <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
+<div class="swiper-button-next swiper-navBtn"></div>
+<div class="swiper-button-prev swiper-navBtn"></div>
+<div class="swiper-pagination"></div>
 </div>
 
 <div class="espacamento"><span></span></div>
@@ -348,5 +177,6 @@
         format: "yyyy/mm/dd",
         todayHighlight: true,
         startDate: '-1',
+
     });
 </script>

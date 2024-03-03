@@ -9,6 +9,11 @@ if (!isset($_SESSION['username'])) {
     // Termina o script para garantir que o redirecionamento funcione corretamente
     exit();
 }
+
+// Incluir arquivo de conexão com o banco
+require_once "./config/connect.php";
+require_once "./controllers/aptController.php"
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +52,7 @@ if (!isset($_SESSION['username'])) {
 
     <section class="overlay-header"></section>
 
-    <?php include './components/main.php' ?>
+    <?php include './components/main.php'?>
 
 
     <!-- SCRIPT IMPORTS -->
