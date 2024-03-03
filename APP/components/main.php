@@ -94,13 +94,12 @@
                 ?>
                 <div class="card swiper-slide">
                     <div class="image-content">
-                        <img src="" alt="">
                         <img class="overlay" src="./assets/imagens/<?php echo ($apt->getImg1()) ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
                             <a href="" class="name">
-                                <?php $apt->getNome() ?>
+                                <?php echo $apt->getNome()?>
                             </a>
                             <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
                         </div>
@@ -108,12 +107,12 @@
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
-                                    <?php ($apt->getPreco() * 1.1) ?>
+                                    R$<?php echo($apt->getPreco() * 1.1) ?>
                                 </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
-                                    <?php $apt->getPreco() ?>
+                                    R$<?php echo $apt->getPreco() ?>
                                 </R1>
                                 <p>/valor diária</p>
                             </div>
@@ -127,13 +126,12 @@
 
         </div>
     </div>
-</div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
 </div>
 
-<div class="swiper-button-next swiper-navBtn"></div>
-<div class="swiper-button-prev swiper-navBtn"></div>
-<div class="swiper-pagination"></div>
-</div>
+
 
 <div class="espacamento"><span></span></div>
 
@@ -179,6 +177,6 @@
         format: "yyyy/mm/dd",
         todayHighlight: true,
         startDate: '-1',
-
+        endDate: '+5d'
     });
 </script>
