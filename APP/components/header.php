@@ -25,12 +25,12 @@
 			<a href="" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
 			<a href="" class="nav-link">reservas</a>
-			<a href="" class="nav-link" id="nav-link-last">suporte</a>
-			<a href="" class="nav-link" id="nav-link-last">
+			<a href="" class="nav-link">suporte</a>
+			<a href="" class="nav-link">
 				<?= $_SESSION['username']; ?>
 				<i class="fa-regular fa-user" id="icon-login" style="padding-left: 10px;"></i>
 			</a>
-			<a href="logout.php" style="padding-left: 1em;" class="nav-link" id="nav-link-last">Logout<i class="fa fa-chevron-left" style="color: black"></i>
+			<a href="logout.php" class="nav-link" id="nav-link-last">Logout<i class="fa fa-chevron-left" style="color: black; padding-left: 10px;"></i>
 			</a>
 		</div>
 	</nav>

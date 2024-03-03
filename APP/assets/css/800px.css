@@ -88,8 +88,9 @@
         margin-top: 40px;
     }
 
-    #nav-link-last {
-        align-self: flex-end;
+    #nav-link-last {    
+        display: flex;
+      align-self: flex-start;
     }
     
     
