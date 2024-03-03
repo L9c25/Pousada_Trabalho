@@ -14,7 +14,10 @@ class daoMysql implements AptDAO
 	{
 		$lista = [];
 
-		$sql = $this->pdo->query("SELECT * from acomodacao");
+		$sql = $this->pdo->query("SELECT a.id,a.nome,a.preco,
+								a.descricao,a.disponivel, i.d0 AS img_1
+								FROM acomodacao a
+								JOIN imagens i on a.fk_img = i.id");
 
 		if ($sql->rowCount() > 0) {
 			$dados = $sql->fetchAll();
@@ -22,25 +25,12 @@ class daoMysql implements AptDAO
 			foreach ($dados as $item) {
 				$p = new Apt();
 				$p->setId($item['id']);
-				$id = $p->getId();
-
 				$p->setNome($item['nome']);
 				$p->setPreco($item['preco']);
 				$p->setDescricao($item['descricao']);
-				$p->setFkImg($item['fk_img']);
+				$p->setImg1($item['img_1']);
 				$p->setDisponivel($item['disponivel']);
 
-
-				$smt = $this->pdo->query("SELECT *
-											from imagens i
-											JOIN acomodacao a on a.fk_img = i.id
-											where a.id = $id;");
-
-				$smt->execute();
-				if ($smt->rowCount() > 0) {
-					$imgData = $smt->fetch();
-					$p->setImg1($imgData); // Aqui você seta img_1
-				}
 
 				$lista[] = $p;
 			}

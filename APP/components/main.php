@@ -97,7 +97,8 @@
                 foreach ($dados as $apt):
                 ?>
                     <div class="image-content">
-                        <span class="overlay" id="<?php $apt->getImg1()?>"></span>
+                        <img src="" alt="">
+                        <img class="overlay" src="./assets/imagens/<?php echo($apt->getImg1())?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">

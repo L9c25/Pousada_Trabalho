@@ -7,7 +7,6 @@ class Apt
 	private $nome;
 	private $preco;
 	private $descricao;
-	private $fk_img;
 	private $disponivel;
 	private $img1;
 
@@ -49,16 +48,6 @@ class Apt
 	public function getDescricao()
 	{
 		return $this->descricao;
-	}
-
-	public function setFkImg($fk_img)
-	{
-		$this->fk_img = $fk_img;
-	}
-
-	public function getFkimg()
-	{
-		return $this->fk_img;
 	}
 
 	public function setDisponivel($disponivel)
