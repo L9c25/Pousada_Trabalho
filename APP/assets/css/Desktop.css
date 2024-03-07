@@ -542,3 +542,7 @@ main {
   margin-right: 1em;
   color: white;
 }
+
+table, td, th{
+  font-family: sans-serif;
+}
