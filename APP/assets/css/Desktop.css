@@ -11,6 +11,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+strong {
+  color: white;
+}
+
 ul {
   padding: 0px;
 }
@@ -80,6 +84,7 @@ header {
 .nav-header {
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .nav-link {
@@ -444,9 +449,10 @@ main {
     background-color: white;
     flex-direction: column;
   }
-
+  
   .container-1, .container-2 {
     display: flex;
+    max-width: 1200px;
     align-items: center;
     width: min(90%, 1600px);
     height: 50%;
@@ -574,17 +580,19 @@ footer {
 .rodape {
   display: flex;
   width: 80%;
+  max-width: 1200px;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
 }
 
 .links-rodape {
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
   align-items: flex-start;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   margin: 20px 0px;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .box-links-rodape {
@@ -610,30 +618,53 @@ footer {
 }
 
 .google-maps {
-  width: 50%;
+  width: 100%;
+  margin: 40px 0px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 300px;
+  border-radius: 40px;
 }
 
 .space-footer {
   content: "";
   display: flex;
-  height: 200px;
-  width: 1px;
+  height: 1px;
+  width: 80vw;
   color: white;
   background-color: rgba(255, 255, 255, 0.575);
-
-
 }
 
 .google-maps > h2 {
-  color: white;
+  color: black;
   margin-top: 20px;
 }
 
-.mapa-rodape {
-  width: 100%;
-  height: 300px;
+.box-txt-maps {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
   padding: 20px;
+}
+
+.vetor-maps {
+  display: flex;
+  background-image: url(../imagens/undraw_my_location_re_r52x.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mapa-rodape {
+  width: 70%;
+  height: 100%;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
