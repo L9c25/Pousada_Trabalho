@@ -2,8 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,800;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Heebo:wght@800&family=Jost:wght@700&family=Poppins:wght@300;600;900&family=Red+Hat+Display:wght@300&display=swap');
 
+* {
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  padding: 0px;
+}
+
+ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin-bottom: 0px;
+}
 /*PALETA DE CORES*/
 
 .espacamento {
@@ -13,7 +32,7 @@
   content: "";
 }
 
-.espacamento>span {
+.espacamento > span{
   margin-top: 40px;
   width: 80%;
   height: 1px;
@@ -23,28 +42,17 @@
 
 /*HEADER DA PAGINA*/
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Geologica", sans-serif;
-  ;
-  -webkit-tap-highlight-color: transparent;
-  scrollbar-width: thin;
-  scrollbar-color: #808080 #262626;
-}
 
 a {
-  text-decoration: none;
-  color: white;
-
+    text-decoration: none;
+    color: white;
+    
 }
 
-h1,
-h2 {
-  font-weight: 400;
-  font-family: "Geologica", sans-serif;
-  letter-spacing: -2px;
-
+h1, h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
 }
 
 #header-mobile {
@@ -52,536 +60,531 @@ h2 {
 }
 
 header {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  background-color: #352961;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    z-index: 1000;
 }
 
 #icon-login {
-  font-size: 1.6em;
-  cursor: pointer;
+    font-size: 1.6em;
+    cursor: pointer;
 }
 
 .nav-header {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
-  margin-right: 20px;
+    padding-right: 20px;
 }
 
 .menu-content {
   height: 100%;
 }
 
-.nav-link:hover,
-.nav-link-last:hover {
-  color: rgb(221, 221, 221);
+.nav-link:hover, .nav-link-last:hover {
+    color: rgb(221, 221, 221);
 }
 
 .logo-header {
-  display: flex;
-  background-image: url(../imagens/logo.png);
-  width: 50px;
-  height: 50px;
-  background-position: center;
-  background-size: cover;
+    display: flex;
+    background-image: url(../imagens/logo-two-doors.png);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
 }
 
-/*FILTRO DE RESERVA*/
+  /*FILTRO DE RESERVA*/
 
-#formulario-container,
-#formulario-overlay {
-  display: none;
+  #formulario-container, #formulario-overlay {
+    display: none;
 
-}
+  }
 
-.filtro-reserva {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-}
+  .filtro-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #080807;
+    height: 200px;
+  }
 
-.form-reserva {
-  display: flex;
-  border-radius: 20px;
-  font-size: 1.2em;
-  padding: 20px;
-  width: min(90%, 1200px);
-  height: 80px;
-  background-color: white;
-  box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
-  ;
-  justify-content: space-around;
-  align-items: center;
-  top: 20px
-}
+  .form-reserva {
+    display: flex;
+    border-radius: 20px;
+    font-size: 1.2em;
+    padding: 20px;
+    width: min(90%, 1200px);
+    height: 80px;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    top: 20px
+  }
 
-.filtro-box {
-  display: flex;
-  align-items: center;
-}
+  .filtro-box {
+    display: flex;
+    align-items: center;
+  }
 
-.btn-reservar {
-  color: white;
-  background-color: #080807;
-  padding: 10px;
-  border: none;
-  width: 90px;
-  border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all ease-in-out .2s;
-}
+  .btn-reservar {
+    color: white;
+    background-color: #080807;
+    padding: 10px;
+    border: none;
+    width: 90px;
+    border-radius: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+  }
 
-.space {
-  display: flex;
-  content: "";
-  background-color: #080807;
-  width: 1px;
-  height: 50px;
-}
+  .space {
+    display: flex;
+    content: "";
+    background-color: #080807;
+    width: 1px;
+    height: 50px;
+  }
 
-.num-crianca,
-.num-adulto {
-  width: 40px;
-  border: none;
-}
+  .num-crianca, .num-adulto {
+    width: 40px;
+    border: none;
+  }
 
-.filtro-box>label {
-  padding-right: 20px;
-}
+  .filtro-box > label {
+    padding-right: 20px;
+  }
 
 /*COMEÇO DA PAGINA*/
 
 main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: min(80vh, 600px);
-  background-image: url(../imagens/resort-tororomba-1.jpg);
-  background-size: cover;
-  background-position: center;
-  color: white;
-  box-shadow: 0px 3px 19px -4px rgba(0, 0, 0, 0.52);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: min(80vh, 600px);
+    background-image: url(../imagens/resort-tororomba-1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 .txt-box-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 40%;
-  font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    font-size: 1.3em;
 }
 
-.txt-box-main>h1 {
-  font-size: 2.5em;
-  font-family: "Oswald", sans-serif;
+.txt-box-main > h1 {
+    font-size: 2.5em;
+    font-family: "Oswald", sans-serif;
 }
 
-.txt-box-main>p {
-  text-align: center;
-  font-weight: lighter;
-  font-size: .9em;
-  max-width: 100%;
+.txt-box-main > p {
+    text-align: center;
+    font-weight: lighter;
+    font-size: .9em;
+    max-width: 100%;
 }
 
-.txt-box-main>a {
-  color: black;
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
-  transition: all ease-in-out .2s;
+.txt-box-main > a {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    transition: all ease-in-out .2s;
 }
 
-.txt-box-main>a:hover {
-  transform: scale(1.05);
-  color: white;
-  background-color: #080807;
+.txt-box-main > a:hover {
+    transform: scale(1.05);
+    color: white;
+    background-color: #080807;
 }
 
-.txt-box-main>h1,
-.txt-box-main>p,
-.txt-box-main>a {
-  margin-bottom: 20px;
+.txt-box-main > h1, .txt-box-main > p, .txt-box-main > a {
+    margin-bottom: 20px;
 }
-
-.slide-container {
-  max-width: 1120px;
-  width: 100%;
-  padding: 40px 0;
-  margin-top: 30px;
-}
-
-.slide-content {
-  margin: 0 40px;
-  border-radius: 25px;
-  margin-bottom: 30px;
-}
-
-.card {
-  border-radius: 25px;
-  background-color: #FFF;
-  border: 1px solid #0808077e;
-}
-
-.image-content,
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px;
-}
-
-.image-content {
-  position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
-  height: 150px;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #4070F4;
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px 25px 0px 0px;
-}
-
-.card-image {
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #FFF;
-  padding: 3px;
-}
-
-.card-image .card-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-}
-
-.name {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-}
-
-.description {
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-}
-
-.button {
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: #265DF2;
-}
-
-.swiper-navBtn {
-  color: #6E93f7;
-  transition: color 0.3s ease;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.484);
-}
-
-.swiper-navBtn:hover {
-  color: #000000;
-}
-
-.swiper-navBtn::before,
-.swiper-navBtn::after {
-  font-size: 35px;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-button-prev {
-  left: 0;
-}
-
-.swiper-pagination-bullet {
-  background-color: #6E93f7;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #6E93f7;
-}
-
-.box-h1-card {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.txt-price-diaria {
-  display: flex;
-  width: 100%;
-  justify-content: start;
-  flex-direction: column;
-  font-weight: bolder;
-  font-size: 1.7em;
-  margin-top: 10px;
-  color: #333;
-}
-
-.box-h1-card>a {
-  font-size: 1.5em;
-}
-
-.description {
-  z-index: 99;
-}
-
-.valor-original {
-  font-size: .8em;
-  text-decoration: line-through;
-  font-weight: lighter;
-}
-
-.valor-promocional {
-  display: flex;
-  align-items: flex-end;
-  font-size: 1.3em;
-  font-weight: 500;
-}
-
-.valor-promocional>p {
-  font-size: .6em;
-}
-
-.titulo-reservas {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 3em;
-  margin-top: 30px;
-
-  text-align: center;
-}
-
-/*galeria*/
-
-.cx-txt-galeria {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.cx-txt-galeria>p {
-  width: min(50vw, 800px);
-  text-align: center;
-}
-
-.galeria-container {
-  display: flex;
-  width: 100%;
-  height: 130vh;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  flex-direction: column;
-}
-
-.container-1,
-.container-2 {
-  display: flex;
-  align-items: center;
-  width: min(90%, 1600px);
-  height: 50%;
-  margin-top: 10px;
-  justify-content: space-between;
-  max-width: 1200px;
-}
-
-.container-2 {
-  flex-direction: row-reverse;
-}
-
-.img-maior-1 {
-  display: flex;
-  width: 60%;
-  height: 100%;
-  background-color: #c9c9c98f;
-  border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#img-1 {
-  background-image: url(../imagens/galeria-piscina.jpg);
-}
-
-#img-2 {
-  background-image: url(../imagens/mercado.jpg);
-
-}
-
-#img-3 {
-  background-image: url(../imagens/area-churrasco.jpg);
-}
-
-#img-4 {
-  background-image: url(../imagens/playground.jpg);
-}
-
-#img-5 {
-  background-image: url(../imagens/restaurante.jpg);
-}
-
-#img-6 {
-  background-image: url(../imagens/area-de-lazer.jpg);
-}
-
-.container-img-1,
-.container-img-2 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 40%;
-  height: 100%;
-}
-
-.container-img-1 {
-  margin-left: 10px;
-}
-
-.container-img-2 {
-  margin-right: 10px;
-}
-
-.container-img-1>picture,
-.container-img-2>picture {
-  width: 100%;
-  height: 50%;
-  background-color: #000000;
-  border-radius: 10px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.img-bottom {
-  margin-top: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content {
-    margin-bottom: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-  }
-
-  .swiper-navBtn {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .form-reserva {
+  
+  .slide-container{
+    max-width: 1120px;
     width: 100%;
-    height: 130px;
-    border-radius: none;
-    flex-wrap: wrap;
+    padding: 40px 0;
+    margin-top: 30px;
+  }
+  .slide-content{
+    margin: 0 40px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+  }
+  .card{
+    border-radius: 25px;
+    background-color: #FFF;
+    border: 1px solid #0808077e;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+    height: 150px;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070F4;
+    background-image: url(../imagens/resort-tororomba-1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
   }
 
-  .filtro-box {
-    padding-top: 10px;
+  #ap-1 {
+    background-image: url(../imagens/ap-1.jpg);
   }
 
-  .filtro-box>label {
-    padding-right: 0px;
-    width: 100px;
+  #ap-2 {
+    background-image: url(../imagens/ap-2.jpg);
   }
-}
 
-.user_name {
+  #ap-3 {
+    background-image: url(../imagens/ap-3.jpg);
+  }
+
+  #ap-4 {
+    background-image: url(../imagens/ap-4.jpg);
+  }
+
+  #ap-5 {
+    background-image: url(../imagens/ap-5.jpg);
+  }
+
+  #ap-6 {
+    background-image: url(../imagens/ap-6.webp);
+  }
+  
+  #ap-7 {
+    background-image: url(../imagens/ap-7.webp);
+  }
+  
+  #ap-8 {
+    background-image: url(../imagens/ap-8.jpg);
+
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button:hover{
+    background: #265DF2;
+  }
+  
+  .swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.484);
+  }
+  .swiper-navBtn:hover{
+    color: #000000;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #6E93f7;
+  }
+
+  .box-h1-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .txt-price-diaria {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    flex-direction: column;
+    font-weight: bolder;
+    font-size: 1.7em;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  .box-h1-card > a {
+    font-size: 1.5em;
+  }
+
+  .description {
+    z-index: 99;
+  }
+
+  .valor-original {
+    font-size: .8em;
+    text-decoration: line-through;
+    font-weight: lighter;
+  }
+  
+  .valor-promocional {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  .valor-promocional > p {
+    font-size: .6em;
+  }
+
+  .titulo-reservas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    margin-top: 30px;
+
+    text-align: center;
+  }
+
+  /*galeria*/
+
+  .cx-txt-galeria {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .cx-txt-galeria > p {
+    width: min(50vw, 800px);
+    text-align: center;
+  }
+
+  .galeria-container {
+    display: flex;
+    width: 100%;
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .container-1, .container-2 {
+    display: flex;
+    align-items: center;
+    width: min(90%, 1600px);
+    height: 50%;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+
+  .container-2 {
+    flex-direction: row-reverse;
+  }
+
+  .img-maior-1 {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    background-color: #c9c9c98f;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #img-1 {
+    background-image: url(../imagens/galeria-piscina.jpg);
+  }
+  
+  #img-2 {
+    background-image: url(../imagens/mercado.jpg);
+
+  }
+
+  #img-3{
+    background-image: url(../imagens/area-churrasco.jpg);
+  }
+  
+  #img-4{
+    background-image: url(../imagens/playground.jpg);
+  }
+
+  #img-5 {
+    background-image: url(../imagens/restaurante.jpg);
+  }
+
+  #img-6 {
+    background-image: url(../imagens/area-de-lazer.jpg);
+  }
+
+  .container-img-1, .container-img-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+  }
+
+  .container-img-1 {
+    margin-left: 10px;
+  }
+
+  .container-img-2 {
+    margin-right: 10px;
+  }
+
+  .container-img-1 > picture, .container-img-2 > picture {
+    width: 100%;
+    height: 50%;
+    background-color: #000000;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .img-bottom {
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .form-reserva {
+      width: 100%;
+      height: 130px;
+      border-radius: none;
+      flex-wrap: wrap;
+    }
+
+    .filtro-box {
+      padding-top: 10px;
+    }
+    .filtro-box > label {
+      padding-right: 0px;
+      width: 100px;
+  }
+  }
+
+.user_name{
   margin-right: 1em;
   color: white;
-  font-size: 20px;
 }
 
-#name {
-  color: #ead2ff;
-}
-
-table,
-td,
-th {
+table, td, th{
   font-family: sans-serif;
 }
-
 
 footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(13deg, rgb(0, 0, 0)  50%,  rgb(53, 41, 97) 100%);
+  background-color: #080807;
   margin-top: 90px;
 }
 
 .rodape {
   display: flex;
   width: 80%;
-  max-width: 1200px;
-  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
 }
 
 .links-rodape {
-  align-items: flex-start;
   display: flex;
-  width: 100%;
+  width: 40%;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 20px 0px;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .box-links-rodape {
@@ -601,59 +604,36 @@ footer {
   color: #ffffff98;
 }
 
-.nav-link-rodape>i {
+.nav-link-rodape > i {
   margin-left: 5px;
 
 }
 
 .google-maps {
-  width: 100%;
-  margin: 40px 0px;
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  height: 300px;
-  border-radius: 40px;
+  flex-direction: column;
 }
 
 .space-footer {
   content: "";
   display: flex;
-  height: 1px;
-  width: 80vw;
+  height: 200px;
+  width: 1px;
   color: white;
   background-color: rgba(255, 255, 255, 0.575);
+
+
 }
 
-.google-maps>h2 {
-  color: black;
+.google-maps > h2 {
+  color: white;
   margin-top: 20px;
 }
 
-.box-txt-maps {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  height: 100%;
-  padding: 20px;
-}
-
-.vetor-maps {
-  display: flex;
-  background-image: url(../imagens/undraw_my_location_re_r52x.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 180px;
-  width: 100%;
-  margin-top: 10px;
-}
-
 .mapa-rodape {
-  width: 70%;
-  height: 100%;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
 }
