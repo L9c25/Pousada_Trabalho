@@ -3,6 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,800;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Oswald:wght@200..700&display=swap');
 
+* {
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  padding: 0px;
+}
+
+ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin-bottom: 0px;
+}
 /*PALETA DE CORES*/
 
 .espacamento {
@@ -22,12 +42,6 @@
 
 /*HEADER DA PAGINA*/
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Fredoka", sans-serif;
-    -webkit-tap-highlight-color: transparent;
-}
 
 a {
     text-decoration: none;
@@ -53,6 +67,7 @@ header {
     color: rgb(255, 255, 255);
     background-color: black;
     width: 100%;
+    height: 8vh;
     position: fixed;
     z-index: 1000;
 }
@@ -81,7 +96,7 @@ header {
 
 .logo-header {
     display: flex;
-    background-image: url(../imagens/logo.png);
+    background-image: url(../imagens/logo-two-doors.png);
     width: 50px;
     height: 50px;
     background-position: center;
@@ -545,4 +560,80 @@ main {
 
 table, td, th{
   font-family: sans-serif;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080807;
+  margin-top: 90px;
+}
+
+.rodape {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-rodape {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0px;
+  font-size: 1.5em;
+}
+
+.box-links-rodape {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.nav-link-rodape {
+  font-weight: lighter;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-rodape:hover {
+  color: #ffffff98;
+}
+
+.nav-link-rodape > i {
+  margin-left: 5px;
+
+}
+
+.google-maps {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.space-footer {
+  content: "";
+  display: flex;
+  height: 200px;
+  width: 1px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.575);
+
+
+}
+
+.google-maps > h2 {
+  color: white;
+  margin-top: 20px;
+}
+
+.mapa-rodape {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
 }
