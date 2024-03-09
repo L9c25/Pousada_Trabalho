@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
 	exit();
 }
 
+
 // Incluir arquivo de conexão com o banco
 require_once "./config/connect.php";
 require_once "./controllers/aptController.php";
@@ -25,8 +26,6 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,25 +34,29 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>acomodacoes</title>
-	 <!-- import bootstrap css -->
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<!-- import bootstrap css -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-	<div class="slide-container swiper">
-		<div class="slide-content">
-			<div class="card-wrapper swiper-wrapper">
-				<?php
-				$d = new daoMysql($pdo);
-				$dados = $d->listar();
-				foreach ($dados as $apt):
-					?>
-					<div class="h3 mb-2"><?php echo $apt->getPreco()?></div> <br>
-				<?php endforeach ?>
 
-			</div>
-		</div>
-	</div>
+<body>
+	<?php
+	$d = new daoMysql($pdo);
+	$dados = $d->listar();
+	foreach ($dados as $apt):
+		?>
+		<?php $val = $intervalo * $apt->getPreco(); ?>
+
+		<div class="h3 mb-2">
+			<?php echo $apt->getPreco() ?>
+		</div> <br>
+
+		<p>
+			<?php echo $intervalo ?> dias x
+			<?php echo $apt->getPreco() ?> por noite = R$
+			<?php echo number_format($val, 2, ",", ".") ?>
+
+		<?php endforeach ?>
 </body>
 
 </html>
