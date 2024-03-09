@@ -174,9 +174,9 @@
     $('.input-daterange').datepicker({
         language: "pt-BR",
         clearBtn: true,
+        autoclose: true,
         format: "yyyy/mm/dd",
-        todayHighlight: true,
-        startDate: '-1',
-        endDate: '+5d'
+        startDate: '-0d',
+        endDate: '+14d'
     });
 </script>
