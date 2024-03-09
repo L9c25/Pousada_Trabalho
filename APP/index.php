@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
 require_once "./config/connect.php";
 require_once "./controllers/aptController.php"
 
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -48,13 +48,32 @@ require_once "./controllers/aptController.php"
 
 <body>
 
-    <?php include './components/header.php' ?>
+    <?php
+        // Verificação se o Usuario é um administrador
+        $id = $_SESSION["id"];
+
+        $dao = new daoMysql($pdo);
+        $sql = $pdo->query("SELECT tipo 
+                                From usuario
+                                where id = $id;");
+        $tipo = $sql->fetch();
+
+        if ($tipo[0] == 1) {
+            include './components/header_adm.php';
+        } else {
+            include './components/header.php';
+        }
+
+
+    
+    
+    ?>
 
     <section class="overlay-header"></section>
 
-    <?php include './components/main.php'?>
+    <?php include './components/main.php' ?>
 
-    <?php include './components/footer.php'?>
+    <?php include './components/footer.php' ?>
 
 
     <!-- SCRIPT IMPORTS -->
@@ -65,6 +84,4 @@ require_once "./controllers/aptController.php"
     <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
 
 </body>
-
-
 </html>
