@@ -47,7 +47,6 @@ require_once "./controllers/aptController.php"
 </head>
 
 <body>
-
     <?php
         // Verificação se o Usuario é um administrador
         $id = $_SESSION["id"];
@@ -62,11 +61,7 @@ require_once "./controllers/aptController.php"
             include './components/header_adm.php';
         } else {
             include './components/header.php';
-        }
-
-
-    
-    
+        }  
     ?>
 
     <section class="overlay-header"></section>
