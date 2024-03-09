@@ -8,7 +8,7 @@
 	</nav>
 	<span>
 		<span class="user_name">Olá !
-			<?= $_SESSION['username']; ?>
+			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
 			<a href="logout.php" style="padding-left: 1em;">
