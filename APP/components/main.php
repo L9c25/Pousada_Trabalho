@@ -99,7 +99,7 @@
                     <div class="card-content">
                         <div class="box-h1-card">
                             <a href="" class="name">
-                                <?php echo $apt->getNome()?>
+                                <?php echo $apt->getNome() ?>
                             </a>
                             <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
                         </div>
@@ -107,12 +107,14 @@
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
-                                    R$<?php echo($apt->getPreco() * 1.1) ?>
+                                    R$
+                                    <?php echo ($apt->getPreco() * 1.1) ?>
                                 </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
-                                    R$<?php echo $apt->getPreco() ?>
+                                    R$
+                                    <?php echo $apt->getPreco() ?>
                                 </R1>
                                 <p>/valor diária</p>
                             </div>
@@ -163,12 +165,14 @@
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
-<!-- jquery -->
+<!-- Jquery -->
 <script src="assets/bootstrap/js/jquery-3.7.1.slim.min.js"></script>
-<!-- datepicker &  bootstrap-->
+<!-- Datepicker &  Bootstrap -->
 <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstra/js/popper.min.js"></script>
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
 
 <script>
     $('.input-daterange').datepicker({
@@ -179,4 +183,48 @@
         startDate: '-0d',
         endDate: '+14d'
     });
+
+
+    ScrollReveal().reveal('#img-1', {
+        delay: 20,
+        duration: 400,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
+    ScrollReveal().reveal('#img-2', {
+        delay: 20,
+        duration: 500,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
+    ScrollReveal().reveal('#img-3', {
+        delay: 20,
+        duration: 600,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
+    ScrollReveal().reveal('#img-5', {
+        delay: 20,
+        duration: 620,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
+    ScrollReveal().reveal('#img-6', {
+        delay: 20,
+        duration: 630,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
+    ScrollReveal().reveal('#img-4', {
+        delay: 20,
+        duration: 640,
+        reset: true,
+        easing: 'cubic-bezier(.25,.1,.64,.96)'
+    });
+
 </script>
