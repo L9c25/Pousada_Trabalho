@@ -189,42 +189,55 @@
         delay: 20,
         duration: 400,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'left',
+        distance: '10px'
     });
 
     ScrollReveal().reveal('#img-2', {
         delay: 20,
-        duration: 500,
+        duration: 400,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'right',
+        distance: '10px'
+
     });
 
     ScrollReveal().reveal('#img-3', {
         delay: 20,
-        duration: 600,
+        duration: 410,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'right',
+        distance: '10px'
     });
 
     ScrollReveal().reveal('#img-5', {
         delay: 20,
-        duration: 620,
+        duration: 500,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'left',
+        distance: '10px'
     });
 
     ScrollReveal().reveal('#img-6', {
         delay: 20,
-        duration: 630,
+        duration: 510,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'left',
+        distance: '10px'
     });
 
     ScrollReveal().reveal('#img-4', {
         delay: 20,
-        duration: 640,
+        duration: 510,
         reset: true,
-        easing: 'cubic-bezier(.25,.1,.64,.96)'
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'right',
+        distance: '10px'
     });
 
 </script>
