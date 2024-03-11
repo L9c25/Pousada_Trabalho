@@ -6,7 +6,7 @@
 		<a href="" class="nav-link">reservas</a>
 		<a href="" class="nav-link">suporte</a>
 		<!-- link exclusiva para adms -->
-		<a href="" class="nav-link-last" id="adm">CMD</a>
+		<a href="test2.php" class="nav-link-last" id="adm">CMD</a>
 	</nav>
 	<span>
 		<span class="user_name">Olá !
@@ -30,7 +30,7 @@
 			<a href="" class="nav-link">suporte</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<!-- link exclusiva para adms -->
-			<a href="" class="nav-link" id="adm">CMD</a>
+			<a href="test.php" class="nav-link" id="adm">CMD</a>
 
 			<a href="" class="nav-link" id="nav-link-last">
 				<?= $_SESSION['username']; ?>

@@ -296,21 +296,25 @@ main {
   text-align: center;
 }
 
-.button {
-  border: none;
+.input-btn{
+  width: 10em;
   font-size: 16px;
   color: #FFF;
   padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
+  background-color: #dad8d8a3;
+  border: none;
+  border-radius: 12px;
+  border-style: none;
+  outline:none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.button:hover {
-  background: #265DF2;
+.input-btn:hover{
+  background: #c4aedbd6;
 }
+
+
 
 .swiper-navBtn {
   color: #6E93f7;

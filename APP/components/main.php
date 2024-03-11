@@ -14,8 +14,8 @@
     <form action="acomodacoes.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
-            <input type="text" class="" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" required />
-            <input type="" class="" name="end" placeholder="CHEK-OUT" required />
+            <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN" outl required />
+            <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" required />
         </div>
 
         <span class="space"></span>
@@ -53,13 +53,14 @@
 
 <div id="formulario-overlay" onclick="fecharFormulario()">
     <div id="formulario-container" onclick="event.stopPropagation()">
-        <form action="#" method="post">
+        <form action="acomodacoes.php" method="post">
             <h2>Reserva de Hotel</h2>
-            <label for="check_in" style="padding: 0px">Check-in:</label>
-            <input type="date" id="check_in" name="check_in" required>
 
-            <label for="check_out">Check-out:</label>
-            <input type="date" id="check_out" name="check_out" required>
+            <div class="input-daterange" id="datepicker">
+                <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
+                    style="margin-right: 0.4em;"/>
+                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT"/>
+            </div> 
 
             <label for="num_adultos">Número de Adultos (até 2):</label>
             <select id="num_adultos" name="num_adultos" required>
@@ -88,17 +89,20 @@
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
             <?php
+            // Defenindo variaveis:
+            $HOST = $_SERVER['HTTP_HOST'];
+
             $d = new daoMysql($pdo);
             $dados = $d->listar();
             foreach ($dados as $apt):
                 ?>
-                <div class="card swiper-slide">
+                <div class="card swiper-slide" id="card">
                     <div class="image-content">
-                        <img class="overlay" src="./assets/imagens/<?php echo ($apt->getImg1()) ?>.jpg"></img>
+                        <img class="overlay" src="./assets/imagens/<?php echo $apt->getImg1() ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
-                            <a href="" class="name">
+                            <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>" class="name">
                                 <?php echo $apt->getNome() ?>
                             </a>
                             <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
@@ -181,7 +185,7 @@
         autoclose: true,
         format: "yyyy/mm/dd",
         startDate: '-0d',
-        endDate: '+14d'
+        endDate: '+2m'
     });
 
 
