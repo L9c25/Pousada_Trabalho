@@ -1,9 +1,7 @@
 <!-- INICIO DA PAGINA -->
 <main>
     <div class="txt-box-main">
-        <h1>
-            TWO DOORS
-        </h1>
+        <h1>HOTEL CLUB</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
             dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
         <a href="">NOSSOS SERVIÇOS</a>
@@ -14,20 +12,15 @@
 
 <div class="filtro-reserva">
     <form action="#" method="post" class="form-reserva">
+            <div class="filtro-box">
+            <label for="check_in">Check-in:</label>
+            <input type="date" id="check_in" name="check_in" required style="margin-right: 10px">
 
             <label for="check_out">Check-out:</label>
             <input type="date" id="check_out" name="check_out" required style="margin-right: 10px">
             </div>
 
             <span class="space"></span>
-=======
-    <form action="acomodacoes.php" method="post" class="form-reserva">
-
-        <div class="input-daterange" id="datepicker">
-            <input type="text" class="" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" required />
-            <input type="" class="" name="end" placeholder="CHEK-OUT" required />
-        </div>
->>>>>>> cbe52ec6088e38cadad4adae0602975f0323e17e
 
     
             <div class="filtro-box">
@@ -95,30 +88,25 @@
 <div class="slide-container swiper">
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
-            <?php
-            $d = new daoMysql($pdo);
-            $dados = $d->listar();
-            foreach ($dados as $apt):
-                ?>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <img class="overlay" src="./assets/imagens/<?php echo ($apt->getImg1()) ?>.jpg"></img>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay" id="ap-1"></span>
+
+
+                </div>
+
+                <div class="card-content">
+                    <div class="box-h1-card">
+                        <a href="" class="name">lorem ipsum</a>
+                        <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
                     </div>
-                    <div class="card-content">
-                        <div class="box-h1-card">
-                            <a href="" class="name">
-                                <?php echo $apt->getNome() ?>
-                            </a>
-                            <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
-                        </div>
 
                     <div class="txt-price-diaria">
                         <p class="valor-original">
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -143,8 +131,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -169,8 +156,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -195,8 +181,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -221,8 +206,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -247,8 +231,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -273,8 +256,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -299,8 +281,7 @@
                             <R1>450,00</R1>
                         </p>
                         <div class="valor-promocional">
-                            <R1>350,00</R1>
-                            <p>/valor diária</p>
+                            <R1>350,00</R1> <p>/valor diária</p>
                         </div>
                     </div>
 
@@ -315,14 +296,12 @@
     <div class="swiper-pagination"></div>
 </div>
 
-
-
 <div class="espacamento"><span></span></div>
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
 
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas">nossas fotos internas</h2>
+    <h2 class="titulo-reservas"><i class="fa-solid fa-camera" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>nossas fotos internas</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.</p>
 </div>
 
@@ -344,21 +323,4 @@
 </section>
 
 <!-- Swiper JS -->
-<<<<<<< HEAD
 <script src="assets/js/swiper-bundle.min.js"></script>
-<!-- jquery -->
-<script src="assets/bootstrap/js/jquery-3.7.1.slim.min.js"></script>
-<!-- datepicker &  bootstrap-->
-<script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/bootstra/js/popper.min.js"></script>
-
-<script>
-    $('.input-daterange').datepicker({
-        language: "pt-BR",
-        clearBtn: true,
-        format: "yyyy/mm/dd",
-        todayHighlight: true,
-        startDate: '-1',
-    });
-</script>
