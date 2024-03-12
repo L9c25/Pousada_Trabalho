@@ -12,7 +12,7 @@
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
 			<a href="logout.php" style="padding-left: 1em;">
-			<i class="fa-solid fa-right-to-bracket"></i>
+				<i class="fa fa-chevron-left"></i>
 			</a>
 		</i>
 	</span>
@@ -32,8 +32,7 @@
 				<i class="fa-solid fa-user" id="icon-login" style="padding-left: 10px;"></i>
 			</a>
 		</div>
-			<a href="logout.php" class="nav-link-logout">Logout
-				<i class="fa-solid fa-right-to-bracket" style="color: #ff3434; margin-left: 10px;"></i>
+			<a href="logout.php" class="nav-link-logout">Logout<i class="fa fa-chevron-left" style="color: #ff3434; margin-left: 10px;" ></i>
 			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>
