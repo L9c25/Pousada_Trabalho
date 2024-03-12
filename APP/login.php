@@ -137,6 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             </div>
         </div>
+        <div class="bg"></div>
     </main>
 </body>
 <script src="assets/js/jquery-3.7.1.slim.min"></script>

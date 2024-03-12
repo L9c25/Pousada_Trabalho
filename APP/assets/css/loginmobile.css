@@ -1,9 +1,18 @@
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (max-width: 1199px) and (min-width: 801px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bg {
+        width: 100%;
+    }
 
     input {
         height: 70px;
     }
-    
+
     body {
         justify-content: center;
     }
@@ -34,7 +43,7 @@
         height: 70px;
         margin-top: 20px;
     }
-    
+
     form {
         width: 100%;
     }
@@ -48,11 +57,12 @@
         height: 100%;
     }
 
-    .box-form > p, .box-form > h2 {
+    .box-form>p,
+    .box-form>h2 {
         width: 100%;
     }
-    
-    .box-form > h2{
+
+    .box-form>h2 {
         font-size: 2em;
     }
 }

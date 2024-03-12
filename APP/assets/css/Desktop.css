@@ -56,11 +56,12 @@ header {
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  color: rgb(255, 255, 255);
-  background-color: #352961;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(270deg, rgba(201,182,213,1) 28%, rgb(54, 0, 77) 72%); 
   width: 100%;
   position: fixed;
   z-index: 100;
+  font-weight: 200;
 }
 
 #icon-login {
@@ -84,7 +85,7 @@ header {
 
 .nav-link:hover,
 .nav-link-last:hover {
-  color: rgb(221, 221, 221);
+  color: rgb(199, 151, 229);
 }
 
 .logo-header {
@@ -551,7 +552,8 @@ main {
 }
 
 #name {
-  color: #ead2ff;
+  color: #410055;
+  font-weight: 500;
 }
 
 table,
@@ -566,8 +568,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(13deg, rgb(0, 0, 0)  50%,  rgb(53, 41, 97) 100%);
+  background: #ab92c6;
   margin-top: 90px;
+  box-shadow: inset 0px 4px 15px 1px rgba(0,0,0,0.32);
 }
 
 .rodape {

@@ -1,4 +1,13 @@
 <?php
+// Inicialize a sessão
+session_start();
+
+// Verifique se o usuário já está logado, em caso afirmativo, redirecione-o para a página principal
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] === true) {
+    header("location: index.php");
+    exit;
+}
+
 // Incluir arquivo de configuração
 require_once "./config/connect.php";
  
@@ -100,15 +109,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/loginDesktop.css">
-    <link rel="stylesheet" href="assets/css/loginmobile.css">
     <link rel="stylesheet" href="assets/js/bootstrap/jquery-3.7.1.slim.min">
     <link rel="stylesheet" href="assets/js/bootstrap/bootstrap.min.js">
     <link rel="stylesheet" href="assets/js/bootstrap/popper.min.js">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="assets/css/loginmobile.css">
+    <link rel="stylesheet" href="assets/css/loginDesktop.css">
 </head>
 <body>
     <main>
@@ -138,6 +143,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
             </form>
         </div>
+        <div class="bg"></div>
     </main>   
 </body>
 </html>
