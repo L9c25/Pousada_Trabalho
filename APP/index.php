@@ -68,6 +68,7 @@ require_once "./controllers/aptController.php"
 
     <?php include './components/main.php' ?>
 
+    <?php include './components/footer.php'?>
 
     <!-- SCRIPT IMPORTS -->
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
