@@ -1,10 +1,18 @@
-@media screen and (max-width: 1005px) and (min-width: 801px) {
-    .user_name {
-        display: none;
+@media screen and (max-width: 350px) {
+    .box-cod {
+        display: flex;
+        flex-direction: column;
     }
-}
 
-@media screen and (max-width: 800px) and (min-width: 351px) {
+    #btn-promo {
+        background-color: #2a074e;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .input-promo{
+        margin: 0;
+    }
 
     .slide-container {
         z-index: 9;
@@ -70,7 +78,7 @@
     .nav-header {
         position: fixed;
         top: 0;
-        left: -100%;
+        left: -150%;
         height: 100vh;
         width: 260px;
         padding: 20px 16px;
@@ -223,6 +231,7 @@
     .rodape {
         align-items: center;
         flex-direction: column-reverse;
+        padding: 0 1em;
     }
 
     .links-rodape {
@@ -254,5 +263,4 @@
     }
 
     /*Inicio da pagina mobile*/
-
 }

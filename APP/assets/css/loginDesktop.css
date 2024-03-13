@@ -5,7 +5,10 @@ main {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    
+    background-image: url(../imagens/background-login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .btn {
@@ -17,23 +20,16 @@ main {
 #btn-group {
     display: flex;
     width: 100%;
-
+    
 }
 
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
+    
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    margin-left: 12em;
 }
 
-.bg {
-    width: 70%;
-    height: 100vh;
-    background-image: url(../imagens/background-login.png);
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-}

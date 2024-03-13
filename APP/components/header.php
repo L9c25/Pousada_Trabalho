@@ -1,17 +1,17 @@
 <header id="header-desktop">
 	<picture class="logo-header"></picture>
-	<nav class="nav-header">
+	<nav class="nav-header" id="desktop">
 		<a href="" class="nav-link">localização</a>
 		<a href="" class="nav-link">promoções</a>
 		<a href="" class="nav-link">reservas</a>
 		<a href="" class="nav-link">suporte</a>
 	</nav>
-	<span>
+	<span class="btns">
 		<span class="user_name">Olá !
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
-			<a href="logout.php" style="padding-left: 1em;">
+			<a href="logout.php">
 				<i class="fa fa-chevron-left"></i>
 			</a>
 		</i>
