@@ -13,19 +13,19 @@
                 </ul>
                 <ul class="box-links-rodape">
                     <strong>Lorem ipsum</strong>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
                 </ul>
             </div>
             <div class="container-links-2">
                 <ul class="box-links-rodape">
                     <strong>Lorem ipsum</strong>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
-                    <a href="" class="nav-link-rodape">Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
+                    <a href="" class="nav-link-rodape">• Lorem ipsum</a>
                 </ul>
                 <ul class="box-links-rodape">
                     <strong>Lorem ipsum</strong>
