@@ -13,8 +13,8 @@
     <form action="acomodacoes.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
-            <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN" outl required />
-            <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" required />
+            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" outl required />
+            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" required />
         </div>
 
         <span class="space"></span>

@@ -188,7 +188,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  top: -60px;
+  top: -50px;
   margin-bottom: 20px;
 }
 
@@ -612,7 +612,6 @@ th {
 
 
 footer {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -623,7 +622,7 @@ footer {
 
 .rodape {
   display: flex;
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -659,12 +658,16 @@ footer {
   color: var(--dark-bg-color);
   font-size: 1.1em;
 }
-te
+
 .nav-link-rodape {
   font-weight: lighter;
   font-style: italic;
   display: flex;
   align-items: center;
+  min-width: 112px;
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .nav-link-rodape:hover {
