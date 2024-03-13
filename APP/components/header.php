@@ -1,6 +1,6 @@
 <header id="header-desktop">
 	<picture class="logo-header"></picture>
-	<nav class="nav-header">
+	<nav class="nav-header" id="desktop">
 		<a href="" class="nav-link">localização</a>
 		<a href="" class="nav-link">promoções</a>
 		<a href="" class="nav-link">reservas</a>

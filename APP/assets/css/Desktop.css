@@ -13,6 +13,10 @@
   --dark-bg-color:#2a074e;
 }
 
+a {
+  padding: 0;
+}
+
 ul {
   padding: 0px;
 }
@@ -83,7 +87,10 @@ header {
   display: flex;
   align-items: center;
   font-size: 20px;
-  margin-left: 30px;
+}
+
+#desktop {
+  margin-left: 50px;
 }
 
 .nav-link {
@@ -679,7 +686,7 @@ te
 }
 
 .codigo-promo {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .codigo-promo > h2 {
@@ -692,10 +699,16 @@ te
   padding: 10px;
   border-radius: 20px;
   height: 40px;
+  margin-right: 20px;
+}
+
+.input-promo:focus {
+  outline: none;
 }
 
 .input-promo::placeholder {
   color: var(--dark-bg-color);
+  opacity: 0.5;
 }
 
 #btn-promo {

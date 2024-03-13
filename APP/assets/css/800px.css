@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 
     .slide-container {
         z-index: 9;
@@ -81,7 +81,6 @@
         color: #ff3434;
         width: 100%;
         height: 60px;
-        margin-bottom: 40px;
     }
 
     #header-mobile.open .nav-header{
@@ -101,13 +100,14 @@
         justify-content: center;
         font-weight: normal;
         font-size: 1em;
-        border: 1px solid black;
+        border: 1px solid var(--dark-bg-color);
         border-radius: 15px;
-        color: black;
+        color: var(--dark-bg-color);
         background-color: white;
-        width: 90%;
+        width: 100%;
         height: 60px;
-        margin-top: 40px;
+        margin-top: 20px;
+        margin-right: 0px;
     }
 
     #nav-link-last {
@@ -131,6 +131,11 @@
     .filtro-reserva {
         display: none;
       }
+
+    .input-daterange {
+        display: flex;
+        justify-content: space-between;
+    }
 
       #formulario-overlay {
         display: none;
