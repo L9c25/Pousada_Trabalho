@@ -3,13 +3,22 @@
 main {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-image: url(../imagens/background-login.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
+
+.wrapper {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    margin-left: 12em;
+
+}
+.container{
+    width: 25%;
+}
+
 
 .btn {
     font-size: 1em;
@@ -22,14 +31,3 @@ main {
     width: 100%;
     
 }
-
-
-.wrapper {
-    
-    padding: 20px;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.315);
-    border-radius: 10px;
-    margin-left: 12em;
-}
-

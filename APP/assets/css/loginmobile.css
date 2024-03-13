@@ -1,9 +1,48 @@
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 576px) {
+    #background {
+        display: none;
+    }
+}
+
+@media (min-width: 767px) {
+    #background {
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        background-image: url(../imagens/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #background {
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        background-image: url(../imagens/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     input {
         height: 70px;
     }
-    
+
     body {
         justify-content: center;
     }
@@ -18,23 +57,13 @@
         width: 100%;
     }
 
-    .wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 10%;
-        padding: 40px;
-        width: 85%;
-        font-size: 2em;
-    }
-
     .btn {
         font-size: 1em;
         width: 60%;
         height: 70px;
         margin-top: 20px;
     }
-    
+
     form {
         width: 100%;
     }
@@ -44,15 +73,51 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
-    .box-form > p, .box-form > h2 {
+    .box-form>p,
+    .box-form>h2 {
         width: 100%;
     }
-    
-    .box-form > h2{
+
+    .box-form>h2 {
         font-size: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .wrapper {
+        padding: 20px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.315);
+        border-radius: 10px;
+        margin-left: 12em;
+
+    }
+
+    .container {
+        width: 25%;
+    }
+
+
+    .btn {
+        font-size: 1em;
+        width: 200px;
+        height: 40px;
+    }
+
+    #btn-group {
+        display: flex;
+        width: 100%;
+
     }
 }

@@ -90,19 +90,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/loginDesktop.css">
-    <link rel="stylesheet" href="assets/css/loginmobile.css">
-    <link rel="stylesheet" href="assets/js/bootstrap/jquery-3.7.1.slim.min">
-    <link rel="stylesheet" href="assets/js/bootstrap/bootstrap.min.js">
-    <link rel="stylesheet" href="assets/js/bootstrap/popper.min.js">
-
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
+    <link rel="stylesheet" href="assets\css\loginmobile.css">
+    <link rel="stylesheet" href="assets\css\loginDesktop.css">
 </head>
 
 <body>
     <main>
-        <div class="wrapper">
+        <div class="container">
             <div class="box-form">
                 <h2>Login</h2>
                 <p>Por favor, preencha os campos para fazer o login.</p>
@@ -113,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 ?>
                 <form action="" method="POST">
-                    <div class="form-group">
+                    <div class="form-group my-1">
                         <label>Nome do usuário</label>
                         <input type="text" name="username"
                             class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
@@ -122,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php echo $username_err; ?>
                         </span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-2">
                         <label>Senha</label>
                         <input type="password" name="password"
                             class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
@@ -131,14 +129,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Entrar">
+                        <input type="submit" class="btn btn-primary my-3" value="Entrar">
                     </div>
                     <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
                 </form>
             </div>
         </div>
+        <div id="background"></div>
     </main>
 </body>
-<script src="assets/js/jquery-3.7.1.slim.min"></script>
-
+<script src="assets\bootstrap\js\bootstrap.bundle.min.js"></script>
 </html>

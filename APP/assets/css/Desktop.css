@@ -91,6 +91,7 @@ header {
   font-weight: 100;
   position: absolute;
   top: 10px;
+  z-index: 100;
 }
 
 .nav-link {
@@ -114,10 +115,13 @@ header {
   background-position: center;
   background-size: cover;
   margin-left: 20px;
+  z-index: 101;
 }
+
 
 .btns{
   margin-right: 20px;
+  z-index: 101;
 }
 
 /*COMEÇO DA PAGINA*/
