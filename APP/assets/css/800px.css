@@ -1,3 +1,9 @@
+@media screen and (max-width: 1005px) and (min-width: 801px){
+    .user_name{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
 
     .slide-container {

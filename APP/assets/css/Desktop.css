@@ -70,7 +70,6 @@ header {
   width: 100%;
   position: fixed;
   z-index: 100;
-  padding: 0px 20px;
   box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
 }
 
@@ -80,14 +79,17 @@ header {
 }
 
 .nav-header {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 20px;
-  margin-left: 30px;
+  position: absolute;
+  top: 10px;
 }
 
 .nav-link {
-  margin-right: 20px;
+  padding-right: 20px;
 }
 
 .menu-content {
@@ -106,6 +108,11 @@ header {
   height: 50px;
   background-position: center;
   background-size: cover;
+  margin-left: 20px;
+}
+
+.btns{
+  margin-right: 20px;
 }
 
 /*COMEÇO DA PAGINA*/

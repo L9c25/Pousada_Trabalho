@@ -6,7 +6,7 @@
 		<a href="" class="nav-link">reservas</a>
 		<a href="" class="nav-link">suporte</a>
 	</nav>
-	<span>
+	<span class="btns">
 		<span class="user_name">Olá !
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>

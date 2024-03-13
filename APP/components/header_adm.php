@@ -8,12 +8,12 @@
 		<!-- link exclusiva para adms -->
 		<a href="test2.php" class="nav-link-last" id="adm">CMD</a>
 	</nav>
-	<span>
+	<span class="btns">
 		<span class="user_name">Olá !
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
-			<a href="logout.php" style="padding-left: 1em;">
+			<a href="logout.php">
 				<i class="fa fa-chevron-left"></i>
 			</a>
 		</i>
