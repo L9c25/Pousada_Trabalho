@@ -4,7 +4,6 @@
         <h1>HOTEL CLUB</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
             dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
-        <a href="">NOSSOS SERVIÇOS</a>
     </div>
 </main>
 
@@ -132,9 +131,9 @@
 
         </div>
     </div>
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
+    <!-- <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div> -->
+    <div class="swiper-pagination"></div> 
 </div>
 
 
@@ -144,7 +143,7 @@
 <!-- GALERIA DE FOTOS DA POUSADA -->
 
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas">nossas fotos internas</h2>
+    <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda
         unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.
     </p>

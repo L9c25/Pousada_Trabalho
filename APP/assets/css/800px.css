@@ -205,6 +205,38 @@
             width: 100%;
         }
 
+        .rodape {
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .links-rodape {
+            font-size: .9em;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .box-links-rodape {
+            padding: 0px;
+        }
+
+        .container-links {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-links-1, .container-links-2 {
+            width: 100%;
+            justify-content: space-between;    
+        }
+
+        .mapa-rodape {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
 /*Inicio da pagina mobile*/
 
 }
