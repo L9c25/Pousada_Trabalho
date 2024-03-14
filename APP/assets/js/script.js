@@ -30,3 +30,26 @@ const navBar = document.querySelector(".header-mobile"),
         navBar.classList.remove("open");
       })
       );
+
+      let isDragging = false;
+    let startY;
+    let startScrollTop;
+
+    function startDrag(event) {
+      isDragging = true;
+      startY = event.touches[0].clientY;
+      startScrollTop = event.target.scrollTop;
+      document.addEventListener('touchmove', drag);
+    }
+
+    function stopDrag() {
+      isDragging = false;
+      document.removeEventListener('touchmove', drag);
+    }
+
+    function drag(event) {
+      if (isDragging) {
+        const delta = event.touches[0].clientY - startY;
+        event.target.scrollTop = startScrollTop - delta;
+      }
+    }

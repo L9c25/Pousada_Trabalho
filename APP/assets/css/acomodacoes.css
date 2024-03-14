@@ -245,6 +245,7 @@ a {
     display: flex;
     width: 40%;
     padding: 30px;
+    height: 230px;
     margin-right: 40px;
     flex-direction: column;
     background-color: var(--main-bg-color);
@@ -269,8 +270,88 @@ a {
     /* Estilos do input */
     margin-right: 5px; /* Adiciona um espaço entre o input e o texto */
     background-color: #2a074e;
+    color: var(--dark-bg-color);
+  }
+
+  .btn-filtro {
+    border-radius: 20px;
+    background-color: var(--opaca-bg-color);
+    border: none;
+    height: 40px;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+  }
+
+  .btn-filtro:hover {
+    background-color: var(--second-bg-color);
+    color: white;
   }
 
   .cx-checkbox{
     background-color: var(--second-bg-color);
   }
+
+  /* card das acomodações */
+
+  .scrollable-div {
+    max-height: 60vh; /* Altura máxima da div */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+    border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+    padding: 10px; /* Adiciona um espaço interno */
+    border: none;
+  }
+
+  .scrollable-div::-webkit-scrollbar {
+    width: 30px; /* largura da scrollbar */
+  }
+  
+  /* Estilizando o polegar da scrollbar */
+  .scrollable-div::-webkit-scrollbar-thumb {
+    background-color: var(--opaca-bg-color); /* cor do polegar */
+    border-radius: 5px; /* borda arredondada */
+  }
+  
+  /* Estilizando a área de fundo da scrollbar */
+  .scrollable-div::-webkit-scrollbar-track {
+    background-color: var(--main-bg-color); /* cor de fundo */
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid var(--dark-bg-color);
+    border-radius: 20px;
+    height: 150px;
+    color: var(--dark-bg-color);
+  }
+
+  .img-card {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../imagens/ap-1.jpg);
+    width: 60%;
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .txt-box-card-acomodacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .desc-card-acomodacao {
+    font-size: .7em;
+    margin-bottom: 10px;
+  }
+
+  .valor-acomodacao {
+    font-size: 1.5em;
+  }
+

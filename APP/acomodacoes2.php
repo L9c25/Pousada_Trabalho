@@ -113,13 +113,13 @@ require_once "./controllers/aptController.php"
                 <input class="cx-checkbox" type="checkbox" name="vista_praia"> Vista para a praia
                 </label>
                 <!-- Adicione mais opções conforme necessário -->
-                <input type="submit" value="Filtrar">
+                <input class="btn-filtro" type="submit" value="Filtrar">
             </form>
         </div>
 
-        <div class="carrosel-acomodacoes">
+        <div class="scrollable-div" onmousedown="startDrag(event)" onmouseup="stopDrag()" ontouchstart="startDrag(event)" ontouchend="stopDrag()">
             <div class="card">
-                <picture></picture>
+                <picture class="img-card"></picture>
                 <div class="txt-box-card-acomodacao">
                     <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
                     <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
@@ -127,6 +127,61 @@ require_once "./controllers/aptController.php"
                     <R1 class="valor-acomodacao">R$300,00</R1>
                 </div>
             </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+            <div class="card">
+                <picture class="img-card"></picture>
+                <div class="txt-box-card-acomodacao">
+                    <h2 class="acomodacao-title">Lorem ipsum dolor</h2>
+                    <p class="desc-card-acomodacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro beatae eaque aspernatur ex facilis sequi ab repudiandae veniam natus voluptate
+                        , numquam illum autem distinctio! Nesciunt ducimus ex quasi iusto.</p>
+                    <R1 class="valor-acomodacao">R$300,00</R1>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

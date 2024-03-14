@@ -257,6 +257,28 @@
         margin-bottom: 40px;
     }
 
-    /*Inicio da pagina mobile*/
+    /*acomodacoes*/
+
+    #seção-acomodacoes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 130px;
+    }
+
+    .acomodacoes-container {
+        flex-direction: column;
+    }
+
+    .scrollable-div {
+        max-height: 700px; /* Altura máxima da div */
+        overflow-y: auto; /* Habilita a rolagem vertical */
+        border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+        padding: 10px; /* Adiciona um espaço interno */
+    }
+
+    
+
 
 }
