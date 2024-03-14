@@ -1,20 +1,20 @@
 <?php
-// Inicia a sessão
-session_start();
+    // Inicia a sessão
+    session_start();
 
-// Verifica se a variável de sessão está definida
-if (!isset($_SESSION['username'])) {
-    // Redireciona o usuário para a página de login ou outra página de sua escolha
-    header("Location: login.php");
-    // Termina o script para garantir que o redirecionamento funcione corretamente
-    exit();
-}
+    // Verifica se a variável de sessão está definida
+    if (!isset($_SESSION['username'])) {
+        // Redireciona o usuário para a página de login ou outra página de sua escolha
+        header("Location: login.php");
+        // Termina o script para garantir que o redirecionamento funcione corretamente
+        exit();
+    }
 
-// Incluir arquivo de conexão com o banco
-require_once "./config/connect.php";
-require_once "./controllers/aptController.php"
+    // Incluir arquivo de conexão com o banco
+    require_once "./config/connect.php";
+    require_once "./controllers/aptController.php"
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
