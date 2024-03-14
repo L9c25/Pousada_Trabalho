@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-width: 800px) and (min-width: 351px) {
+@media screen and (max-width: 850px) and (min-width: 351px) {
 
     .slide-container {
         z-index: 9;
@@ -33,6 +33,10 @@
         justify-content: space-between;
         box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
         z-index: 1000;
+    }
+
+    .btn-reserva-mobile {
+        background-color: var(--main-bg-color);
     }
 
     .overlay-header {

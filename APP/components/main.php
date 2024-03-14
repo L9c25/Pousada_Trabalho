@@ -74,7 +74,7 @@
                 <option value="2">2</option>
             </select>
 
-            <input type="submit" value="Reservar">
+            <input class="btn-reserva-mobile" type="submit" value="Reservar">
         </form>
     </div>
 </div>
