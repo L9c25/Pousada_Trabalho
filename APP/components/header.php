@@ -4,7 +4,8 @@
 		<a href="" class="nav-link">localização</a>
 		<a href="" class="nav-link">promoções</a>
 		<a href="acomodacoes2.php" class="nav-link">reservas</a>
-		<a href="" class="nav-link">suporte</a>
+		<!-- Linkado -->
+		<a href="./acomodacoes2.php" class="nav-link">suporte</a>
 	</nav>
 	<span class="btns">
 		<span class="user_name">Olá !

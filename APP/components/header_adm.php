@@ -4,7 +4,8 @@
 		<a href="" class="nav-link">localização</a>
 		<a href="" class="nav-link">promoções</a>
 		<a href="" class="nav-link">reservas</a>
-		<a href="" class="nav-link">suporte</a>
+		<!-- Linkado -->
+		<a href="./acomodacoes2.php" class="nav-link">suporte</a>
 		<!-- link exclusiva para adms -->
 		<a href="test2.php" class="nav-link-last" id="adm">CMD</a>
 	</nav>
