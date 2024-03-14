@@ -3,7 +3,7 @@
 	<nav class="nav-header" id="desktop">
 		<a href="" class="nav-link">localização</a>
 		<a href="" class="nav-link">promoções</a>
-		<a href="" class="nav-link">reservas</a>
+		<a href="acomodacoes2.php" class="nav-link">reservas</a>
 		<a href="" class="nav-link">suporte</a>
 	</nav>
 	<span class="btns">
