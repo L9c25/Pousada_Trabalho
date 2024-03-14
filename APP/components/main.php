@@ -1,7 +1,7 @@
 <!-- INICIO DA PAGINA -->
 <main>
     <div class="txt-box-main">
-        <h1>HOTEL CLUB</h1>
+        <h1>TWO DOORS</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
             dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
     </div>
