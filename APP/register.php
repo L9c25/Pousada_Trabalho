@@ -101,11 +101,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/loginDesktop.css">
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
+
+
     <link rel="stylesheet" href="assets/css/loginmobile.css">
-    <link rel="stylesheet" href="assets/js/bootstrap/jquery-3.7.1.slim.min">
-    <link rel="stylesheet" href="assets/js/bootstrap/bootstrap.min.js">
-    <link rel="stylesheet" href="assets/js/bootstrap/popper.min.js">
+    <link rel="stylesheet" href="assets/css/loginDesktop.css">
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
@@ -132,14 +132,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                         <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                     </div>
-                    <div class="form-group" id="btn-group">
+                    <div class="form-group d-inline" id="btn-group">
                         <input type="submit" class="btn btn-primary" value="Criar Conta">
                         <input type="reset" class="btn btn-secondary ml-2" value="Apagar Dados">
                     </div>
-                    <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
+                    <p class="mt-4">Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
                 </form>
             </div>
-            <div id="backgroud"></div>
+            <div id="background"></div>
 
     </main>   
 </body>

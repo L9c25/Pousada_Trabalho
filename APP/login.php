@@ -94,8 +94,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
-    <link rel="stylesheet" href="assets\css\loginmobile.css">
     <link rel="stylesheet" href="assets\css\loginDesktop.css">
+    <link rel="stylesheet" href="assets\css\loginmobile.css">
 </head>
 
 <body>
