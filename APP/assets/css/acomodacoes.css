@@ -7,10 +7,10 @@
 /*PALETA DE CORES*/
 
 :root {
-  --main-bg-color: #7E5EF2;
-  --second-bg-color: #A38DF2;
-  --opaca-bg-color: #B3B6F2;
-  --dark-bg-color:#2a074e;
+  --main-bg-color: #ffffff;
+  --second-bg-color: white;
+  --opaca-bg-color: #dbddff;
+  --dark-bg-color:#0a0427;
 }
 
 a {
@@ -96,6 +96,7 @@ a {
 }
 
 .filtro-box {
+  color: var(--dark-bg-color);
   display: flex;
   align-items: center;
 }
@@ -248,6 +249,7 @@ a {
     flex-direction: column;
     background-color: var(--main-bg-color);
     border-radius: 20px;
+    border: 1px solid var(--dark-bg-color);
   }
 
   .form-acomodacao {
@@ -267,7 +269,7 @@ a {
   .check-box {
     padding-bottom: 20px;
     font-size: 1.3em;
-    color: white;
+    color: var(--dark-bg-color);
   }
 
   input[type="checkbox"] {
