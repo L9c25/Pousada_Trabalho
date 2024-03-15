@@ -3,7 +3,7 @@
 session_start();
 
 // Verifique se o usuário já está logado, em caso afirmativo, redirecione-o para a página principal
-if (isset($_SESSION["logado"]) && $_SESSION["logado"] === true) {
+if (isset ($_SESSION["logado"]) && $_SESSION["logado"] === true) {
     header("location: index.php");
     exit;
 }
@@ -19,21 +19,21 @@ $username_err = $password_err = $login_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifique se o nome de usuário está vazio
-    if (empty(trim($_POST["username"]))) {
+    if (empty (trim($_POST["username"]))) {
         $username_err = "Por favor, insira o nome de usuário.";
     } else {
         $username = trim($_POST["username"]);
     }
 
     // Verifique se a senha está vazia
-    if (empty(trim($_POST["password"]))) {
+    if (empty (trim($_POST["password"]))) {
         $password_err = "Por favor, insira sua senha.";
     } else {
         $password = trim($_POST["password"]);
     }
 
     // Validar credenciais
-    if (empty($username_err) && empty($password_err)) {
+    if (empty ($username_err) && empty ($password_err)) {
         // Prepare uma declaração selecionada
         $sql = "SELECT id, username, senha FROM usuario WHERE username = :username";
 
@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Por favor, preencha os campos para fazer o login.</p>
                 <?php
                 // exibe uma caixa indicando erro no login
-                if (!empty($login_err)) {
+                if (!empty ($login_err)) {
                     echo '<div class="alert alert-danger">' . $login_err . '</div>';
                 }
                 ?>
@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-group">
                         <label>Nome do usuário</label>
                         <input type="text" name="username"
-                            class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                            class="form-control <?php echo (!empty ($username_err)) ? 'is-invalid' : ''; ?>"
                             value="<?php echo $username; ?>">
                         <span class="invalid-feedback">
                             <?php echo $username_err; ?>
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-group">
                         <label>Senha</label>
                         <input type="password" name="password"
-                            class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                            class="form-control <?php echo (!empty ($password_err)) ? 'is-invalid' : ''; ?>">
                         <span class="invalid-feedback">
                             <?php echo $password_err; ?>
                         </span>
@@ -139,4 +139,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
 </body>
+
 </html>

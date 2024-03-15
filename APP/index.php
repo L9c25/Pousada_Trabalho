@@ -27,18 +27,19 @@ require_once "./controllers/aptController.php"
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- import icones-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- import bootstrap css -->
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
-    
+
     <!-- Import swiper css -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    
+
     <!-- import CSS date picker -->
     <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
-    
+
     <!-- CSS by me -->
     <link rel="stylesheet" href="assets/css/Desktop.css">
     <link rel="stylesheet" href="assets/css/800px.css">

@@ -34,10 +34,10 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
-        <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="assets/css/acomodacoes.css">
-        <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/acomodacoes.css">
+    <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
     <title>Acomodações</title>
 </head>
 
@@ -49,8 +49,10 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
         <form action="quartos.php" method="POST" class="form-reserva">
 
             <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" value="<?php echo $_POST["start"]?>" name="start" placeholder="CHEK-IN" required />
-                <input class="input-btn" type="text" value="<?php echo $_POST['end']?>" name="end" placeholder="CHEK-OUT" required />
+                <input class="input-btn" type="text" value="<?php echo $_POST["start"] ?>" name="start"
+                    placeholder="CHEK-IN" required />
+                <input class="input-btn" type="text" value="<?php echo $_POST['end'] ?>" name="end"
+                    placeholder="CHEK-OUT" required />
             </div>
 
             <span class="space"></span>
@@ -92,9 +94,10 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                 <h2>Reserva de Hotel</h2>
 
                 <div class="input-daterange" id="datepicker">
-                    <input class="input-btn" type="text" value="<?php echo $_POST["start"]?>" name="start" placeholder="CHEK-IN"
-                        style="margin-right: 0.4em;" />
-                    <input class="input-btn" type="text" value="<?php echo $_POST['end']?>" name="end" placeholder="CHEK-OUT" />
+                    <input class="input-btn" type="text" value="<?php echo $_POST["start"] ?>" name="start"
+                        placeholder="CHEK-IN" style="margin-right: 0.4em;" />
+                    <input class="input-btn" type="text" value="<?php echo $_POST['end'] ?>" name="end"
+                        placeholder="CHEK-OUT" />
                 </div>
 
                 <label for="num_adultos">Número de Adultos (até 2):</label>
@@ -156,10 +159,11 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                 foreach ($dados as $apt):
                     ?>
 
-                    <?php $val = $intervalo * $apt->getPreco()?>
+                    <?php $val = $intervalo * $apt->getPreco() ?>
 
                     <div class="card">
-                        <picture class="img-card" style="background-image: url(./assets/imagens/<?php echo $apt->getImg1() ?>.jpg);"></picture>
+                        <picture class="img-card"
+                            style="background-image: url(./assets/imagens/<?php echo $apt->getImg1() ?>.jpg);"></picture>
                         <div class="txt-box-card-acomodacao">
                             <h2 class="acomodacao-title">
                                 <?php echo $apt->getNome() ?><span
@@ -173,9 +177,15 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                             <p class="desc-card-acomodacao">
                                 <?php echo $apt->getDescricao() ?>
                             </p>
-                            <R1><?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite</R1>
-                            <R1 class="valor-acomodacao"><?php echo number_format($val, 2, ",", ".")?> Total
-                                <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button class="btn btn-success">ID-<?php echo $apt->getId()?></button></a>
+                            <R1>
+                                <?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite
+                            </R1>
+                            <R1 class="valor-acomodacao">
+                                <?php echo number_format($val, 2, ",", ".") ?> Total
+                                <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button
+                                        class="btn btn-success">ID-
+                                        <?php echo $apt->getId() ?>
+                                    </button></a>
                             </R1>
                         </div>
                     </div>
@@ -198,8 +208,8 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/bootstra/js/popper.min.js"></script>
     <script>
-        $("#num_adultos").val(<?php echo $qtd_adulto?>).change();
-        $("#num_criancas").val(<?php echo $qtd_kid?>).change();
+        $("#num_adultos").val(<?php echo $qtd_adulto ?>).change();
+        $("#num_criancas").val(<?php echo $qtd_kid ?>).change();
 
 
         $('.input-daterange').datepicker({

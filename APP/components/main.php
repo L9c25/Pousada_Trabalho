@@ -57,9 +57,9 @@
 
             <div class="input-daterange" id="datepicker">
                 <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
-                    style="margin-right: 0.4em;"/>
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT"/>
-            </div> 
+                    style="margin-right: 0.4em;" />
+                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />
+            </div>
 
             <label for="num_adultos">Número de Adultos (até 2):</label>
             <select id="num_adultos" name="num_adultos" required>
@@ -81,7 +81,8 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas em promoção</h2>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+    em promoção</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -132,7 +133,7 @@
     </div>
     <!-- <div class="swiper-button-next swiper-navBtn"></div>
     <div class="swiper-button-prev swiper-navBtn"></div> -->
-    <div class="swiper-pagination"></div> 
+    <div class="swiper-pagination"></div>
 </div>
 
 
