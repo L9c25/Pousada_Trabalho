@@ -46,11 +46,11 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
     <?php include './components/header.php' ?>
 
     <div class="filtro-reserva">
-        <form action="acomodacoes.php" method="post" class="form-reserva">
+        <form action="quartos.php" method="POST" class="form-reserva">
 
             <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" outl required />
-                <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" required />
+                <input class="input-btn" type="text" value="<?php echo $_POST["start"]?>" name="start" placeholder="CHEK-IN" required />
+                <input class="input-btn" type="text" value="<?php echo $_POST['end']?>" name="end" placeholder="CHEK-OUT" required />
             </div>
 
             <span class="space"></span>
@@ -88,13 +88,13 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 
     <div id="formulario-overlay" onclick="fecharFormulario()">
         <div id="formulario-container" onclick="event.stopPropagation()">
-            <form action="acomodacoes.php" method="post">
+            <form action="quartos.php" method="POST">
                 <h2>Reserva de Hotel</h2>
 
                 <div class="input-daterange" id="datepicker">
-                    <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
+                    <input class="input-btn" type="text" value="<?php echo $_POST["start"]?>" name="start" placeholder="CHEK-IN"
                         style="margin-right: 0.4em;" />
-                    <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />
+                    <input class="input-btn" type="text" value="<?php echo $_POST['end']?>" name="end" placeholder="CHEK-OUT" />
                 </div>
 
                 <label for="num_adultos">Número de Adultos (até 2):</label>
@@ -175,7 +175,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                             </p>
                             <R1><?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite</R1>
                             <R1 class="valor-acomodacao"><?php echo number_format($val, 2, ",", ".")?> Total
-                                <span><button class="btn btn-success">oi</button></span>
+                                <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button class="btn btn-success">ID-<?php echo $apt->getId()?></button></a>
                             </R1>
                         </div>
                     </div>
@@ -198,6 +198,10 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/bootstra/js/popper.min.js"></script>
     <script>
+        $("#num_adultos").val(<?php echo $qtd_adulto?>).change();
+        $("#num_criancas").val(<?php echo $qtd_kid?>).change();
+
+
         $('.input-daterange').datepicker({
             language: "pt-BR",
             clearBtn: true,
@@ -206,6 +210,10 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
             startDate: '-0d',
             endDate: '+2m'
         });
+
+
+
+
     </script>
 </body>
 
