@@ -99,12 +99,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Import Bootstrap -->
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+
+    <!-- Import css By me -->
     <link rel="stylesheet" href="assets/css/loginDesktop.css">
     <link rel="stylesheet" href="assets/css/loginmobile.css">
-    <link rel="stylesheet" href="assets/js/bootstrap/jquery-3.7.1.slim.min">
-    <link rel="stylesheet" href="assets/js/bootstrap/bootstrap.min.js">
-    <link rel="stylesheet" href="assets/js/bootstrap/popper.min.js">
+    
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }

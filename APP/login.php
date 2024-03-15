@@ -91,12 +91,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Import Bootstrap -->
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+
+    <!-- Import Css by me -->
     <link rel="stylesheet" href="assets/css/loginDesktop.css">
     <link rel="stylesheet" href="assets/css/loginmobile.css">
-    <link rel="stylesheet" href="assets/js/bootstrap/jquery-3.7.1.slim.min">
-    <link rel="stylesheet" href="assets/js/bootstrap/bootstrap.min.js">
-    <link rel="stylesheet" href="assets/js/bootstrap/popper.min.js">
 
 </head>
 
@@ -139,6 +139,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
 </body>
-<script src="assets/js/jquery-3.7.1.slim.min"></script>
-
 </html>
