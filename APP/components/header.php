@@ -12,7 +12,7 @@
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
-			<a href="logout.php">
+			<a href="logout.php" style="color: black;">
 				<i class="fa fa-chevron-left"></i>
 			</a>
 		</i>
@@ -25,7 +25,7 @@
 		<div class="menu-content">
 			<a href="" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
-			<a href="" class="nav-link">reservas</a>
+			<a href="./acomodacoes2.php" class="nav-link">reservas</a>
 			<a href="" class="nav-link">suporte</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<a href="" class="nav-link" id="nav-link-last">
@@ -33,7 +33,7 @@
 				<i class="fa-solid fa-user" id="icon-login" style="padding-left: 10px;"></i>
 			</a>
 		</div>
-			<a href="logout.php" class="nav-link-logout">Logout<i class="fa fa-chevron-left" style="color: #ff3434; margin-left: 10px;" ></i>
+			<a href="logout.php" class="nav-link-logout">Logout<i class="fa fa-chevron-left" style="color: black; margin-left: 10px;" ></i>
 			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>

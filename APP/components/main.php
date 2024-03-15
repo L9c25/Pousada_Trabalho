@@ -81,8 +81,7 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas
-    mais populares</h2>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas em promoção</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">

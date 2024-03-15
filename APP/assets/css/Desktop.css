@@ -7,10 +7,10 @@
 /*PALETA DE CORES*/
 
 :root {
-  --main-bg-color: #7E5EF2;
-  --second-bg-color: #A38DF2;
-  --opaca-bg-color: #B3B6F2;
-  --dark-bg-color:#2a074e;
+  --main-bg-color: #ffffff;
+  --second-bg-color: white;
+  --opaca-bg-color: #dbddff;
+  --dark-bg-color:#0a0427;
 }
 
 a {
@@ -28,21 +28,11 @@ ul {
   content: "";
 }
 
-.espacamento>span {
-  margin-top: 40px;
-  width: 80%;
-  height: 1px;
-  background-color: #0808077c;
-  align-self: center;
-}
-
 * {
   margin: 0;
   padding: 0;
   font-family: "Geologica", sans-serif;;
   -webkit-tap-highlight-color: transparent;
-  scrollbar-width: thin;
-  scrollbar-color: #808080 #262626;
 }
 
 a {
@@ -69,8 +59,8 @@ header {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  color: rgb(255, 255, 255);
-  background-color: var(--main-bg-color);
+  color: var(--dark-bg-color);
+  background-color: white;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -209,7 +199,7 @@ main {
   justify-content: space-around;
   align-items: center;
   top: 20px;
-  color: white;
+  color: var(--dark-bg-color);
 }
 
 .filtro-box {
@@ -222,15 +212,13 @@ main {
   justify-content: center;
   align-items: center;
   background-color: var(--opaca-bg-color);
-  color: white;
-  text-transform: uppercase;
+  color: #757575;
+  font-family: "Geologica", sans-serif;
   text-align: center;
   padding: 10px;
   border: none;
   width: 110px;
   border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
   cursor: pointer;
   transition: all ease-in-out .2s;
 }
@@ -240,7 +228,7 @@ main {
   content: "";
   background-color: var(--opaca-bg-color);
   width: 1px;
-  height: 50px;
+  height: 80px;
 }
 
 .num-crianca,
@@ -250,7 +238,7 @@ main {
   background-color: var(--opaca-bg-color);
   border-radius: 10px;
   width: 45px;
-  color: white;
+  color: #757575;
   outline: none;
 }
 
@@ -344,7 +332,7 @@ main {
 .input-btn{
   width: 10em;
   font-size: 16px;
-  color: #FFF;
+  color: #757575;
   padding: 8px 16px;
   background-color: var(--opaca-bg-color);
   border: none;
@@ -600,13 +588,14 @@ main {
 }
 
 .user_name {
-  margin-right: 1em;
+  margin-right: 8px;
   color: white;
   font-size: 20px;
 }
 
 #name {
-  color: #ead2ff;
+  color: var(--dark-bg-color);
+
 }
 
 table,
@@ -620,7 +609,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(13deg, var(--main-bg-color)  50%,  var(--second-bg-color) 100%);
+  background-color: var(--dark-bg-color);
   margin-top: 90px;
   padding: 40px 0px;
 }
@@ -660,7 +649,7 @@ footer {
 }
 
 .box-links-rodape > strong {
-  color: var(--dark-bg-color);
+  color: white;
   font-size: 1.1em;
 }
 
@@ -699,10 +688,11 @@ footer {
 
 .codigo-promo {
   margin-top: 60px;
+  margin-left: 25px;
 }
 
 .codigo-promo > h2 {
-  color: var(--dark-bg-color);
+  color: white;
 }
 
 .input-promo {
@@ -724,7 +714,11 @@ footer {
 }
 
 #btn-promo {
-  background-color: #2a074e;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--opaca-bg-color);
+  color: #757575;
   height: 40px;
   border-radius: 20px;
 }

@@ -26,8 +26,6 @@ a {
     padding: 0;
     font-family: "Geologica", sans-serif;;
     -webkit-tap-highlight-color: transparent;
-    scrollbar-width: thin;
-    scrollbar-color: #808080 #262626;
   }
   
   a {
@@ -245,7 +243,7 @@ a {
     display: flex;
     width: 40%;
     padding: 30px;
-    height: 230px;
+    max-height: 240px;
     margin-right: 40px;
     flex-direction: column;
     background-color: var(--main-bg-color);
@@ -259,6 +257,12 @@ a {
     flex-direction: column;
   }
 
+  .container-check-1, .container-check-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  }
 
   .check-box {
     padding-bottom: 20px;
@@ -302,7 +306,7 @@ a {
   }
 
   .scrollable-div::-webkit-scrollbar {
-    width: 30px; /* largura da scrollbar */
+    width: 10px; /* largura da scrollbar */
   }
   
   /* Estilizando o polegar da scrollbar */
@@ -341,14 +345,26 @@ a {
 
   .txt-box-card-acomodacao {
     display: flex;
+    height: 90%;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 0px 10px;
+
+  }
+
+  .acomodacao-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 5px;
   }
 
   .desc-card-acomodacao {
-    font-size: .7em;
+    font-size: .5em;
     margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: .6em;
   }
 
   .valor-acomodacao {

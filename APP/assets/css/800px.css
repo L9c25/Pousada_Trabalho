@@ -159,6 +159,10 @@
         z-index: 9999;
     }
 
+    .codigo-promo {
+        margin-left: 0px;
+    }
+
     #formulario-container {
         display: none;
         position: absolute;

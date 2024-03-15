@@ -103,6 +103,11 @@
         width: 100%;
         flex-direction: column;
         height: 100%;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 0px;
     }
 
     .nav-link {
@@ -272,13 +277,35 @@
     }
 
     .scrollable-div {
-        max-height: 700px; /* Altura máxima da div */
+        max-height: 50vh; /* Altura máxima da div */
         overflow-y: auto; /* Habilita a rolagem vertical */
         border: 1px solid #ccc; /* Adiciona uma borda para visualização */
         padding: 10px; /* Adiciona um espaço interno */
     }
 
-    
+    #secao-acomodacoes {
+        display: flex;
+        align-items: center;
+    }
+
+    .container-check-1, .container-check-2 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .form-acomodacao {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .filtro-acomodacao {
+        width: 88%;
+        height: auto;
+        margin: 0px 0px 10px 0px;
+    }
 
 
 }
