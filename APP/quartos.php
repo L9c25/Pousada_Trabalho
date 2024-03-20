@@ -159,7 +159,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                 foreach ($dados as $apt):
                     ?>
 
-                    <?php $val = $intervalo * $apt->getPreco() ?>
+                    <?php $val = calc($intervalo, $qtd_adulto, $qtd_kid, $apt->getPreco()) ?>
 
                     <div class="card">
                         <picture class="img-card"
@@ -181,7 +181,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                                 <?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite
                             </R1>
                             <R1 class="valor-acomodacao">
-                                <?php echo number_format($val, 2, ",", ".") ?> Total
+                                <?php echo $val?>-----por <?php echo $intervalo?>/noites
                                 <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button
                                         class="btn btn-success">ID-
                                         <?php echo $apt->getId() ?>
@@ -195,6 +195,8 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 
             </div>
         </div>
+
+        <a href="index.php" style="color: black;">Voltar</a>
     </section>
 
 
