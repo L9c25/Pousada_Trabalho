@@ -194,9 +194,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 
 
             </div>
-        </div>
-
-        <a href="index.php" style="color: black;">Voltar</a>
+                </div>
     </section>
 
 
