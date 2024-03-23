@@ -1,19 +1,10 @@
-@media screen and (max-width: 350px) {
-
-    .box-cod {
-        display: flex;
-        flex-direction: column;
+@media screen and (max-width: 1005px) and (min-width: 801px) {
+    .user_name {
+        display: none;
     }
+}
 
-    #btn-promo {
-        background-color: #2a074e;
-        height: 100%;
-        border-radius: 20px;
-    }
-
-    .input-promo{
-        margin: 0px 0px 10px 0px;
-    }
+@media screen and (max-width: 850px) and (min-width: 0px) {
 
     .slide-container {
         z-index: 9;
@@ -40,8 +31,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
         z-index: 1000;
+        color: black;
+    }
+
+    .btn-reserva-mobile {
+        background-color: var(--main-bg-color);
     }
 
     .overlay-header {
@@ -79,7 +75,7 @@
     .nav-header {
         position: fixed;
         top: 0;
-        left: -150%;
+        left: -100%;
         height: 100vh;
         width: 260px;
         padding: 20px 16px;
@@ -108,6 +104,11 @@
         width: 100%;
         flex-direction: column;
         height: 100%;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 0px;
     }
 
     .nav-link {
@@ -191,15 +192,16 @@
     input[type="submit"] {
         width: 100%;
         padding: 10px;
-        background-color: #111111;
-        color: #fff;
+        background-color: var(--main-bg-color);
+        color: var(--dark-bg-color);
         border: none;
         border-radius: 4px;
         cursor: pointer;
     }
 
     input[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: #e9e9e9;
+        color: black;
     }
 
     .cx-txt-galeria>p {
@@ -232,7 +234,6 @@
     .rodape {
         align-items: center;
         flex-direction: column-reverse;
-        padding: 0 1em;
     }
 
     .links-rodape {
@@ -263,5 +264,103 @@
         margin-bottom: 40px;
     }
 
-    /*Inicio da pagina mobile*/
+    /*acomodacoes*/
+
+    #seção-acomodacoes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 100px;
+    }
+
+    .acomodacoes-container {
+        flex-direction: column;
+    }
+
+    .scrollable-div {
+        max-height: 68vh; /* Altura máxima da div */
+        overflow-y: auto; /* Habilita a rolagem vertical */
+        border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+        padding: 10px; /* Adiciona um espaço interno */
+        overflow-x: hidden;
+    }
+
+    #secao-acomodacoes {
+        display: flex;
+        align-items: center;
+    }
+
+    .container-check-1, .container-check-2 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .form-acomodacao {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .filtro-acomodacao {
+        width: 100%;
+        height: auto;
+        margin: 0px 0px 10px 0px;
+        padding: 15px;
+    }
+
+    .check-box {
+        font-size: .7em;
+    }
+
+    .card {
+        height: 460px;
+        flex-direction: column;
+    }
+
+    .img-card {
+        height: 70%;
+        width: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .txt-box-card-acomodacao {
+        width: 100%;
+        height: 40%;
+        font-size: 1.2vh;
+        padding: 30px 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .valor-acomodacao {
+        display: flex;
+        padding: 0px;
+        font-size: 2em;
+    }
+
+    .acomodacao-title {
+        font-size: 2.3em;
+        margin: 0px;
+    }
+
+    .btn-success {
+        display: flex;
+        height: 20px;
+        align-items: center;
+    }
+
+    .desc-card-acomodacao {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+    #num-adultos {
+        background-color: var(--dark-bg-color);
+    }
+    
 }

@@ -10,7 +10,7 @@
 <!-- FILTRO DESKTOP -->
 
 <div class="filtro-reserva">
-    <form action="acomodacoes.php" method="post" class="form-reserva">
+    <form action="quartos.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
             <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" outl required />
@@ -52,7 +52,7 @@
 
 <div id="formulario-overlay" onclick="fecharFormulario()">
     <div id="formulario-container" onclick="event.stopPropagation()">
-        <form action="acomodacoes.php" method="post">
+        <form action="quartos.php" method="post">
             <h2>Reserva de Hotel</h2>
 
             <div class="input-daterange" id="datepicker">
