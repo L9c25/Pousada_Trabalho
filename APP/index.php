@@ -36,8 +36,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- CSS by me -->
-    <link rel="stylesheet" href="assets/css/Desktop.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/Desktop.css">
     <link rel="stylesheet" href="assets/css/800px.css">
     <link rel="stylesheet" href="assets/css/350px.css">
 
