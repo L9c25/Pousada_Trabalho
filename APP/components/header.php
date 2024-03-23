@@ -36,6 +36,4 @@
 			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>
-
-	<button id="id_user" hiden value="<?php echo $_SESSION["id"]?>"></button>
 </header>
