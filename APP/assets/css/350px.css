@@ -3,6 +3,7 @@
     .box-cod {
         display: flex;
         flex-direction: column;
+
     }
 
     #btn-promo {

@@ -17,7 +17,8 @@ class daoMysql implements AptDAO
 		$sql = $this->pdo->query("SELECT a.id,a.nome,a.preco,
 								a.descricao,a.disponivel, i.d0 AS img_1
 								FROM acomodacao a
-								JOIN imagens i on a.fk_img = i.id");
+								JOIN imagens i on a.fk_img = i.id
+								where disponivel = 0");
 
 		if ($sql->rowCount() > 0) {
 			$dados = $sql->fetchAll();
@@ -61,3 +62,4 @@ function calc($intervalo, $p_noite)
 	// retornando o valor da estadia
 	return $valorEstadia;
 }
+

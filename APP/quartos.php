@@ -20,8 +20,12 @@ $e_date = date_create($_POST['end']);
 $qtd_adulto = intval($_POST['num_adultos']);
 $qtd_kid = intval($_POST['num_criancas']);
 
+// Definindo o intervalo entre as datas
 $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
-
+// Corrigindo caso a pesoa reserve por 1 dia:
+if ($intervalo == 0){
+    $intervalo = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +34,22 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Sweetalert2 -->
+    <link rel="stylesheet" href="assets\Sweetalert2\sweetalert2.min.css">
 
-        <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
-        <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="assets/css/acomodacoes.css">
-        <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
-        <title>Acomodações</title>
+    <!-- CSS By me -->
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/acomodacoes.css">
+    <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
+    
+    <title>Acomodações</title>
 </head>
 
 <body>
@@ -49,9 +60,9 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
         <form action="quartos.php" method="POST" class="form-reserva">
 
             <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" value="<?php echo $_POST["start"] ?>" name="start"
+                <input class="input-btn start" type="text" value="<?php echo $_POST["start"] ?>" name="start"
                     placeholder="CHEK-IN" required />
-                <input class="input-btn" type="text" value="<?php echo $_POST['end'] ?>" name="end"
+                <input class="input-btn end" type="text" value="<?php echo $_POST['end'] ?>" name="end"
                     placeholder="CHEK-OUT" required />
             </div>
 
@@ -149,8 +160,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                 <input class="btn-filtro" type="submit" value="Filtrar">
             </div>
 
-            <div class="scrollable-div" onmousedown="startDrag(event)" onmouseup="stopDrag()"
-                ontouchstart="startDrag(event)" ontouchend="stopDrag()">
+            <div class="scrollable-div">
 
 
                 <?php
@@ -180,20 +190,22 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                                 <?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite
                             </R1>
                             <R1 class="valor-acomodacao">
-                                <?php echo $val?> por <?php echo $intervalo?> noite
-                                <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button
-                                        class="btn btn-success">ID-
-                                        <?php echo $apt->getId() ?>
-                                    </button></a>
+                                <?php echo $val ?> por
+                                <?php echo $intervalo ?> noite
+                                
+                                <button class="btn btn-success reservar" value="<?php echo $apt->getId();?>">
+                                
+                                ID- <?php echo $apt->getId();?>
+                                
+                                </button>
                             </R1>
                         </div>
                     </div>
                 <?php endforeach ?>
 
 
-
             </div>
-                </div>
+        </div>
     </section>
 
 
@@ -201,29 +213,27 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 
 
     <!-- Jquery -->
-    <script src="assets/bootstrap/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="assets\js\jquery-3.7.1.min.js"></script>
+    <!-- Sweetalert -->
+    <script src="assets\Sweetalert2\sweetalert2.all.min.js"></script>
     <!-- Datepicker &  Bootstrap -->
     <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/bootstra/js/popper.min.js"></script>
     <script>
         $("#num_adultos").val(<?php echo $qtd_adulto ?>).change();
         $("#num_criancas").val(<?php echo $qtd_kid ?>).change();
 
-
         $('.input-daterange').datepicker({
             language: "pt-BR",
             clearBtn: true,
-            autoclose: true,
+            autoclose: true,    
             format: "yyyy/mm/dd",
             startDate: '-0d',
             endDate: '+2m'
         });
-
-
-
-
     </script>
+
+    <Script src="assets\js\reservar.js"></Script>
 </body>
 
 </html>

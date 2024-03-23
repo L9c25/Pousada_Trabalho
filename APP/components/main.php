@@ -101,7 +101,7 @@
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
-                            <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>" class="name">
+                            <a class="name">
                                 <?php echo $apt->getNome() ?>
                             </a>
                         </div>
@@ -169,7 +169,7 @@
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
 <!-- Jquery -->
-<script src="assets/bootstrap/js/jquery-3.7.1.slim.min.js"></script>
+<script src="assets\js\jquery-3.7.1.min.js"></script>
 <!-- Datepicker &  Bootstrap -->
 <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
