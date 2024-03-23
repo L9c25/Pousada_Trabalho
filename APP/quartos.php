@@ -159,7 +159,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                 foreach ($dados as $apt):
                     ?>
 
-                    <?php $val = calc($intervalo, $qtd_adulto, $qtd_kid, $apt->getPreco()) ?>
+                    <?php $val = calc($intervalo, $apt->getPreco()) ?>
 
                     <div class="card">
                         <picture class="img-card"

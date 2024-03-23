@@ -50,32 +50,14 @@ class daoMysql implements AptDAO
 	}
 }
 
-function calc($intervalo, $qtd_ad, $qtd_kid, $p_noite)
+// Funçao que calcula o valor total da estadia
+function calc($intervalo, $p_noite)
 {
 	// Definindo as Variaveis
 	$ValBase = $p_noite * $intervalo;
 
-	$Acrecimo_Adult = 0;
-	$AcKid = 0;
-
-	// Adcional por 1 Adulto
-	if ($qtd_ad == 2) {
-		$Acrecimo_Adult = $p_noite * 0.1;
-	}
-
-	// Adcional por crianças
-	if ($qtd_kid == 1) {
-		$AcKid = ($p_noite * 0.2) * 0.5;
-	} else if ($qtd_kid == 2) {
-		$AcKid = (($p_noite * 0.2) * 0.5) * 2;
-	}
-
-
-	// Total da estadia
-	$Tot = ($ValBase + $Acrecimo_Adult + $AcKid);
-
 	// Formatando o valor da estadia
-	$valorEstadia = number_format($Tot, 2, ",", ".");
+	$valorEstadia = number_format($ValBase, 2, ",", ".");
 
 	// retornando o valor da estadia
 	return $valorEstadia;
