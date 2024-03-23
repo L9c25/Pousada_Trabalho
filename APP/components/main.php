@@ -57,9 +57,9 @@
 
             <div class="input-daterange" id="datepicker">
                 <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
-                    style="margin-right: 0.4em;"/>
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT"/>
-            </div> 
+                    style="margin-right: 0.4em;" />
+                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />
+            </div>
 
             <label for="num_adultos">Número de Adultos (até 2):</label>
             <select id="num_adultos" name="num_adultos" required>
@@ -74,15 +74,15 @@
                 <option value="2">2</option>
             </select>
 
-            <input type="submit" value="Reservar">
+            <input class="btn-reserva-mobile" type="submit" value="Reservar">
         </form>
     </div>
 </div>
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas
-    mais populares</h2>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+    em promoção</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -104,15 +104,15 @@
                             <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>" class="name">
                                 <?php echo $apt->getNome() ?>
                             </a>
-                            <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
                         </div>
+                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach"></i></span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
                                     R$
                                     <?php echo ($apt->getPreco() * 1.1) ?>
-                                </R1>
+                           </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-
+     
 
 
             <?php endforeach ?>
@@ -133,7 +133,7 @@
     </div>
     <!-- <div class="swiper-button-next swiper-navBtn"></div>
     <div class="swiper-button-prev swiper-navBtn"></div> -->
-    <div class="swiper-pagination"></div> 
+    <div class="swiper-pagination"></div>
 </div>
 
 
