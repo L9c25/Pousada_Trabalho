@@ -53,18 +53,3 @@ const navBar = document.querySelector(".header-mobile"),
         event.target.scrollTop = startScrollTop - delta;
       }
     }
-
-    const contents = document.querySelectorAll('.card');
-    let currentContentIndex = 0;
-
-    document.addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-        // Rola para baixo
-        currentContentIndex = Math.min(currentContentIndex + 1, contents.length - 1);
-      } else {
-        // Rola para cima
-        currentContentIndex = Math.max(currentContentIndex - 1, 0);
-      }
-
-      contents[currentContentIndex].scrollIntoView({ behavior: 'smooth' });
-    });

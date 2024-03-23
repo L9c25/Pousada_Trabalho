@@ -14,8 +14,8 @@
 			</span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
-			<a href="logout.php" style="color: black;">
-				<i class="fa fa-chevron-left"></i>
+			<a href="logout.php">
+				<i class="fa fa-chevron-left" class="logout"></i>
 			</a>
 		</i>
 	</span>

@@ -93,6 +93,8 @@ a {
   justify-content: space-around;
   align-items: center;
   color: white;
+  padding: 0px 10px;
+  border: 1px solid var(--dark-bg-color);
 }
 
 .filtro-box {
@@ -105,16 +107,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--opaca-bg-color);
+  background-color: var(--dark-bg-color);
   color: white;
   text-transform: uppercase;
   text-align: center;
   padding: 10px;
   border: none;
-  width: 10%;
+  width: 8%;
   border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
+  font-family: "Geologica", sans-serif;
+  font-size: .7em;
+  font-weight: 300;
   cursor: pointer;
   transition: all ease-in-out .2s;
 }
@@ -131,7 +134,7 @@ a {
 .num-adulto {
   width: 40px;
   border: none;
-  background-color: var(--opaca-bg-color);
+  background-color: var(--dark-bg-color);
   border-radius: 10px;
   width: 45px;
   color: white;
@@ -150,7 +153,7 @@ a {
     font-size: 16px;
     color: #FFF;
     padding: 8px 16px;
-    background-color: var(--opaca-bg-color);
+    background-color: var(--dark-bg-color);
     border: none;
     border-radius: 12px;
     border-style: none;
@@ -243,11 +246,12 @@ a {
   .filtro-acomodacao {
     display: flex;
     width: 40%;
+    height: 50%;
     padding: 30px;
-    max-height: 240px;
+    color: #FFF;
     margin-right: 40px;
     flex-direction: column;
-    background-color: var(--main-bg-color);
+    background-color: var(--dark-bg-color);
     border-radius: 20px;
     border: 1px solid var(--dark-bg-color);
   }
@@ -276,7 +280,10 @@ a {
     /* Estilos do input */
     margin-right: 5px; /* Adiciona um espaço entre o input e o texto */
     background-color: #2a074e;
-    color: var(--dark-bg-color);
+  }
+
+  .check-box {
+    color: white;
   }
 
   .btn-filtro {
@@ -289,7 +296,7 @@ a {
   }
 
   .btn-filtro:hover {
-    background-color: var(--second-bg-color);
+    background-color: #6ea1ff;
     color: white;
   }
 
@@ -300,7 +307,7 @@ a {
   /* card das acomodações */
 
   .scrollable-div {
-    max-height: 60vh; /* Altura máxima da div */
+    max-height: 70vh; /* Altura máxima da div */
     overflow-y: auto; /* Habilita a rolagem vertical */
     border: 1px solid #ccc; /* Adiciona uma borda para visualização */
     padding: 10px; /* Adiciona um espaço interno */
@@ -313,13 +320,13 @@ a {
   
   /* Estilizando o polegar da scrollbar */
   .scrollable-div::-webkit-scrollbar-thumb {
-    background-color: var(--opaca-bg-color); /* cor do polegar */
+    background-color: var(--dark-bg-color); /* cor do polegar */
     border-radius: 5px; /* borda arredondada */
   }
   
   /* Estilizando a área de fundo da scrollbar */
   .scrollable-div::-webkit-scrollbar-track {
-    background-color: var(--main-bg-color); /* cor de fundo */
+    background-color: rgb(235, 235, 235); /* cor de fundo */
   }
 
   .card {
@@ -342,6 +349,7 @@ a {
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    border: 1px solid var(--dark-bg-color);
     box-shadow: 9px 0px 17px -10px rgba(0,0,0,0.2);
   }
 
@@ -377,8 +385,8 @@ a {
 
   .valor-acomodacao {
     font-size: 1.5em;
-    padding-top: 10px;
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
   }

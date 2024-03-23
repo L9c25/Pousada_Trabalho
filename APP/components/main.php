@@ -104,15 +104,15 @@
                             <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>" class="name">
                                 <?php echo $apt->getNome() ?>
                             </a>
-                            <p class="description"><i class="fa-solid fa-star"></i>4.8/5.0</p>
                         </div>
+                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach"></i></span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
                                     R$
                                     <?php echo ($apt->getPreco() * 1.1) ?>
-                                </R1>
+                           </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-
+     
 
 
             <?php endforeach ?>

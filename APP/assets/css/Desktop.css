@@ -37,7 +37,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  
   padding: 0px;
 }
 
@@ -106,6 +106,10 @@ header {
   background-size: cover;
   margin-left: 20px;
   z-index: 101;
+}
+
+.logout {
+  color: #000000;
 }
 
 .btns{
@@ -257,7 +261,7 @@ main {
 .slide-container {
   max-width: 1120px;
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 0px 10px 0px;
   margin-top: 30px;
 }
 
@@ -269,16 +273,23 @@ main {
 
 .card {
   border-radius: 25px;
+  height: 340px;
   background-color: #FFF;
   border: 1px solid #0808077e;
 }
 
-.image-content,
-.card-content {
+.image-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 14px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 0px 20px;
+  height: 55%;
 }
 
 .image-content {
@@ -391,13 +402,19 @@ main {
 
 .txt-price-diaria {
   display: flex;
+  position: relative;
   width: 100%;
-  justify-content: start;
+  height: 100%;
+  justify-content: flex-end;
   flex-direction: column;
   font-weight: bolder;
   font-size: 1.7em;
-  margin-top: 10px;
   color: var(--dark-bg-color);
+}
+
+.valor-original {
+  position: absolute;
+  bottom: 40px;
 }
 
 .box-h1-card>a {
@@ -658,6 +675,8 @@ footer {
   font-style: italic;
   display: flex;
   align-items: center;
+  color: white;
+  text-decoration: none;
   min-width: 112px;
   display: flex;
   justify-content: space-between;

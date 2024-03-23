@@ -171,7 +171,6 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                                         class="fa-solid fa-star"
                                         style="margin-right: 8px; font-size: .8em;"></i>4.8/5.0</span>
                             </h2>
-                            <p class="description"></p>
                             <span class="icons"><i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach">
                                 </i></span>
                             <p class="desc-card-acomodacao">
@@ -181,7 +180,7 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
                                 <?php echo number_format($apt->getPreco(), 2, ",", ".") ?>/noite
                             </R1>
                             <R1 class="valor-acomodacao">
-                                <?php echo $val?>-----por <?php echo $intervalo?>/noites
+                                <?php echo $val?> por <?php echo $intervalo?> noite
                                 <a href="http://<?php echo $HOST ?>/test.php?id=<?php echo $apt->getId() ?>"><button
                                         class="btn btn-success">ID-
                                         <?php echo $apt->getId() ?>
