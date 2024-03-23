@@ -48,3 +48,16 @@ class daoMysql implements AptDAO
 
 	}
 }
+
+// Funçao que calcula o valor total da estadia
+function calc($intervalo, $p_noite)
+{
+	// Definindo as Variaveis
+	$ValBase = $p_noite * $intervalo;
+
+	// Formatando o valor da estadia
+	$valorEstadia = number_format($ValBase, 2, ",", ".");
+
+	// retornando o valor da estadia
+	return $valorEstadia;
+}
