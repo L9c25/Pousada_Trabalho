@@ -34,11 +34,11 @@ $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
-    <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="assets/css/acomodacoes.css">
-    <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
-    <title>Acomodações</title>
+        <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="assets/css/acomodacoes.css">
+        <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
+        <title>Acomodações</title>
 </head>
 
 <body>
