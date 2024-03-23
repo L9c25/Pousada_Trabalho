@@ -16,7 +16,7 @@
 			</span>
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
-			<a href="logout.php">
+			<a href="logout.php" class="logout">
 				<i class="fa fa-chevron-left"></i>
 			</a>
 		</i>
