@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,800;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Heebo:wght@800&family=Jost:wght@700&family=Poppins:wght@300;600;900&family=Red+Hat+Display:wght@300&display=swap');
+
+/*PALETA DE CORES*/
+
+:root {
+  --main-bg-color: #ffffff;
+  --second-bg-color: white;
+  --opaca-bg-color: #dbddff;
+  --dark-bg-color:#0a0427;
+}
+
+a {
+    padding: 0;
+  }
+  
+  ul {
+    padding: 0px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Geologica", sans-serif;;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+  }
+  
+  h1,
+  h2 {
+    font-weight: 400;
+    font-family: "Geologica", sans-serif;
+    letter-spacing: -2px;
+  }
+
+  /*FILTRO DE RESERVA*/
+
+@media screen and (max-width: 1300px) {
+
+    .form-reserva {
+      width: 100%;
+      height: 130px;
+      border-radius: none;
+      flex-wrap: wrap;
+    }
+  
+    .filtro-box>label {
+      padding-right: 0px;
+      font-size: .8em;
+    }
+
+    .titulo-reservas {
+      margin-top: 110px;
+    }
+
+    .input-btn {
+        width: 90px;
+    }
+}
+
+#formulario-container,
+#formulario-overlay {
+  display: none;
+
+}
+
+.filtro-reserva {
+  display: flex;
+  padding-top: 90px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: -50px;
+  margin-bottom: 20px;
+}
+
+.form-reserva {
+  display: flex;
+  border-radius: 20px;
+  font-size: 1.2em;
+  width: min(90%, 1200px);
+  height: 80px;
+  background-color: var(--main-bg-color);
+  box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 0px 10px;
+  border: 1px solid var(--dark-bg-color);
+}
+
+.filtro-box {
+  color: var(--dark-bg-color);
+  display: flex;
+  align-items: center;
+}
+
+.btn-reservar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-bg-color);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  width: 8%;
+  border-radius: 8px;
+  font-family: "Geologica", sans-serif;
+  font-size: .7em;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+
+.space {
+  display: flex;
+  content: "";
+  background-color: var(--opaca-bg-color);
+  width: 1px;
+  height: 50px;
+}
+
+.num-crianca,
+.num-adulto {
+  width: 40px;
+  border: none;
+  background-color: var(--dark-bg-color);
+  border-radius: 10px;
+  width: 45px;
+  color: white;
+  outline: none;
+}
+
+.filtro-box>label {
+  padding-right: 20px;
+}
+
+.input-datepicker {
+    display: flex;
+}
+
+.input-btn{
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: var(--dark-bg-color);
+    border: none;
+    border-radius: 12px;
+    border-style: none;
+    outline:none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+
+  /*HEADER DA PAGINA*/
+
+#header-mobile {
+    display: none;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
+  }
+  
+  #icon-login {
+    font-size: 1.6em;
+    cursor: pointer;
+  }
+  
+  .nav-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+  }
+  
+  .nav-link {
+    padding-right: 20px;
+  }
+  
+  .menu-content {
+    height: 100%;
+  }
+  
+  .nav-link:hover,
+  .nav-link-last:hover {
+    color: rgb(221, 221, 221);
+  }
+  
+  .logo-header {
+    display: flex;
+    background-image: url(../imagens/logo.png);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+    z-index: 101;
+  }
+  
+  .btns{
+    margin-right: 20px;
+    z-index: 101;
+  }
+
+  /*Inicio da pagina mobile*/
+
+  #seção-acomodacoes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  .acomodacoes-container {
+    display: flex;
+    width: min(90%, 1200px);
+  }
+
+  .filtro-acomodacao {
+    display: flex;
+    width: 40%;
+    height: 50%;
+    padding: 30px;
+    color: #FFF;
+    margin-right: 40px;
+    flex-direction: column;
+    background-color: var(--dark-bg-color);
+    border-radius: 20px;
+    border: 1px solid var(--dark-bg-color);
+  }
+
+  .form-acomodacao {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .container-check-1, .container-check-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  }
+
+  .check-box {
+    padding-bottom: 20px;
+    font-size: 1.3em;
+    color: var(--dark-bg-color);
+  }
+
+  input[type="checkbox"] {
+    /* Estilos do input */
+    margin-right: 5px; /* Adiciona um espaço entre o input e o texto */
+    background-color: #2a074e;
+  }
+
+  .check-box {
+    color: white;
+  }
+
+  .btn-filtro {
+    border-radius: 20px;
+    background-color: var(--opaca-bg-color);
+    border: none;
+    height: 40px;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+  }
+
+  .btn-filtro:hover {
+    background-color: #6ea1ff;
+    color: white;
+  }
+
+  .cx-checkbox{
+    background-color: var(--second-bg-color);
+  }
+
+  /* card das acomodações */
+
+  .scrollable-div {
+    max-height: 70vh; /* Altura máxima da div */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+    border: 1px solid #ccc; /* Adiciona uma borda para visualização */
+    padding: 10px; /* Adiciona um espaço interno */
+    border: none;
+  }
+
+  .scrollable-div::-webkit-scrollbar {
+    width: 10px; /* largura da scrollbar */
+  }
+  
+  /* Estilizando o polegar da scrollbar */
+  .scrollable-div::-webkit-scrollbar-thumb {
+    background-color: var(--dark-bg-color); /* cor do polegar */
+    border-radius: 5px; /* borda arredondada */
+  }
+  
+  /* Estilizando a área de fundo da scrollbar */
+  .scrollable-div::-webkit-scrollbar-track {
+    background-color: rgb(235, 235, 235); /* cor de fundo */
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    color: var(--dark-bg-color);
+    height: 220px;
+  }
+
+  .img-card {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid var(--dark-bg-color);
+    box-shadow: 9px 0px 17px -10px rgba(0,0,0,0.2);
+  }
+
+  .txt-box-card-acomodacao {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    border: 1px solid var(--dark-bg-color);
+    border-left: none;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+  }
+
+  .acomodacao-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 28px;
+  }
+
+  .desc-card-acomodacao {
+    font-size: .5em;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: .6em;
+  }
+
+  .valor-acomodacao {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+

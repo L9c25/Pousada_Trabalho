@@ -3,7 +3,7 @@
 session_start();
 
 // Verifique se o usuário já está logado, em caso afirmativo, redirecione-o para a página principal
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] === true) {
     header("location: index.php");
     exit;
 }
@@ -90,57 +90,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font: 14px sans-serif;
-        }
-
-        .wrapper {
-            width: 360px;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
+    <link rel="stylesheet" href="assets\css\loginDesktop.css">
+    <link rel="stylesheet" href="assets\css\loginmobile.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Por favor, preencha os campos para fazer o login.</p>
-        <?php
-        // exibe uma caixa indicando erro no login
-        if (!empty($login_err)) {
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }
-        ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-
-            <div class="form-group">
-                <label>Nome do usuário</label>
-                <input type="text" name="username"
-                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-                    value="<?php echo $username; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $username_err; ?>
-                </span>
+    <main>
+        <div class="container">
+            <div class="box-form">
+                <h2>Login</h2>
+                <p>Por favor, preencha os campos para fazer o login.</p>
+                <?php
+                // exibe uma caixa indicando erro no login
+                if (!empty($login_err)) {
+                    echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                }
+                ?>
+                <form action="" method="POST">
+                    <div class="form-group my-1">
+                        <label>Nome do usuário</label>
+                        <input type="text" name="username"
+                            class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                            value="<?php echo $username; ?>">
+                        <span class="invalid-feedback">
+                            <?php echo $username_err; ?>
+                        </span>
+                    </div>
+                    <div class="form-group my-2">
+                        <label>Senha</label>
+                        <input type="password" name="password"
+                            class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                        <span class="invalid-feedback">
+                            <?php echo $password_err; ?>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary my-3" value="Entrar">
+                    </div>
+                    <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label>Senha</label>
-                <input type="password" name="password"
-                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <span class="invalid-feedback">
-                    <?php echo $password_err; ?>
-                </span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Entrar">
-            </div>
-            <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
-        </form>
-    </div>
+        </div>
+        <div id="background"></div>
+    </main>
 </body>
-
+<script src="assets\bootstrap\js\bootstrap.bundle.min.js"></script>
 </html>
