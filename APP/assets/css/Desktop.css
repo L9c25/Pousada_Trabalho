@@ -13,6 +13,11 @@
   --dark-bg-color:#0a0427;
 }
 
+::-webkit-input-placeholder {
+  color: white;
+}
+
+
 a {
   padding: 0;
 }
@@ -222,11 +227,15 @@ main {
   font-size: .8em;
   text-transform: uppercase;
   padding: 8px 16px;
-  font-weight: 100;
+  font-weight: 300;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all ease-in-out .2s;
+}
+
+.btn-reservar:hover {
+  background-color: #0f0735;
 }
 
 .space {
@@ -329,7 +338,7 @@ main {
 }
 
 .name {
-  font-size: 18px;
+  font-size: 1.5em;
   font-weight: 500;
   color: var(--dark-bg-color);
 }
@@ -355,7 +364,7 @@ main {
 }
 
 .input-btn:hover{
-  background: var(--second-bg-color);
+  background: #0f0735;
 }
 
 .swiper-navBtn {
@@ -415,10 +424,6 @@ main {
 .valor-original {
   position: absolute;
   bottom: 40px;
-}
-
-.box-h1-card>a {
-  font-size: 1.5em;
 }
 
 .description {

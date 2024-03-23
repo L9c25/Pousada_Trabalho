@@ -25,7 +25,7 @@
 			<a href="" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
 			<a href="" class="nav-link">reservas</a>
-			<a href="" class="nav-link">suporte</a>
+			<a href="quartos.php" class="nav-link">suporte</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<a href="" class="nav-link" id="nav-link-last">
 				<?= $_SESSION['username']; ?>

@@ -4,7 +4,7 @@
     }
 }
 
-@media screen and (max-width: 850px) and (min-width: 351px) {
+@media screen and (max-width: 850px) and (min-width: 0px) {
 
     .slide-container {
         z-index: 9;
@@ -135,6 +135,14 @@
         color: black;
     }
 
+    .valor-promocional {
+        font-size: 1em;
+    }
+
+    .name {
+        font-size: 1.4em;
+    }
+
     main {
         height: max(60vh, 700px);
     }
@@ -143,9 +151,14 @@
         display: none;
     }
 
-    .input-daterange {
+    #datepicker-mobile {
         display: flex;
+        width: 100%;
         justify-content: space-between;
+    }
+
+    .input-btn {
+        width: 50%;
     }
 
     #formulario-overlay {

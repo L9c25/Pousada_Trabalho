@@ -71,7 +71,7 @@ if ($intervalo == 0){
 
             <div class="filtro-box">
                 <i class="fa-solid fa-person" style="padding-right: 10px; font-size: 1.4em;"></i>
-                <label for="num_adultos">Número de Adultos</label>
+                <label for="num_adultos">Adultos</label>
                 <select id="num_adultos" name="num_adultos" class="num-adulto" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -82,7 +82,7 @@ if ($intervalo == 0){
 
             <div class="filtro-box">
                 <i class="fa-solid fa-child" style="padding-right: 10px; font-size: 1.2em;"></i>
-                <label for="num_criancas">Número de Crianças</label>
+                <label for="num_criancas">Crianças</label>
                 <select id="num_criancas" name="num_criancas" class="num-crianca" required>
                     <option value="0">0</option>
                     <option value="1">1</option>

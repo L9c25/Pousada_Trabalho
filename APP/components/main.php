@@ -55,7 +55,7 @@
         <form action="quartos.php" method="post">
             <h2>Reserva de Hotel</h2>
 
-            <div class="input-daterange" id="datepicker">
+            <div class="input-daterange" id="datepicker-mobile">
                 <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
                     style="margin-right: 0.4em;" />
                 <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />

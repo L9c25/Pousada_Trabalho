@@ -174,7 +174,7 @@ a {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: var(--dark-bg-color);
     background-color: var(--main-bg-color);
     width: 100%;
     position: fixed;
