@@ -1,12 +1,7 @@
 $(function () {
 	$(".reservar").on("click", function () {
-
-		// Exibe o valor do botão no alert
-		// alert(U_ID);
 		swal.fire({
 			title: 'Reservar',
-			text: "OIE",
-			icon: 'none',
 			confirmButtonText: 'reservar',
 			color: '#0a0427',
 			confirmButtonColor: '#0a0427',
@@ -41,7 +36,7 @@ $(function () {
 		$(".btn_confirm_reserva").on("click", function () {
 			$.ajax({
 				method: "POST",
-				url: "reservar.php", // test para erro .php -> .pp
+				url: "reservar.php",
 				data: {
 					"A_id": ID,
 					"U_id": U_ID,
@@ -55,7 +50,6 @@ $(function () {
 				// printnado as acomodaçoes 
 				$(".scrollable-div").html(response);
 
-				console.log("deu bom")
 					// Reserva criada com sucesso
 					const Toast = Swal.mixin({
 						toast: true,
@@ -76,7 +70,6 @@ $(function () {
 			}).fail(function (jqXHR, textStatus) {
 				// Tratamento de falha na requisição
 				// A reserva já existe
-				console.log("deu ruim")
 
 				const Toast = Swal.mixin({
 					toast: true,

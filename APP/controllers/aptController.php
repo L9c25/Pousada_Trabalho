@@ -40,6 +40,7 @@ class daoMysql implements AptDAO
 		return $lista;
 	}
 
+
 	public function geraJSON()
 	{
 		$sql = $this->pdo->query("SELECT * FROM produto");
@@ -49,8 +50,6 @@ class daoMysql implements AptDAO
 		}
 
 	}
-
-
 	public function criarReserva($id_a, $id_u, $chek_in, $chek_out, $adult, $kid)
 	{
 		// query
@@ -66,7 +65,7 @@ class daoMysql implements AptDAO
 			$response = ['success' => false];
 			echo json_encode($response);
 			return false;
-		} else{
+		} else {
 		}
 
 		$sql = "INSERT INTO reserva (id_a, id_u, chek_in, chek_out, pessoas, criancas, data) VALUES (:id_a, :id_u, :chek_in, :chek_out, :adult, :kid, :data);";
@@ -120,6 +119,55 @@ class daoMysql implements AptDAO
 		} finally {
 			unset($stmt); // Libera a variável $stmt
 		}
+	}
+
+	public function verifyReserva($id_u)
+	{
+		// query
+		$sql = "SELECT id_u FROM reserva WHERE (id_u = $id_u)";
+		// preparando a query
+		$stmt = $this->pdo->prepare($sql);
+		// executando a query
+		$stmt->execute();
+
+		if ($stmt->rowCount() >= 1) {
+			// O usuario ja possui reserva
+			$sql = $this->pdo->query("SELECT r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_in, r.chek_out) AS 	intervalo,
+				DATEDIFF(r.chek_out, r.chek_in) * a.preco AS total_preco
+				FROM reserva r
+				JOIN acomodacao a ON r.id_a = a.id
+				WHERE id_u = $id_u");
+
+
+			if ($sql->rowCount() >= 1) {
+				// O usuario ja possui reserva
+				$dados = $sql->fetchAll();
+				foreach($dados as $item) {
+					$lista = [
+						'status' => 'success',
+						'nome' => $item['nome'],
+						'preco' => $item['preco'],
+						'intervalo' => $item['intervalo'],
+						'total_preco' => $item['total_preco'],
+						'chek_in' => $item['chek_in'],
+						'chek_out' => $item['chek_out'],
+					];
+				}
+				return $lista;
+			} else {
+				// O usuario ñ possui reserva
+				$lista = [
+					'status' => 'error',
+				];
+				return $lista;
+			}
+		} else {
+			$lista = [
+				'status' => 'error',
+			];
+			return $lista;
+		}
+
 	}
 }
 
