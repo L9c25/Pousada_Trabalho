@@ -40,7 +40,6 @@ class daoMysql implements AptDAO
 		return $lista;
 	}
 
-
 	public function geraJSON()
 	{
 		$sql = $this->pdo->query("SELECT * FROM produto");
@@ -132,7 +131,7 @@ class daoMysql implements AptDAO
 
 		if ($stmt->rowCount() >= 1) {
 			// O usuario ja possui reserva
-			$sql = $this->pdo->query("SELECT r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_in, r.chek_out) AS 	intervalo,
+			$sql = $this->pdo->query("SELECT r.id_a ,r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_in, r.chek_out) AS 	intervalo,
 				DATEDIFF(r.chek_out, r.chek_in) * a.preco AS total_preco
 				FROM reserva r
 				JOIN acomodacao a ON r.id_a = a.id
@@ -142,9 +141,10 @@ class daoMysql implements AptDAO
 			if ($sql->rowCount() >= 1) {
 				// O usuario ja possui reserva
 				$dados = $sql->fetchAll();
-				foreach($dados as $item) {
+				foreach ($dados as $item) {
 					$lista = [
 						'status' => 'success',
+						'id' => $item['id_a'],
 						'nome' => $item['nome'],
 						'preco' => $item['preco'],
 						'intervalo' => $item['intervalo'],
@@ -169,7 +169,33 @@ class daoMysql implements AptDAO
 		}
 
 	}
+
+	public function deletReserva($id_a)
+	{
+		// Inicia uma transação
+		$this->pdo->beginTransaction();
+		try {
+			// Deleta a reserva
+			$stmt = $this->pdo->prepare("DELETE FROM reserva WHERE id_a = :id_a");
+			$stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
+			$stmt->execute();
+
+			// Atualiza a disponibilidade na pousada
+			$stmt = $this->pdo->prepare("UPDATE acomodacao SET disponivel = '0' WHERE id = :id_a");
+			$stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
+			$stmt->execute();
+
+			// Commita as operações caso ambas sejam bem-sucedidas
+			$this->pdo->commit();
+			return true;
+		} catch (Exception $e) {
+			// Rollback nas operações em caso de erro
+			$this->pdo->rollBack();
+			return false;
+		}
+	}
 }
+
 
 
 // Funçao que calcula o valor total da estadia

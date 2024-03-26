@@ -10,6 +10,7 @@
 		// possui a reserva
 		header('Content-Type: application/json');
 		$response = ['success' => true,
+					 'id' => $response['id'],
 					 'nome' => $response['nome'],
 					 'preco' => $response['preco'],
 					 'intervalo'=> $response['intervalo'],

@@ -27,6 +27,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select><br><br>
+
         </div>
 
         <span class="space"></span>
@@ -178,7 +179,6 @@
 <script src="assets/js/carrousel.js"></script>
 <!-- ScrollReveal -->
 <script src="assets\ScrollReveal\scrollreveal.js"></script>
-
 <!-- Sweetalert -->
 <script src="assets\Sweetalert2\sweetalert2.all.min.js"></script>
 
@@ -198,21 +198,23 @@
         }).done(function (response) {
             //? Esta função é chamada quando a requisição é concluída com sucesso
             var resp = response.success;
+            var A_id = response.id;
 
-            // console.log(resp)
-            
             if (resp) {
                 //? Possui uma reserva
                 Swal.fire({
                     title: "<strong>Sua Reservas</strong>",
                     html: `
-                            <p>response</p>
-                            
+                            <button class="btn btn-danger" id="deletReserva">Delet</button>
+                            <button id="A_id" hiden value=""></button>
                             
                         `,
                     focusConfirm: false,
-
                     confirmButtonAriaLabel: "Thumbs up, great!",
+                    didOpen: () => {
+                        // Aqui o SweetAlert já está aberto e podemos manipular seu conteúdo
+                        $("#A_id").val(A_id); // Atribui o valor da variável A_id ao botão
+                    },
                 });
             } else {
                 //? Ñ possui uma reserva
@@ -241,6 +243,63 @@
             });
         }), "json";
     })
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Adiciona o manipulador de eventos quando o documento estiver pronto
+        $(document).on('click', '#deletReserva', function () {
+            // Oculta o botão clicado
+            var A_id = $("#A_id").val()
+            // console.log(A_id)
+
+            $.ajax({
+                method: "POST",
+                url: "Delete.php", // test para erro .php -> .pp
+                data: {"A_id": A_id}
+
+            }).done(function (response) {
+                //? Esta função é chamada quando a requisição é concluída com sucesso
+                var resp = response.success;
+
+                // console.log(resp)
+                console.log("ok")
+
+                //? Reserva deletada com suceso
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "RESERVADO !"
+                });
+
+
+            }).fail(function (jqXHR, textStatus) {
+                //? Tratamento de falha na requisição
+                console.log("erro")
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+            });
+        });
+    });
 </script>
 
 <script src="assets/js/myScrow_myDatepicker.js"></script>
