@@ -145,9 +145,14 @@
         display: none;
     }
 
-    .input-daterange {
+    #datepicker-mobile {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+    }
+
+    #input-btn-mobile {
+        width: 50%;
     }
 
     #formulario-overlay {
