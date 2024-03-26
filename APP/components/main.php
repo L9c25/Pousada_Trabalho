@@ -27,6 +27,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select><br><br>
+
         </div>
 
         <span class="space"></span>
@@ -105,14 +106,15 @@
                                 <?php echo $apt->getNome() ?>
                             </a>
                         </div>
-                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach"></i></span>
+                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i
+                                class="fa-solid fa-umbrella-beach"></i></span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
                                     R$
                                     <?php echo ($apt->getPreco() * 1.1) ?>
-                           </R1>
+                                </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
@@ -124,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-     
+
 
 
             <?php endforeach ?>
@@ -172,75 +174,132 @@
 <script src="assets\js\jquery-3.7.1.min.js"></script>
 <!-- Datepicker &  Bootstrap -->
 <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/bootstra/js/popper.min.js"></script>
+<!-- Script by me -->
+<script src="assets/js/script.js"></script>
+<script src="assets/js/carrousel.js"></script>
 <!-- ScrollReveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
+<script src="assets\ScrollReveal\scrollreveal.js"></script>
+<!-- Sweetalert -->
+<script src="assets\Sweetalert2\sweetalert2.all.min.js"></script>
+
+
+<!-- script para a vizualisação da reserva -->
+<script>
+    $("#icon-login").on("click", function () {
+        // definindo o ID com base no value do button
+        var U_ID = $("#id_user").val();
+
+        $.ajax({
+            method: "POST",
+            url: "verifyReserva.php", // test para erro .php -> .pp
+            data: {
+                "U_id": U_ID,
+            }
+        }).done(function (response) {
+            //? Esta função é chamada quando a requisição é concluída com sucesso
+            var resp = response.success;
+            var A_id = response.id;
+
+            if (resp) {
+                //? Possui uma reserva
+                Swal.fire({
+                    title: "<strong>Sua Reservas</strong>",
+                    html: `
+                            <button class="btn btn-danger" id="deletReserva">Delet</button>
+                            <button id="A_id" hiden value=""></button>
+                            
+                        `,
+                    focusConfirm: false,
+                    confirmButtonAriaLabel: "Thumbs up, great!",
+                    didOpen: () => {
+                        // Aqui o SweetAlert já está aberto e podemos manipular seu conteúdo
+                        $("#A_id").val(A_id); // Atribui o valor da variável A_id ao botão
+                    },
+                });
+            } else {
+                //? Ñ possui uma reserva
+                Swal.fire({
+                    title: "<strong>Você não possui reserva</strong>",
+                    html: `You can use <b>bold text</b>,
+                        <a href="#">links</a>,
+                        and other HTML tags
+                        `,
+                    showCloseButton: true,
+                    showCancelButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: `<i class="fa fa-thumbs-up"></i> Great!`,
+                    confirmButtonAriaLabel: "Thumbs up, great!",
+                    cancelButtonText: `<i class="fa fa-thumbs-down"></i> `,
+                    cancelButtonAriaLabel: "Thumbs down"
+                })
+            }
+
+        }).fail(function (jqXHR, textStatus) {
+            //? Tratamento de falha na requisição
+            Swal.fire({
+                title: "Error!",
+                text: "O correu um erro ao tentarmos verificar se você tem uma reserva",
+                icon: "error"
+            });
+        }), "json";
+    })
+</script>
 
 <script>
-    $('.input-daterange').datepicker({
-        language: "pt-BR",
-        clearBtn: true,
-        autoclose: true,
-        format: "yyyy/mm/dd",
-        startDate: '-0d',
-        endDate: '+2m'
+    $(document).ready(function () {
+        // Adiciona o manipulador de eventos quando o documento estiver pronto
+        $(document).on('click', '#deletReserva', function () {
+            // Oculta o botão clicado
+            var A_id = $("#A_id").val()
+            // console.log(A_id)
+
+            $.ajax({
+                method: "POST",
+                url: "Delete.php", // test para erro .php -> .pp
+                data: {"A_id": A_id}
+
+            }).done(function (response) {
+                //? Esta função é chamada quando a requisição é concluída com sucesso
+                var resp = response.success;
+
+                // console.log(resp)
+                console.log("ok")
+
+                //? Reserva deletada com suceso
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "RESERVADO !"
+                });
+
+
+            }).fail(function (jqXHR, textStatus) {
+                //? Tratamento de falha na requisição
+                console.log("erro")
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+            });
+        });
     });
-
-
-    ScrollReveal().reveal('#img-1', {
-        delay: 20,
-        duration: 400,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-2', {
-        delay: 20,
-        duration: 400,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-
-    });
-
-    ScrollReveal().reveal('#img-3', {
-        delay: 20,
-        duration: 410,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-5', {
-        delay: 20,
-        duration: 500,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-6', {
-        delay: 20,
-        duration: 510,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-4', {
-        delay: 20,
-        duration: 510,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-    });
-
 </script>
+
+<script src="assets/js/myScrow_myDatepicker.js"></script>
