@@ -57,19 +57,18 @@
             <h2>Reserva de Hotel</h2>
 
             <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
-                    style="margin-right: 0.4em;" />
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />
+                <input class="input-btn" type="text" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" required/>
+                <input class="input-btn" type="text" name="end" placeholder="CHEK-OUT" required/>
             </div>
 
             <label for="num_adultos">Número de Adultos (até 2):</label>
-            <select id="num_adultos" name="num_adultos" required>
+            <select id="num_adultos" name="num_adultos">
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
 
             <label for="num_criancas">Número de Crianças (até 2):</label>
-            <select id="num_criancas" name="num_criancas" required>
+            <select id="num_criancas" name="num_criancas">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
