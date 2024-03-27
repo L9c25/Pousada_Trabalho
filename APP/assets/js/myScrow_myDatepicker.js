@@ -27,6 +27,25 @@
 
     });
 
+    ScrollReveal().reveal('#img-cardapio', {
+        delay: 20,
+        duration: 400,
+        reset: false,
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'right',
+        distance: '10px'
+
+    });
+
+    ScrollReveal().reveal('#txt-box-cardapio', {
+        delay: 30,
+        duration: 600,
+        reset: false,
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'left',
+        distance: '10px'
+    });
+
     ScrollReveal().reveal('#img-3', {
         delay: 20,
         duration: 410,
@@ -55,6 +74,24 @@
     });
 
     ScrollReveal().reveal('#img-4', {
+        delay: 20,
+        duration: 510,
+        reset: false,
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'right',
+        distance: '10px'
+    });
+
+    ScrollReveal().reveal('#img-sobre-nos', {
+        delay: 20,
+        duration: 510,
+        reset: false,
+        easing: 'cubic-bezier(.25,.1,.64,.96)',
+        origin: 'left',
+        distance: '10px'
+    });
+
+    ScrollReveal().reveal('#txt-box-sobre-nos', {
         delay: 20,
         duration: 510,
         reset: false,

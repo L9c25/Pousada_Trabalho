@@ -138,6 +138,10 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-circle-info" style="padding-right: 10px;"></i>SOBRE A TWO DOORS</h2>
+</div> 
+
 <section class="sobre-nos" id="sobre-nos">
     <div class="bckg-sobre-nos">
         <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
