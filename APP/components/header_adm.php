@@ -2,7 +2,7 @@
 	<picture class="logo-header"></picture>
 	<nav class="nav-header">
 	    <a href="#inicio" class="nav-link">Inicio</a>
-		<a href="" class="nav-link">localização</a>
+		<a href="#footer" class="nav-link">localização</a>
 		<a href="#promocao" class="nav-link">promoções</a>
 		<a href="" class="nav-link">suporte</a>
 		<!-- link exclusiva para adms -->
@@ -25,7 +25,7 @@
 	<nav class="nav-header">
 		<div class="menu-content">
 			<a href="#inicio" class="nav-link">Inicio</a>
-			<a href="" class="nav-link">localização</a>
+			<a href="#footer" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
 			<a href="" class="nav-link">suporte</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>

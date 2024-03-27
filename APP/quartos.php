@@ -171,7 +171,7 @@ if ($intervalo == 0){
 
                     <?php $val = calc($intervalo, $apt->getPreco()) ?>
 
-                    <div class="card">
+                    <div class="card" id="card">
                         <picture class="img-card"
                             style="background-image: url(./assets/imagens/<?php echo $apt->getImg1() ?>.jpg);"></picture>
                         <div class="txt-box-card-acomodacao">
