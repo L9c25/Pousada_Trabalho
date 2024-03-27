@@ -30,3 +30,8 @@ const navBar = document.querySelector(".header-mobile"),
         navBar.classList.remove("open");
       })
       );
+
+      window.onload = function() {
+        document.getElementById('input-disabled').disabled = true;
+        document.getElementById('input-readonly').readOnly = true;
+      }

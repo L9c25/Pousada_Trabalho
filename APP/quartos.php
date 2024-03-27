@@ -61,9 +61,9 @@ if ($intervalo == 0){
 
             <div class="input-daterange" id="datepicker">
                 <input class="input-btn start" type="text" value="<?php echo $_POST["start"] ?>" name="start"
-                    placeholder="CHEK-IN" required />
+                    placeholder="CHEK-IN" autocomplete="off" value="" readonly required />
                 <input class="input-btn end" type="text" value="<?php echo $_POST['end'] ?>" name="end"
-                    placeholder="CHEK-OUT" required />
+                    placeholder="CHEK-OUT" autocomplete="off" value="" readonly required />
             </div>
 
             <span class="space"></span>
@@ -106,9 +106,9 @@ if ($intervalo == 0){
 
                 <div class="input-daterange" id="datepicker">
                     <input class="input-btn" type="text" value="<?php echo $_POST["start"] ?>" name="start"
-                        placeholder="CHEK-IN" style="margin-right: 0.4em;" />
+                        placeholder="CHEK-IN" autocomplete="off" value="" readonly style="margin-right: 0.4em;" />
                     <input class="input-btn" type="text" value="<?php echo $_POST['end'] ?>" name="end"
-                        placeholder="CHEK-OUT" />
+                        placeholder="CHEK-OUT" autocomplete="off" value="" readonly />
                 </div>
 
                 <label for="num_adultos">Número de Adultos (até 2):</label>

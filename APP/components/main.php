@@ -13,8 +13,8 @@
     <form action="quartos.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
-            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" outl required />
-            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
+            <input class="input-btn" id="input-readonly" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" required />
+            <input class="input-btn" id="input-readonly" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
         </div>
 
         <span class="space"></span>
