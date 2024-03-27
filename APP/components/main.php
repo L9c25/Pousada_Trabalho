@@ -1,5 +1,5 @@
 <!-- INICIO DA PAGINA -->
-<main>
+<main id="inicio">
     <div class="txt-box-main">
         <h1>TWO DOORS</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
@@ -13,8 +13,8 @@
     <form action="quartos.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
-            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" outl required />
-            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" required />
+            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" outl required />
+            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
         </div>
 
         <span class="space"></span>
@@ -22,7 +22,7 @@
 
         <div class="filtro-box">
             <i class="fa-solid fa-person" style="padding-right: 10px; font-size: 1.4em;"></i>
-            <label for="num_adultos">Número de Adultos</label>
+            <label for="num_adultos">Adultos</label>
             <select id="num_adultos" name="num_adultos" class="num-adulto" required>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -34,7 +34,7 @@
 
         <div class="filtro-box">
             <i class="fa-solid fa-child" style="padding-right: 10px; font-size: 1.2em;"></i>
-            <label for="num_criancas">Número de Crianças</label>
+            <label for="num_criancas">Crianças</label>
             <select id="num_criancas" name="num_criancas" class="num-crianca" required>
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -56,18 +56,19 @@
         <form action="quartos.php" method="post">
             <h2>Reserva de Hotel</h2>
 
-            <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" name="start" placeholder="CHEK-IN" style="margin-right: 0.4em;" required/>
-                <input class="input-btn" type="text" name="end" placeholder="CHEK-OUT" required/>
+            <div class="input-daterange" id="datepicker-mobile">
+                <input class="input-btn" id="input-btn-mobile" type="text" name="start" autocomplete="off" placeholder="CHEK-IN" required   
+                    style="margin-right: 0.4em;" /> 
+                <input class="input-btn" id="input-btn-mobile" type="text" name="end" autocomplete="off" placeholder="CHEK-OUT" required/>
             </div>
 
-            <label for="num_adultos">Número de Adultos (até 2):</label>
+            <label for="num_adultos">Adultos</label>
             <select id="num_adultos" name="num_adultos">
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
 
-            <label for="num_criancas">Número de Crianças (até 2):</label>
+            <label for="num_criancas">Crianças</label>
             <select id="num_criancas" name="num_criancas">
                 <option value="0">0</option>
                 <option value="1">1</option>
@@ -81,8 +82,8 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
-    em promoção</h2>
+<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 10px 10px 0px 0px;"></i>reservas
+    mais populares</h2>
 
 <div class="slide-container swiper">
     <div class="slide-content">
