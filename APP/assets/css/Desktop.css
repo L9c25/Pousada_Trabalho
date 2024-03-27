@@ -248,15 +248,8 @@ main {
 .num-adulto {
   width: 40px;
   border: none;
-<<<<<<< HEAD
-  background-color: var(--opaca-bg-color);
-  border-radius: 10px;
-  width: 45px;
-  color: #757575;
-=======
   background-color: white;
   color: var(--dark-bg-color);
->>>>>>> Peuzada
   outline: none;
 }
 
