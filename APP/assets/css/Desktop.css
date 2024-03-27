@@ -129,7 +129,7 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: min(80vh, 600px);
+  height: max(80vh, 600px);
   background: 
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url(../imagens/pexels-thorsten-technoman-338504.jpg);
@@ -485,8 +485,9 @@ main {
   height: 90vh;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #FFF;
   flex-direction: column;
+  margin-top: 5em;
 }
 
 .container-1,
@@ -572,6 +573,35 @@ main {
   margin-top: 10px;
 }
 
+
+
+
+
+
+
+
+
+#A_id{
+  display: none;
+}
+
+.depoimentos{
+  background-color: red;
+  margin-top: 8em;
+  width: 100%;
+  height: 20em;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .slide-content {
     margin-bottom: 30px;
@@ -613,10 +643,7 @@ main {
   font-size: 20px;
 }
 
-#name {
-  color: var(--dark-bg-color);
 
-}
 
 table,
 td,
@@ -745,10 +772,18 @@ footer {
   border-radius: 20px;
 }
 
+.user_name{
+  color: rgb(0, 0, 0);
+}
 #adm {
-  color: black;
+  color: rgb(0, 0, 0);
+}
+
+#name {
+  color: rgb(0, 0, 0, 0.7);
 }
 
 .logout{
   color: black;
+  padding-left: 10px;
 }

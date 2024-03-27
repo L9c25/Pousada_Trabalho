@@ -143,11 +143,11 @@
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
 
-<div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
-</div>
 
 <section class="galeria-container">
+    <div class="cx-txt-galeria">
+        <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
+    </div>
     <div class="container-1">
         <picture class="img-maior-1" id="img-1"></picture>
         <div class="container-img-1">
@@ -162,6 +162,10 @@
             <picture class="img-bottom" id="img-6"></picture>
         </div>
     </div>
+</section>
+
+<section class="depoimentos">
+    
 </section>
 
 <!-- Swiper JS -->
