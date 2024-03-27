@@ -67,6 +67,10 @@ header {
   box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
 }
 
+#id_user {
+  display: none;
+}
+
 #icon-login {
   font-size: 1.6em;
   cursor: pointer;
@@ -180,6 +184,10 @@ main {
 
 }
 
+#datepicker-mobile {
+  display: none;
+}
+
 .filtro-reserva {
   display: flex;
   position: relative;
@@ -240,10 +248,8 @@ main {
 .num-adulto {
   width: 40px;
   border: none;
-  background-color: var(--opaca-bg-color);
-  border-radius: 10px;
-  width: 45px;
-  color: #757575;
+  background-color: white;
+  color: var(--dark-bg-color);
   outline: none;
 }
 

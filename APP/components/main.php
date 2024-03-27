@@ -1,5 +1,5 @@
 <!-- INICIO DA PAGINA -->
-<main>
+<main id="inicio">
     <div class="txt-box-main">
         <h1>TWO DOORS</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
@@ -56,20 +56,20 @@
         <form action="quartos.php" method="post">
             <h2>Reserva de Hotel</h2>
 
-            <div class="input-daterange" id="datepicker">
-                <input class="input-btn" type="text" value="CHECK-IN" name="start" autocomplete="off" placeholder="CHEK-IN"
+            <div class="input-daterange" id="datepicker-mobile">
+                <input class="input-btn" id="input-btn-mobile" type="text" name="start" autocomplete="off" placeholder="CHEK-IN" required   
                     style="margin-right: 0.4em;" /> 
-                <input class="input-btn" type="text" value="CHECK-OUT" name="end" autocomplete="off" placeholder="CHEK-OUT" />
+                <input class="input-btn" id="input-btn-mobile" type="text" name="end" autocomplete="off" placeholder="CHEK-OUT" required/>
             </div>
 
             <label for="num_adultos">Adultos</label>
-            <select id="num_adultos" name="num_adultos" required>
+            <select id="num_adultos" name="num_adultos">
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
 
             <label for="num_criancas">Crianças</label>
-            <select id="num_criancas" name="num_criancas" required>
+            <select id="num_criancas" name="num_criancas">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
