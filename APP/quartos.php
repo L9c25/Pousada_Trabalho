@@ -193,11 +193,7 @@ if ($intervalo == 0){
                                 <?php echo $val ?> por
                                 <?php echo $intervalo ?> noite
                                 
-                                <button class="btn btn-success reservar" value="<?php echo $apt->getId();?>">
-                                
-                                ID- <?php echo $apt->getId();?>
-                                
-                                </button>
+                                <button class="btn btn-success reservar" value="<?php echo $apt->getId();?>">Reservar</button>
                             </R1>
                         </div>
                     </div>

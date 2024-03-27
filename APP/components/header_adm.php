@@ -1,12 +1,14 @@
 <header id="header-desktop">
-	<picture class="logo-header"></picture>
+	<span class="d-flex align-items-center">
+		<picture class="logo-header"></picture>
+	</span>
 	<nav class="nav-header">
 	    <a href="#inicio" class="nav-link">Inicio</a>
 		<a href="" class="nav-link">localização</a>
 		<a href="#promocao" class="nav-link">promoções</a>
 		<a href="" class="nav-link">suporte</a>
 		<!-- link exclusiva para adms -->
-		<a href="test_CMD.php" class="nav-link-last" id="adm">CMD</a>
+		<a href="" class="nav-link-last" id="adm">CMD</a>
 	</nav>
 	<span class="btns">
 		<span class="user_name">Olá !

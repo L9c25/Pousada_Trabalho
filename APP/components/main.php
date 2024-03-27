@@ -2,8 +2,7 @@
 <main id="inicio">
     <div class="txt-box-main">
         <h1>TWO DOORS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
-            dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
+        <p>"TWO DOORS" é sua escapada ideal numa praia idílica, oferecendo uma combinação de tranquilidade e conforto luxuoso. Situada à beira-mar, a pousada proporciona uma experiência única, com quartos confortáveis e vistas espetaculares. Ideal para românticos, aventureiros ou famílias, promete uma estadia relaxante com todas as comodidades modernas, envolvida pela beleza natural deslumbrante. Descubra a paz ao som das ondas e crie memórias inesquecíveis.</p>
     </div>
 </main>
 
@@ -146,9 +145,6 @@
 
 <div class="cx-txt-galeria">
     <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda
-        unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.
-    </p>
 </div>
 
 <section class="galeria-container">
