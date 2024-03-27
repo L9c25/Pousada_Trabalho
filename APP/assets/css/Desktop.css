@@ -268,8 +268,7 @@ main {
 .slide-container {
   max-width: 1120px;
   width: 100%;
-  padding: 40px 0px 10px 0px;
-  margin-top: 30px;
+  padding: 0px 0px 10px 0px;
 }
 
 .slide-content {
@@ -455,7 +454,7 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 3em;
-  margin-top: 80px;
+  margin-top: 130px;
   color: var(--dark-bg-color);
   text-align: center;
 }
@@ -471,7 +470,7 @@ main {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-top: 60px;
 }
 
 .cx-txt-galeria>p {
@@ -751,4 +750,108 @@ footer {
 
 .logout{
   color: black;
+}
+
+
+/*SOBRE NOS*/
+
+.sobre-nos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 80px;
+}
+
+.bckg-sobre-nos {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  width: min(80%, 1200px);
+  height: 500px;
+  background-color: var(--opaca-bg-color);
+  border-radius: 20px;
+}
+
+.img-sobre-nos {
+  display: flex;
+  background-image: url(../imagens/pousada-sobre-nos.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  border-radius: 20px;
+}
+
+#arrow {
+  font-size: 3em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+  justify-self: center;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+}
+
+.img-txt-box {
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+#img-txt-box {
+  background-image: url(../imagens/8500340-Photoroom.png);
+}
+
+#img-sobre-nos {
+  background-image: url(../imagens/pousada-sobre-nos.jpg);
+}
+
+.arrow-right {
+  background-image: url(../imagens/arrow.png);
+}
+
+.arrow-bottom {
+  display: none;
+}
+
+.txt-box-sobre-nos {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.txt-box-sobre-nos > h2 {
+  padding-top: 10px;
+}
+
+/*NOSSO CARDAPIO*/
+
+.arrow-left {
+  background-image: url(../imagens/arrow-left.png);
+}
+
+#cardapio {
+  flex-direction: row-reverse;
+
+}
+
+#img-cardapio {
+  background-image: url(../imagens/flat-lay-assortment-with-delicious-brazilian-food.jpg); 
+}
+
+#img-txt-cardapio {
+  background-image: url(../imagens/undraw_cooking_p7m1.svg);
+  padding: 10px;
 }

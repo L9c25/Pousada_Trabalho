@@ -269,5 +269,23 @@
         margin-bottom: 40px;
     }
 
+    .txt-box-sobre-nos {
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    #arrow {
+        right: 36%;
+    }
+
+    .arrow-bottom {
+        display: flex;
+        bottom: 35%;
+        background-image: url(../imagens/arrow-down.png);
+    }
+
     /*Inicio da pagina mobile*/
 }

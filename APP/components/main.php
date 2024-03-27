@@ -138,17 +138,40 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<section class="sobre-nos" id="sobre-nos">
+    <div class="bckg-sobre-nos">
+        <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
+        <span class="arrow-right" id="arrow"></span>
+        <span class="arrow-bottom" id="arrow"></span>
 
+        <div class="txt-box-sobre-nos" id="txt-box-sobre-nos">
 
-<div class="espacamento"><span></span></div>
+            <picture class="img-txt-box" id="img-txt-box"></picture>
+            <h2>Nossa história</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque? Voluptatum odit at corrupti.</p>
+        
+        </div>
+    </div>
+</section>
+
+<section class="sobre-nos">
+    <div class="bckg-sobre-nos" id="cardapio">
+        <picture class="img-sobre-nos" id="img-cardapio"></picture>
+        <span class="arrow-left" id="arrow"></span>
+        <span class="arrow-bottom" id="arrow"></span>
+
+        <div class="txt-box-sobre-nos" id="txt-box-cardapio">
+            <picture class="img-txt-box" id="img-txt-cardapio"></picture>
+            <h2>Nosso Cardápio</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque? Voluptatum odit at corrupti.</p>
+        </div>
+    </div>
+</section>
+
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
-
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda
-        unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.
-    </p>
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-camera-retro" style="padding-right: 10px;"></i>Nossas fotos internas</h2>
 </div>
 
 <section class="galeria-container">
@@ -167,6 +190,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
