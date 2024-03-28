@@ -454,7 +454,7 @@ main {
 
 .titulo-reservas {
   display: flex;
-  width: 90%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   font-size: 3em;
@@ -472,7 +472,7 @@ main {
 
 .cx-txt-galeria {
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
