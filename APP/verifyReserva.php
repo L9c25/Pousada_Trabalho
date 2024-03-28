@@ -16,7 +16,8 @@
 					 'intervalo'=> $response['intervalo'],
 					 'total_preco'=> $response['total_preco'],
 					 'chek_in'=> $response['chek_in'],
-					 'chek_out'=> $response['chek_out']
+					 'chek_out'=> $response['chek_out'],
+					 'img' => $response['img'],
 					];
 		echo json_encode($response);
 	} else {

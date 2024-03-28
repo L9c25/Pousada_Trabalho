@@ -275,6 +275,8 @@
             var A_preco = response.preco;
             var A_totalprc = response.total_preco;
             var A_intervalo = response.intervalo;
+            var A_img = response.img;
+            console.log(A_img)
 
             if (resp) {
                 //? Possui uma reserva
@@ -284,7 +286,7 @@
                             <button id="A_id" hiden value=""></button>
                             <div class="card-acomodacao" id="card">
                         <picture class="img-card"
-                            style="background-image: url(./assets/imagens/.jpg);"></picture>
+                            style="background-image: url(./assets/imagens/${A_img}.jpg);"></picture>
                         <div class="txt-box-card-acomodacao">
                             <h2 class="acomodacao-title"> ${A_nome}
                                 <span style="font-size: .8em; font-weight: lighter; display: flex; align-items: center;">
