@@ -271,15 +271,49 @@
             //? Esta função é chamada quando a requisição é concluída com sucesso
             var resp = response.success;
             var A_id = response.id;
+            var A_nome = response.nome;
+            var A_preco = response.preco;
+            var A_totalprc = response.total_preco;
+            var A_intervalo = response.intervalo;
 
             if (resp) {
                 //? Possui uma reserva
                 Swal.fire({
                     title: "<strong>Sua Reservas</strong>",
                     html: ` 
-                            <button class="btn btn-danger" id="deletReserva">Delet</button>
                             <button id="A_id" hiden value=""></button>
-                            
+                            <div class="card-acomodacao" id="card">
+                        <picture class="img-card"
+                            style="background-image: url(./assets/imagens/.jpg);"></picture>
+                        <div class="txt-box-card-acomodacao">
+                            <h2 class="acomodacao-title"> ${A_nome}
+                                <span style="font-size: .8em; font-weight: lighter; display: flex; align-items: center;">
+                                    <i class="fa-solid fa-star" style="margin-right: 8px; font-size: .8em;"></i>
+                                    4.8/5.0
+                                </span>
+                            </h2>
+
+                            <span class="icons">
+                            <i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach"></i>
+                            </span>
+
+                            <p class="desc-card-acomodacao">
+                                
+                            </p>
+                            <R1>
+                                ${A_preco}/noite
+                            </R1>
+                            <R1 class="valor-acomodacao">
+                                 R$${A_totalprc} por ${A_intervalo}
+                                 noite
+                                
+
+                                 <button class="btn btn-danger" id="deletReserva">Delet</button>
+                                
+                                </button>
+                            </R1>
+                        </div>
+                    </div>
                         `,
                     focusConfirm: false,
                     confirmButtonAriaLabel: "Thumbs up, great!",

@@ -13,6 +13,10 @@
   --dark-bg-color:#0a0427;
 }
 
+#A_id {
+  display: none;
+}
+
 p {
   margin-bottom: 0px;
 }
@@ -932,4 +936,66 @@ footer {
 .user-img {
   background-color: #4070F4;
   align-self: flex-start;
+}
+
+.card-acomodacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  color: var(--dark-bg-color);
+  height: 170px;
+}
+
+.img-card {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid var(--dark-bg-color);
+  box-shadow: 9px 0px 17px -10px rgba(0,0,0,0.2);
+}
+
+.txt-box-card-acomodacao {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px;
+  border: 1px solid var(--dark-bg-color);
+  border-left: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+
+.acomodacao-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 28px;
+}
+
+.desc-card-acomodacao {
+  font-size: .5em;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  font-size: .6em;
+}
+
+.valor-acomodacao {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
