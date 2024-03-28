@@ -13,6 +13,10 @@
   --dark-bg-color:#0a0427;
 }
 
+#id_user {
+  display: none;
+}
+
 a {
     padding: 0;
   }

@@ -82,8 +82,10 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas" id="promocao"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
-    em promoção</h2>
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="promocao"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+        em promoção</h2>
+</div>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -195,6 +197,48 @@
     </div>
 </section>
 
+<div class="container-rating">
+    <h2 class="title-rating">Avaliações dos Usuários</h2>
+        <div class="box-cards-rating">
+            <div class="card-rating">
+                <div class="card-content-rating">
+                    <div class="card-user-bar">
+                        <img class="user-img" src="./assets/imagens/user-3.jpg" alt="Usuário 1">
+                        <p><strong>João Silva</strong></p>
+                    </div>
+                    <div class="card-text">
+                        <p>A pousada é maravilhosa! Fiquei encantado com o atendimento e as instalações. Com certeza voltarei!</p>
+                    </div>
+                </div>
+                <div class="rating">★★★★★</div>
+            </div>
+            <div class="card-rating">
+                <div class="card-content-rating">
+                    <div class="card-user-bar">
+                        <img class="user-img" src="./assets/imagens/user-2.jpg" alt="Usuário 2">
+                        <p><strong>Maria Santos</strong></p>
+                    </div>
+                    <div class="card-text">
+                        <p>Excelente estadia! O café da manhã é delicioso e a localização é perfeita para quem quer relaxar.</p>
+                    </div>
+                </div>
+                <div class="rating">★★★★☆</div>
+            </div>
+            <div class="card-rating">
+                <div class="card-content-rating">
+                    <div class="card-user-bar">
+                        <img class="user-img" src="./assets/imagens/user-1.jpg" alt="Usuário 3">
+                        <p><strong>Carla Oliveira</strong></p>
+                    </div>
+                    <div class="card-text">
+                        <p>Recomendo a todos! A equipe é muito atenciosa e prestativa, me senti em casa durante toda a estadia.</p>
+                    </div>
+                </div>
+                <div class="rating">★★★★★</div>
+            </div>
+        </div>
+    </div>
+
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
@@ -232,7 +276,7 @@
                 //? Possui uma reserva
                 Swal.fire({
                     title: "<strong>Sua Reservas</strong>",
-                    html: `
+                    html: ` 
                             <button class="btn btn-danger" id="deletReserva">Delet</button>
                             <button id="A_id" hiden value=""></button>
                             

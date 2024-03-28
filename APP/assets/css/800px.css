@@ -5,6 +5,10 @@
 }
 @media screen and (max-width: 850px) and (min-width: 0px) {
 
+
+    body{
+        overflow-x: hidden;
+    }
     .slide-container {
         z-index: 9;
         color: #0056b3;
@@ -127,8 +131,14 @@
     }
 
     .titulo-reservas {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 20px;
+        width: 70%;
+        margin-top: 0px;
         font-size: 2em;
-
+        justify-content: flex-start;
+        text-align: left;
     }
 
     .user_name {
@@ -319,5 +329,23 @@
 
       .arrow-left {
         display: none;
+      }
+
+      .box-cards-rating {
+        flex-direction: column;
+        width: 90%;
+        padding: 20px 0px;
+        margin: 0px;
+        align-items: center;
+    }
+
+    .card-rating {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .title-rating {
+        font-size: 3em;
+        margin-left: 20px;
       }
 }

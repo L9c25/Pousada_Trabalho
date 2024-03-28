@@ -13,6 +13,10 @@
   --dark-bg-color:#0a0427;
 }
 
+p {
+  margin-bottom: 0px;
+}
+
 a {
   padding: 0;
 }
@@ -302,7 +306,7 @@ main {
   position: relative;
   row-gap: 5px;
   padding: 25px 0;
-  height: 150px;
+  height: 180px;
 }
 
 .overlay {
@@ -407,8 +411,8 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: column-reverse;
   font-weight: bolder;
   font-size: 1.7em;
   color: var(--dark-bg-color);
@@ -416,7 +420,7 @@ main {
 
 .valor-original {
   position: absolute;
-  bottom: 40px;
+  bottom: 70px;
 }
 
 .box-h1-card>a {
@@ -450,7 +454,7 @@ main {
 
 .titulo-reservas {
   display: flex;
-  width: 100%;
+  width: 90%;
   align-items: center;
   justify-content: center;
   font-size: 3em;
@@ -468,7 +472,7 @@ main {
 
 .cx-txt-galeria {
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
@@ -630,7 +634,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: var(--dark-bg-color);
-  margin-top: 90px;
+  margin-top: 60px;
   padding: 40px 0px;
 }
 
@@ -858,4 +862,74 @@ footer {
 #img-txt-cardapio {
   background-image: url(../imagens/undraw_cooking_p7m1.svg);
   padding: 10px;
+}
+
+
+/*NOSSO CARDAPIO*/
+
+.container-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 60px;
+}
+
+.title-rating {
+  font-size: 3em;
+}
+  
+.box-cards-rating {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card-rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 31%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.card-rating img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.card-content-rating {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.card-text {
+    flex: 1;
+}
+.rating {
+  text-align: center;
+    font-size: 35px;
+    color: #ff9800;
+}
+
+.card-user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.user-img {
+  background-color: #4070F4;
+  align-self: flex-start;
 }

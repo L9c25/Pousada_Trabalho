@@ -232,6 +232,7 @@ if ($intervalo == 0){
             endDate: '+2m'
         });
     </script>
+    <script src="assets/js/script.js"></script>
 
     <Script src="assets\js\reservar.js"></Script>
 </body>
