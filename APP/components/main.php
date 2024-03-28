@@ -9,7 +9,7 @@
 
 <!-- FILTRO DESKTOP -->
 
-<div class="filtro-reserva">
+<div class="filtro-reserva" id="promocao">
     <form action="quartos.php" method="post" class="form-reserva">
 
         <div class="input-daterange" id="datepicker">
@@ -83,7 +83,7 @@
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="promocao"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+    <h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
         em promoção</h2>
 </div>
 
@@ -281,7 +281,7 @@
             if (resp) {
                 //? Possui uma reserva
                 Swal.fire({
-                    title: "<strong>Sua Reservas</strong>",
+                    title: "<strong>Sua Reserva</strong>",
                     html: ` 
                             <button id="A_id" hiden value=""></button>
                             <div class="card-acomodacao" id="card">
@@ -327,18 +327,14 @@
             } else {
                 //? Ñ possui uma reserva
                 Swal.fire({
-                    title: "<strong>Você não possui reserva</strong>",
-                    html: `You can use <b>bold text</b>,
-                        <a href="#">links</a>,
-                        and other HTML tags
-                        `,
+                    title: "<strong>Você ainda não possui reserva</strong>",
                     showCloseButton: true,
                     showCancelButton: true,
                     focusConfirm: false,
-                    confirmButtonText: `<i class="fa fa-thumbs-up"></i> Great!`,
-                    confirmButtonAriaLabel: "Thumbs up, great!",
-                    cancelButtonText: `<i class="fa fa-thumbs-down"></i> `,
-                    cancelButtonAriaLabel: "Thumbs down"
+                    //?confirmButtonText: `<i class="fa fa-thumbs-up"></i>`,
+                    //?confirmButtonAriaLabel: "Thumbs up, great!",
+                    //?cancelButtonText: `<i class="fa fa-thumbs-down"></i> `,
+                    //?cancelButtonAriaLabel: "Thumbs down"
                 })
             }
 

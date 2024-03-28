@@ -4,7 +4,7 @@
 	    <a href="#inicio" class="nav-link">Inicio</a>
 		<a href="#footer" class="nav-link">localização</a>
 		<a href="#promocao" class="nav-link">promoções</a>
-		<a href="" class="nav-link">suporte</a>
+		<a href="" class="nav-link">minha reserva</a>
 		<!-- link exclusiva para adms -->
 		<a href="test_CMD.php" class="nav-link-last" id="adm">CMD</a>
 	</nav>
@@ -14,7 +14,7 @@
 		</span>
 		<i class="fa-regular fa-user" id="icon-login">
 			<a href="logout.php" class="logout">
-				<i class="fa fa-chevron-left"></i>
+				<i class="fa fa-chevron-left" ></i>
 			</a>
 		</i>
 	</span>
@@ -27,7 +27,7 @@
 			<a href="#inicio" class="nav-link">Inicio</a>
 			<a href="#footer" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
-			<a href="" class="nav-link">suporte</a>
+			<a href="" class="nav-link" >minha reserva</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<!-- link exclusiva para adms -->
 			<a href="test_CMD.php" class="nav-link" id="adm">CMD</a>
