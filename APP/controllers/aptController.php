@@ -131,7 +131,7 @@ class daoMysql implements AptDAO
 
 		if ($stmt->rowCount() >= 1) {
 			// O usuario ja possui reserva
-			$sql = $this->pdo->query("SELECT r.id_a ,r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_in, r.chek_out) AS 	intervalo,
+			$sql = $this->pdo->query("SELECT r.id_a ,r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_out, r.chek_in) AS 	intervalo,
 				DATEDIFF(r.chek_out, r.chek_in) * a.preco AS total_preco
 				FROM reserva r
 				JOIN acomodacao a ON r.id_a = a.id
