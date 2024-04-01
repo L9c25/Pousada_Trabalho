@@ -185,27 +185,17 @@ a {
     z-index: 100;
     box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
   }
-  
-  #icon-login {
-    font-size: 1.6em;
-    cursor: pointer;
-  }
-  
+
   .nav-header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-right: 20px;
+    justify-content: center;
     font-size: 20px;
     font-weight: 100;
     position: absolute;
     top: 10px;
     z-index: 100;
-  }
-
-  .fa-circle-chevron-left {
-    font-size: 1.5em;
   }
   
   .nav-link {
