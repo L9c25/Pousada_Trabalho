@@ -267,6 +267,10 @@ main {
 
 /*CARD ACOMODAÇÕES*/
 
+#titulo-acomodacoes {
+  margin-top: 80px;
+}
+
 .txt-box-main>h1,
 .txt-box-main>p,
 .txt-box-main>a {
@@ -478,7 +482,7 @@ main {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  margin-top: 130px;
+  margin-top: 20px;
 }
 
 .cx-txt-galeria>p {
