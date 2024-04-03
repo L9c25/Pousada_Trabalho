@@ -192,6 +192,7 @@ a {
     align-items: center;
     justify-content: flex-end;
     padding-right: 40px;
+    padding-left: 40px;
     font-size: 20px;
     font-weight: 100;
     position: absolute;
