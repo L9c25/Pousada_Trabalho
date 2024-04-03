@@ -36,6 +36,11 @@
         color: black;
     }
 
+    .fa-circle-chevron-left {
+        margin-right: 30px;
+        font-size: 2em;
+    }
+
     .btn-reserva-mobile {
         background-color: var(--main-bg-color);
     }

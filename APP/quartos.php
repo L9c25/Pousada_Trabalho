@@ -53,9 +53,20 @@ if ($intervalo == 0){
 </head>
 
 <body>
-    <!-- FILTRO DESKTOP -->
-    <?php include './components/header.php' ?>
+<header id="header-desktop">
+	<picture class="logo-header"></picture>
+	<nav class="nav-header" id="desktop">
+    <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
+	</nav>
+    </nav>
+</header>
 
+<header id="header-mobile" class="header-mobile">
+	<picture class="logo-header"></picture>
+        <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
+</header>
+    
+    <!-- FILTRO DESKTOP -->
     <div class="filtro-reserva">
         <form action="quartos.php" method="POST" class="form-reserva">
 

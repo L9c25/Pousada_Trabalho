@@ -190,12 +190,18 @@ a {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 40px;
     font-size: 20px;
     font-weight: 100;
     position: absolute;
     top: 10px;
     z-index: 100;
+  }
+
+  .fa-circle-chevron-left {
+    margin-right: 30px;
+    font-size: 1.5em;
   }
   
   .nav-link {
