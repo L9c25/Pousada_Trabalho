@@ -24,9 +24,6 @@ $(function () {
 
 		// Obtém o valor do botão clicado
 		var ID = $(this).val();
-		// Obtém o valor do user id
-		var U_ID = $("#id_user").val();
-
 
 		var start = $(".start").val()
 		var end = $(".end").val()
@@ -39,7 +36,6 @@ $(function () {
 				url: "reservar.php",
 				data: {
 					"A_id": ID,
-					"U_id": U_ID,
 					"start": start,
 					"end": end,
 					"adult": adult,

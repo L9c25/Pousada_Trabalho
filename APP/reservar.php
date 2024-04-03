@@ -1,8 +1,9 @@
 <?php
 require_once "./controllers/aptController.php";
+session_start();
 
 // Definindo Variaves da reserva
-$u_id = $_POST['U_id'];
+$u_id = $_SESSION['id'];
 $a_id = $_POST['A_id'];
 $s_date = date_create($_POST['start']);
 $e_date = date_create($_POST['end']);
