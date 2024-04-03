@@ -316,6 +316,8 @@ main {
   row-gap: 5px;
   padding: 25px 0;
   height: 180px;
+  background-image: linear-gradient(45deg, #0a0427, #0a0427);
+  border-radius: 25px 25px 0px 0px;
 }
 
 .overlay {
@@ -324,7 +326,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070F4;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 100%);
   background-size: cover;
   background-position: center;
   border-radius: 25px 25px 0px 0px;
@@ -410,9 +412,16 @@ main {
 
 .box-h1-card {
   display: flex;
+  position: absolute;
+  top: 20px;
+  color: white;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+.box-h1-card > a {
+  color: white;
 }
 
 .txt-price-diaria {
