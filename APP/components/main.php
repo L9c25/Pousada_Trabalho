@@ -383,7 +383,7 @@
                 });
                 Toast.fire({
                     icon: "success",
-                    title: "RESERVADO !"
+                    title: "RESERVA DELETADA COM SUCESSO"
                 });
 
 
