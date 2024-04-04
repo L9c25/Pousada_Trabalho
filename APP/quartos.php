@@ -3,7 +3,7 @@
 session_start();
 
 // Verifica se a variável de sessão está definida
-if (!isset ($_SESSION['username'])) {
+if (!isset($_SESSION['username'])) {
     // Redireciona o usuário para a página de login ou outra página de sua escolha
     header("Location: login.php");
     // Termina o script para garantir que o redirecionamento funcione corretamente
@@ -23,7 +23,7 @@ $qtd_kid = intval($_POST['num_criancas']);
 // Definindo o intervalo entre as datas
 $intervalo = (int) date_diff($s_date, $e_date)->format('%a');
 // Corrigindo caso a pesoa reserve por 1 dia:
-if ($intervalo == 0){
+if ($intervalo == 0) {
     $intervalo = 1;
 }
 ?>
@@ -34,12 +34,12 @@ if ($intervalo == 0){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Import icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!-- Sweetalert2 -->
     <link rel="stylesheet" href="assets\Sweetalert2\sweetalert2.min.css">
 
@@ -48,33 +48,33 @@ if ($intervalo == 0){
     <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="assets/css/acomodacoes.css">
     <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
-    
+
     <title>Acomodações</title>
 </head>
 
 <body>
-<header id="header-desktop">
-	<picture class="logo-header"></picture>
-	<nav class="nav-header" id="desktop">
-    <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
-	</nav>
-    </nav>
-</header>
+    <header id="header-desktop">
+        <picture class="logo-header"></picture>
+        <nav class="nav-header" id="desktop">
+            <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
+        </nav>
+        </nav>
+    </header>
 
-<header id="header-mobile" class="header-mobile">
-	<picture class="logo-header"></picture>
+    <header id="header-mobile" class="header-mobile">
+        <picture class="logo-header"></picture>
         <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
-</header>
-    
+    </header>
+
     <!-- FILTRO DESKTOP -->
     <div class="filtro-reserva">
         <form action="quartos.php" method="POST" class="form-reserva">
 
-            <div class="input-daterange" id="datepicker">
-                <input class="input-btn start" type="text" value="<?php echo $_POST["start"] ?>" name="start"
-                    placeholder="CHEK-IN" autocomplete="off" value="" readonly required />
-                <input class="input-btn end" type="text" value="<?php echo $_POST['end'] ?>" name="end"
-                    placeholder="CHEK-OUT" autocomplete="off" value="" readonly required />
+            <div class="input-daterange">
+                <input class="input-btn start" type="text" id="CheckInDatePicker" value="<?php echo $_POST["start"] ?>"
+                    name="start" placeholder="CHEK-IN" autocomplete="off" value="" readonly required />
+                <input class="input-btn end" type="text" id="CheckOutDatePicker" value="<?php echo $_POST['end'] ?>"
+                    name="end" placeholder="CHEK-OUT" autocomplete="off" value="" readonly required />
             </div>
 
             <span class="space"></span>
@@ -200,11 +200,12 @@ if ($intervalo == 0){
                             <R1 class="valor-acomodacao">
                                 <?php echo $val ?> por
                                 <?php echo $intervalo ?> noite
-                                
-                                <button class="btn btn-success reservar" value="<?php echo $apt->getId();?>">
-                                
-                                ID- <?php echo $apt->getId();?>
-                                
+
+                                <button class="btn btn-success reservar" value="<?php echo $apt->getId(); ?>">
+
+                                    ID-
+                                    <?php echo $apt->getId(); ?>
+
                                 </button>
                             </R1>
                         </div>
@@ -231,18 +232,12 @@ if ($intervalo == 0){
         $("#num_adultos").val(<?php echo $qtd_adulto ?>).change();
         $("#num_criancas").val(<?php echo $qtd_kid ?>).change();
 
-        $('.input-daterange').datepicker({
-            language: "pt-BR",
-            clearBtn: true,
-            autoclose: true,    
-            format: "yyyy/mm/dd",
-            startDate: '-0d',
-            endDate: '+2m'
-        });
+        
     </script>
     <script src="assets/js/script.js"></script>
 
     <Script src="assets\js\reservar.js"></Script>
+    <script src="assets/js/myScrow_myDatepicker.js"></script>
 </body>
 
 </html>

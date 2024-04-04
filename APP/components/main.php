@@ -12,9 +12,9 @@
 <div class="filtro-reserva" id="promocao">
     <form action="quartos.php" method="post" class="form-reserva">
 
-        <div class="input-daterange" id="datepicker">
-            <input class="input-btn" id="input-readonly" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" required />
-            <input class="input-btn" id="input-readonly" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
+        <div class="input-daterange">
+            <input class="input-btn" id="CheckInDatePicker" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" required />
+            <input class="input-btn" id="CheckOutDatePicker" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
         </div>
 
         <span class="space"></span>
