@@ -636,7 +636,7 @@ main {
 
 .user_name {
   margin-right: 8px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
