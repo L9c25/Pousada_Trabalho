@@ -348,4 +348,49 @@
         font-size: 3em;
         margin-left: 20px;
       }
+
+      .card-acomodacao {
+        height: 360px;
+        flex-direction: column;
+    }
+
+    .img-card {
+        height: 70%;
+        width: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .txt-box-card-acomodacao {
+        width: 100%;
+        height: auto;
+        font-size: 1.2vh;
+        padding: 20px 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .valor-acomodacao {
+        display: flex;
+        padding: 0px;
+        font-size: 2em;
+    }
+
+    .acomodacao-title {
+        font-size: 2.3em;
+        margin: 0px;
+    }
+
+    .btn-success {
+        display: flex;
+        height: 20px;
+        align-items: center;
+    }
+
+    .desc-card-acomodacao {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: lighter;
+        margin-bottom: 15px;
+    }
 }

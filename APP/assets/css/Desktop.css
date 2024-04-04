@@ -270,6 +270,7 @@ main {
 
 #titulo-acomodacoes {
   margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 .txt-box-main>h1,
@@ -294,7 +295,7 @@ main {
   border-radius: 25px;
   height: 340px;
   background-color: #FFF;
-  border: 1px solid #0808077e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
 }
 
 .image-content {
@@ -316,7 +317,7 @@ main {
   row-gap: 5px;
   padding: 25px 0;
   height: 180px;
-  background-image: linear-gradient(45deg, #0a0427, #0a0427);
+  background-image: linear-gradient(45deg, #141414, #141414);
   border-radius: 25px 25px 0px 0px;
 }
 
@@ -326,7 +327,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 1%, rgb(0, 0, 0) 60%);
   background-size: cover;
   background-position: center;
   border-radius: 25px 25px 0px 0px;
@@ -436,9 +437,14 @@ main {
   color: var(--dark-bg-color);
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+}
+
 .valor-original {
   position: absolute;
-  bottom: 70px;
+  bottom:85px;
 }
 
 .box-h1-card>a {
@@ -957,8 +963,10 @@ footer {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
+  margin-right: 10px;
   border-radius: 20px;
   color: var(--dark-bg-color);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
   height: 170px;
 }
 
@@ -971,8 +979,6 @@ footer {
   height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 1px solid var(--dark-bg-color);
-  box-shadow: 9px 0px 17px -10px rgba(0,0,0,0.2);
 }
 
 .txt-box-card-acomodacao {
@@ -983,7 +989,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   padding: 0 10px;
-  border: 1px solid var(--dark-bg-color);
   border-left: none;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;

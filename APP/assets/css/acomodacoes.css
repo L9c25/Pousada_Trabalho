@@ -368,7 +368,6 @@ a {
     align-items: flex-start;
     padding: 0 10px;
     border: 1px solid var(--dark-bg-color);
-    border-left: none;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 

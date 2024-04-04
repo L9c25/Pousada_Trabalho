@@ -108,8 +108,13 @@
                                 <?php echo $apt->getNome() ?>
                             </a>
                         </div>
-                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i
-                                class="fa-solid fa-umbrella-beach"></i></span>
+
+                        <span class="icons">
+                            <i class="fa-solid fa-wifi"></i>
+                            <p style="margin-right: 15px; margin-left: 5px;">wifi</p> 
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <p style="margin-left: 5px;">vista para praia</p> 
+                        </span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
@@ -257,7 +262,10 @@
 
 <!-- script para a vizualisação da reserva -->
 <script>
-    $("#icon-login").on("click", function () {
+    // jogando todos IDS da pagina em uma só variavel
+    var iconLogin = document.querySelectorAll("#icon-login")
+    
+    $(iconLogin).on("click", function () {
         // definindo o ID com base no value do button
         var U_ID = $("#id_user").val();
 

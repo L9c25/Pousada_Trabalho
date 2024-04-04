@@ -335,9 +335,9 @@
 
     .txt-box-card-acomodacao {
         width: 100%;
-        height: 40%;
+        height: auto;
         font-size: 1.2vh;
-        padding: 30px 10px;
+        padding: 20px 10px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 20px;
     }
@@ -363,6 +363,7 @@
         font-size: 1em;
         font-style: italic;
         font-weight: lighter;
+        margin-bottom: 15px;
     }
 
     #num-adultos {
