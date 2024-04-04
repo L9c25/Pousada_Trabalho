@@ -1,7 +1,8 @@
 <?php
+	session_start();
 	require_once("config/connect.php");
 	require_once("controllers/aptController.php");
-	$u_id = $_POST['U_id'];
+	$u_id = $_SESSION['id'];
 	$d = new daoMysql($pdo);
 	$response = $d->verifyReserva($u_id);
 

@@ -263,15 +263,9 @@
 <!-- script para a vizualisação da reserva -->
 <script>
     $("#iconLogin").on("click", function () {
-        // definindo o ID com base no value do button
-        var U_ID = <?php echo $_SESSION['id']?>; 
-
         $.ajax({
             method: "POST",
             url: "verifyReserva.php", // test para erro .php -> .pp
-            data: {
-                "U_id": U_ID,
-            }
         }).done(function (response) {
             //? Esta função é chamada quando a requisição é concluída com sucesso
             var resp = response.success;
