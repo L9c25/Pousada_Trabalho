@@ -262,12 +262,9 @@
 
 <!-- script para a vizualisação da reserva -->
 <script>
-    // jogando todos IDS da pagina em uma só variavel
-    var iconLogin = document.querySelectorAll("#icon-login")
-    
-    $(iconLogin).on("click", function () {
+    $("#iconLogin").on("click", function () {
         // definindo o ID com base no value do button
-        var U_ID = $("#id_user").val();
+        var U_ID = <?php echo $_SESSION['id']?>; 
 
         $.ajax({
             method: "POST",
