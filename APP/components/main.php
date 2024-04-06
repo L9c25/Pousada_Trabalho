@@ -261,8 +261,9 @@
 
 
 <!-- script para a vizualisação da reserva -->
-<script>
-    $("#iconLogin").on("click", function () {
+<script>    
+    $("#icon-login").on("click", function () {
+        // definindo o ID com base no value do button
         $.ajax({
             method: "POST",
             url: "verifyReserva.php", // test para erro .php -> .pp
@@ -275,7 +276,6 @@
             var A_totalprc = response.total_preco;
             var A_intervalo = response.intervalo;
             var A_img = response.img;
-            console.log(A_img)
 
             if (resp) {
                 //? Possui uma reserva
@@ -373,7 +373,7 @@
                     toast: true,
                     position: "top-end",
                     showConfirmButton: false,
-                    timer: 3000,
+                    timer: 1800,
                     timerProgressBar: true,
                     didOpen: (toast) => {
                         toast.onmouseenter = Swal.stopTimer;

@@ -46,7 +46,11 @@ require_once "./controllers/aptController.php"
 
     <!-- import CSS date picker -->
     <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
-
+    <style>
+        .user_name{
+            color: black;
+        }
+    </style>
     <title>Hotel Club</title>
 </head>
 

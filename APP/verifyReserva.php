@@ -1,8 +1,8 @@
 <?php
-	session_start();
+    session_start();
 	require_once("config/connect.php");
 	require_once("controllers/aptController.php");
-	$u_id = $_SESSION['id'];
+	$u_id = $_SESSION["id"];
 	$d = new daoMysql($pdo);
 	$response = $d->verifyReserva($u_id);
 
@@ -27,5 +27,3 @@
 		$response = ['success' => false];
 		echo json_encode($response);
 	}
-
-	

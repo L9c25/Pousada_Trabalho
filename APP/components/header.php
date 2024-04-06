@@ -1,16 +1,16 @@
 <header id="header-desktop">
-	<picture class="logo-header"></picture>
+	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header" id="desktop">
 	       <a href="#inicio" class="nav-link">Inicio</a>
 			<a href="#footer" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
-			<p class="nav-link" id="icon-login">minha reserva</p>
+			<p class="nav-link" id="icon-login">minha reserva</a>
 	</nav>
 	<span class="btns">
 		<span class="user_name">Olá !
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
-		<i class="fa-regular fa-user" id="icon-login">
+		<i class="fa-regular fa-user">
 			<a href="logout.php" class="logout">
 				<i class="fa fa-chevron-left"></i>
 			</a>
@@ -25,7 +25,7 @@
 		   <a href="#inicio" class="nav-link">Inicio</a>
 			<a href="#footer" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
-			<p class="nav-link" id="icon-login">minha reserva</p>
+			<p class="nav-link" id="icon-login">minha reserva</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<a href="" class="nav-link" id="nav-link-last">
 				<?= $_SESSION['username']; ?>
@@ -36,6 +36,4 @@
 			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>
-
-	<button id="id_user" hiden value="<?php echo $_SESSION["id"]?>"></button>
 </header>

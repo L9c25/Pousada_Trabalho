@@ -1,5 +1,5 @@
 <header id="header-desktop">
-	<picture class="logo-header"></picture>
+	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
 	    <a href="#inicio" class="nav-link">Inicio</a>
 		<a href="#footer" class="nav-link">localização</a>
@@ -41,6 +41,4 @@
 			</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>
-	
-	<button id="id_user" hiden value="<?php echo $_SESSION["id"]?>"></button>
 </header>
