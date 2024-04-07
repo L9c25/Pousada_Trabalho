@@ -261,8 +261,10 @@
 
 
 <!-- script para a vizualisação da reserva -->
-<script>    
-    $("#icon-login").on("click", function () {
+<script>   
+    var iconlogin = document.querySelectorAll('#icon-login')
+    
+    $(iconlogin).on("click", function () {
         // definindo o ID com base no value do button
         $.ajax({
             method: "POST",
