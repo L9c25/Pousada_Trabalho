@@ -313,11 +313,13 @@ a {
   /* card das acomodações */
 
   .scrollable-div {
+    display: grid;
     max-height: 70vh; /* Altura máxima da div */
     overflow-y: auto; /* Habilita a rolagem vertical */
     border: 1px solid #ccc; /* Adiciona uma borda para visualização */
     padding: 10px; /* Adiciona um espaço interno */
     border: none;
+    gap: 1em;
   }
 
   .scrollable-div::-webkit-scrollbar {
@@ -340,7 +342,6 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
     border-radius: 20px;
     color: var(--dark-bg-color);
     height: 220px;
