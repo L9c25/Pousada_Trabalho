@@ -285,11 +285,13 @@
     }
 
     .scrollable-div {
+        display: grid;
         max-height: 68vh; /* Altura máxima da div */
         overflow-y: auto; /* Habilita a rolagem vertical */
         border: 1px solid #ccc; /* Adiciona uma borda para visualização */
-        padding: 10px; /* Adiciona um espaço interno */
+        padding: 10px 10px 0px 10px; /* Adiciona um espaço interno */
         overflow-x: hidden;
+        grid: 1em;
     }
 
     #secao-acomodacoes {
