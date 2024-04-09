@@ -122,10 +122,6 @@ header {
   cursor: pointer;
 }
 
-.logout {
-  color: #000000;
-}
-
 .btns{
   margin-right: 20px;
   z-index: 101;
@@ -351,11 +347,7 @@ main {
   border: 4px solid #4070F4;
 }
 
-.name {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--dark-bg-color);
-}
+
 
 .description {
   font-size: 14px;
@@ -635,11 +627,6 @@ main {
   }
 }
 
-#name {
-  color: var(--dark-bg-color);
-
-}
-
 table,
 td,
 th {
@@ -768,12 +755,38 @@ footer {
 }
 
 #adm {
-  color: black;
+  color: var(--dark-bg-color);
 }
+
+
+.user_name {
+  margin-right: 8px;
+  font-size: 20px;
+  color: black;
+  font-weight: 300;
+}
+
+#name {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--dark-bg-color);
+}
+
 
 .logout{
   color: black;
+  font-size: 20px;
+  margin: 0px 20px;
+  font-weight: 300;
+  transition: .9 cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
+
+.logout:hover{
+  color: rgb(75, 75, 75);
+  transition: .9 cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+}
+
 
 
 /*SOBRE NOS*/
@@ -1011,10 +1024,4 @@ footer {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-}
-
-.user_name {
-  margin-right: 8px;
-  font-size: 20px;
-  color: black;
 }
