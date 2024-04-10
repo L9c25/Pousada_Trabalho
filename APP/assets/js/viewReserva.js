@@ -23,7 +23,7 @@ $(iconlogin).on("click", function () {
                             <button id="A_id" hiden value=""></button>
                             <div class="card-acomodacao" id="card">
                         <picture class="img-card"
-                            style="background-image: url(./assets/imagens/${A_img}.jpg);"></picture>
+                            style="background-image: url(./assets/img/${A_img}.jpg);"></picture>
                         <div class="txt-box-card-acomodacao">
                             <h2 class="acomodacao-title"> ${A_nome}
                                 <span style="font-size: .8em; font-weight: lighter; display: flex; align-items: center;">

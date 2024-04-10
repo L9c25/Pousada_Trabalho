@@ -187,7 +187,7 @@ if ($intervalo == 0) {
 
                     <div class="card" id="card">
                         <picture class="img-card"
-                            style="background-image: url(./assets/imagens/<?php echo $apt->getImg1() ?>.jpg);"></picture>
+                            style="background-image: url(./assets/img/<?php echo $apt->getImg1() ?>.jpg);"></picture>
                         <div class="txt-box-card-acomodacao">
                             <h2 class="acomodacao-title">
                                 <?php echo $apt->getNome() ?><span

@@ -66,7 +66,7 @@ header {
 
 .logo-header {
 	display: flex;
-	background-image: url(../imagens/logo.png);
+	background-image: url(../img/logo.png);
 	width: 50px;
 	height: 50px;
 	background-position: center;
@@ -74,6 +74,13 @@ header {
 	margin-left: 20px;
 	z-index: 101;
 	cursor: pointer;
+	transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-header:hover{
+
+	transform: translateX(6px) rotate(25deg);
+	transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btns {

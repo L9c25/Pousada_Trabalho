@@ -68,7 +68,7 @@ main {
 	height: min(80vh, 600px);
 	background:
 		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url(../imagens/pexels-thorsten-technoman-338504.jpg);
+		url(../img/psicina.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -187,6 +187,7 @@ main {
 	background-color: white;
 	color: var(--dark-bg-color);
 	outline: none;
+	cursor: pointer;
 }
 
 .filtro-box>label {
@@ -470,28 +471,28 @@ main {
 }
 
 #img-1 {
-	background-image: url(../imagens/galeria-piscina.jpg);
+	background-image: url(../img/galeria-piscina.jpg);
 }
 
 #img-2 {
-	background-image: url(../imagens/mercado.jpg);
+	background-image: url(../img/mercado.jpg);
 
 }
 
 #img-3 {
-	background-image: url(../imagens/area-churrasco.jpg);
+	background-image: url(../img/area-churrasco.jpg);
 }
 
 #img-4 {
-	background-image: url(../imagens/playground.jpg);
+	background-image: url(../img/playground.jpg);
 }
 
 #img-5 {
-	background-image: url(../imagens/restaurante.jpg);
+	background-image: url(../img/restaurante.jpg);
 }
 
 #img-6 {
-	background-image: url(../imagens/area-de-lazer.jpg);
+	background-image: url(../img/area-de-lazer.jpg);
 }
 
 .container-img-1,
@@ -593,7 +594,7 @@ th {
 
 .img-sobre-nos {
 	display: flex;
-	background-image: url(../imagens/pousada-sobre-nos.jpg);
+	background-image: url(../img/pousada-sobre-nos.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -624,15 +625,15 @@ th {
 }
 
 #img-txt-box {
-	background-image: url(../imagens/8500340-Photoroom.png);
+	background-image: url(../img/8500340-Photoroom.png);
 }
 
 #img-sobre-nos {
-	background-image: url(../imagens/pousada-sobre-nos.jpg);
+	background-image: url(../img/pousada-sobre-nos.jpg);
 }
 
 .arrow-right {
-	background-image: url(../imagens/arrow.png);
+	background-image: url(../img/arrow.png);
 }
 
 .arrow-bottom {
@@ -655,7 +656,7 @@ th {
 /*NOSSO CARDAPIO*/
 
 .arrow-left {
-	background-image: url(../imagens/arrow-left.png);
+	background-image: url(../img/arrow-left.png);
 }
 
 #sobre-nos {
@@ -667,11 +668,11 @@ th {
 }
 
 #img-cardapio {
-	background-image: url(../imagens/flat-lay-assortment-with-delicious-brazilian-food.jpg);
+	background-image: url(../img/flat-lay-assortment-with-delicious-brazilian-food.jpg);
 }
 
 #img-txt-cardapio {
-	background-image: url(../imagens/undraw_cooking_p7m1.svg);
+	background-image: url(../img/undraw_cooking_p7m1.svg);
 	padding: 10px;
 }
 

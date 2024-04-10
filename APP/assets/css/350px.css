@@ -124,7 +124,7 @@
     .arrow-bottom {
         display: flex;
         bottom: 35%;
-        background-image: url(../imagens/arrow-down.png);
+        background-image: url(../img/arrow-down.png);
     }
 
     /*Inicio da pagina mobile*/

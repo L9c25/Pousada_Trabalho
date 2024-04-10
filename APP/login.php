@@ -139,4 +139,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </main>
 </body>
 <script src="assets\bootstrap\js\bootstrap.bundle.min.js"></script>
+<!-- Jquery -->
+<script src="assets\js\jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.alert').fadeOut(3000)
+    })
+</script>
 </html>

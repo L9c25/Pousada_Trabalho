@@ -97,25 +97,6 @@ ScrollReveal().reveal('#img-2', {
 
 });
 
-ScrollReveal().reveal('#img-cardapio', {
-    delay: 20,
-    duration: 400,
-    reset: false,
-    easing: 'cubic-bezier(.25,.1,.64,.96)',
-    origin: 'right',
-    distance: '10px'
-
-});
-
-ScrollReveal().reveal('#txt-box-cardapio', {
-    delay: 30,
-    duration: 600,
-    reset: false,
-    easing: 'cubic-bezier(.25,.1,.64,.96)',
-    origin: 'left',
-    distance: '10px'
-});
-
 ScrollReveal().reveal('#img-3', {
     delay: 20,
     duration: 410,
@@ -152,20 +133,26 @@ ScrollReveal().reveal('#img-4', {
     distance: '10px'
 });
 
-ScrollReveal().reveal('#img-sobre-nos', {
-    delay: 20,
-    duration: 510,
+ScrollReveal().reveal('#nome-empresa', {
+    origin: 'bottom',
+    delay: 80,
+    duration: 400,
     reset: false,
-    easing: 'cubic-bezier(.25,.1,.64,.96)',
-    origin: 'left',
-    distance: '10px'
+    distance: '20px',
+    opacity: 0,
+    easing: 'cubic-bezier(.3,-0.01,.22,1)'
 });
 
-ScrollReveal().reveal('#txt-box-sobre-nos', {
-    delay: 20,
-    duration: 510,
+ScrollReveal().reveal('#text-empresa', {
+    origin: 'bottom',
+    delay: 140,
+    duration: 400,
     reset: false,
-    easing: 'cubic-bezier(.25,.1,.64,.96)',
-    origin: 'right',
-    distance: '10px'
+    distance: '20px',
+    opacity: 0,
+    easing: 'cubic-bezier(.3,-0.01,.22,1)'
 });
+
+ScrollReveal().reveal('.card-rating', { interval: 200});
+
+

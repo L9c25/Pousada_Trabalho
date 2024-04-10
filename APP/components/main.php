@@ -1,8 +1,8 @@
 <!-- INICIO DA PAGINA -->
 <main id="inicio">
     <div class="txt-box-main">
-        <h1>TWO DOORS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
+        <h1 id="nome-empresa">TWO DOORS</h1>
+        <p id="text-empresa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
             dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
     </div>
 </main>
@@ -100,7 +100,7 @@
                 ?>
                 <div class="card swiper-slide" id="card">
                     <div class="image-content">
-                        <img class="overlay" src="./assets/imagens/<?php echo $apt->getImg1() ?>.jpg"></img>
+                        <img class="overlay" src="./assets/img/<?php echo $apt->getImg1() ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
@@ -208,7 +208,7 @@
             <div class="card-rating">
                 <div class="card-content-rating">
                     <div class="card-user-bar">
-                        <img class="user-img" src="./assets/imagens/user-3.jpg" alt="Usuário 1">
+                        <img class="user-img" src="./assets/img/user-3.jpg" alt="Usuário 1">
                         <p><strong>João Silva</strong></p>
                     </div>
                     <div class="card-text">
@@ -220,7 +220,7 @@
             <div class="card-rating">
                 <div class="card-content-rating">
                     <div class="card-user-bar">
-                        <img class="user-img" src="./assets/imagens/user-2.jpg" alt="Usuário 2">
+                        <img class="user-img" src="./assets/img/user-2.jpg" alt="Usuário 2">
                         <p><strong>Maria Santos</strong></p>
                     </div>
                     <div class="card-text">
@@ -232,7 +232,7 @@
             <div class="card-rating">
                 <div class="card-content-rating">
                     <div class="card-user-bar">
-                        <img class="user-img" src="./assets/imagens/user-1.jpg" alt="Usuário 3">
+                        <img class="user-img" src="./assets/img/user-1.jpg" alt="Usuário 3">
                         <p><strong>Carla Oliveira</strong></p>
                     </div>
                     <div class="card-text">

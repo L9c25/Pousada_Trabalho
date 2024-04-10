@@ -1,4 +1,4 @@
-@media (min-width: 0px){
+@media (min-width: 0px) and (max-width: 576px){
     #background {
         display: none;
     }
@@ -9,6 +9,14 @@
         padding: 0 2em;
     }
     
+    #Myform{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+    }
+
     main{
         display: flex;
         justify-content: center;
@@ -17,13 +25,19 @@
     #btn-group {
         display: flex;
         width: 100%;
-        flex-direction: row;
-    }
-    input[type="submit"] {
-        
+        height: 100%;
+        flex-direction: column;
+        gap: 30px;
     }
 
-@media (min-width: 576px) {
+    .btn{
+        width: 100% !important;
+    }
+    input[type="reset"] {
+        margin: 0px !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 766px){
     #background {
         display: none;
     }
@@ -46,12 +60,12 @@
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 767px) and (max-width: 991px){
     #background {
         width: 40%;
         height: 100vh;
         display: flex;
-        background-image: url(../imagens/bg.jpg);
+        background-image: url(../img/bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -70,20 +84,21 @@
     
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px){
 
     .container {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0px 40px;
     }
 
     #background {
         width: 50%;
         height: 100vh;
         display: flex;
-        background-image: url(../imagens/bg.jpg);
+        background-image: url(../img/bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -102,15 +117,13 @@
     }
 
     .form-group {
-        display: flex;
-        flex-direction: column;
         width: 100%;
     }
 
     .btn {
         font-size: 1em;
         width: 60%;
-        height: 70px;
+        height: 50px;
         margin-top: 20px;
     }
 
@@ -152,6 +165,13 @@
 
     #background{
         width: 65%;
+        background-image: url(../img/bg.jpg);
+        height: 100vh;
+        display: flex;
+        background-image: url(../img/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .container {
