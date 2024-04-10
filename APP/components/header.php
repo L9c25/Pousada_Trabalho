@@ -20,7 +20,7 @@
 </header>
 
 <header id="header-mobile" class="header-mobile">
-	<picture class="logo-header"></picture>
+	<picture class="logo-header"  onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
 		<div class="menu-content">
 		   <a href="#inicio" class="nav-link">Inicio</a>

@@ -2,8 +2,7 @@
 <main id="inicio">
     <div class="txt-box-main">
         <h1 id="nome-empresa">TWO DOORS</h1>
-        <p id="text-empresa">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
-            dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
+        <p id="text-empresa">Descubra o paraíso em nossa Pousada, onde o luxo encontra a beleza natural. Estamos ansiosos para recebê-los e compartilhar a magia deste lugar especial. Seja para uma escapada romântica, uma aventura solitária ou um retiro familiar, a Two-Dors é o seu destino para criar lembranças que durarão uma vida inteira.</p>
     </div>
 </main>
 

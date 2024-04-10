@@ -21,7 +21,7 @@
 </header>
 
 <header id="header-mobile" class="header-mobile">
-	<picture class="logo-header"></picture>
+	<picture class="logo-header"  onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
 		<div class="menu-content">
 			<a href="#inicio" class="nav-link">Inicio</a>
@@ -31,7 +31,7 @@
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;"><i
 					class="fa-solid fa-calendar-days" style="padding-right: 10px; font-size: 1.3em;"></i>agendamento</button>
 			<!-- link exclusiva para adms -->
-			<a href="test_CMD.php" class="nav-link" id="adm">painel</a>
+			<a href="" class="nav-link" id="adm">painel</a>
 
 			<a href="" class="nav-link" id="nav-link-last">
 				<i class="fa-solid fa-user" style="padding-right: 10px;"></i>

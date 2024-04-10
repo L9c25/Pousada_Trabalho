@@ -39,16 +39,17 @@ footer {
 	display: flex;
 	align-items: start;
 	flex-direction: column;
+	
 }
 
 .box-links-rodape>strong {
 	color: white;
-	font-size: 1.1em;
+	font-size: 14px;
+	margin-bottom: 10px;
 }
 
 .nav-link-rodape {
 	font-weight: lighter;
-	font-style: italic;
 	display: flex;
 	align-items: center;
 	color: white;
@@ -56,7 +57,7 @@ footer {
 	min-width: 112px;
 	display: flex;
 	justify-content: space-between;
-
+	font-size: 14px;
 }
 
 .nav-link-rodape:hover {
@@ -216,5 +217,13 @@ footer {
 	.mapa-rodape {
 		width: 100%;
 		margin-bottom: 40px;
+	}
+
+	#up-btn{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		font-size: 200px !important;
+		color: black;
 	}
 }

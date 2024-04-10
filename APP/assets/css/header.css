@@ -1,3 +1,29 @@
+/* Works on Firefox */
+* {
+	scrollbar-width: 12px;
+	scrollbar-color: rgba(120, 120, 120, 0.674);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+	width: 13px;
+  }
+  
+  *::-webkit-scrollbar-track {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+	background-color: rgba(140, 120, 220, 0.3);
+	border: none;
+	border-radius: 5rem;
+  }
+
 /*HEADER DA PAGINA*/
 p{
 	padding: 0;
@@ -273,7 +299,7 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
 		z-index: 1000;
 	}
 
@@ -317,7 +343,7 @@ header {
 		width: 260px;
 		padding: 20px 16px;
 		background-color: #fff;
-		box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 5px 1px rgba(0, 0, 0, 0.5);
 		transition: all 0.4s ease;
 	}
 

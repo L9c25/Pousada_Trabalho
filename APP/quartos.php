@@ -57,17 +57,8 @@ if ($intervalo == 0) {
     // Verificação se o Usuario é um administrador
     $id = $_SESSION["id"];
 
-    $dao = new daoMysql($pdo);
-    $sql = $pdo->query("SELECT tipo 
-                                From usuario
-                                where id = $id;");
-    $tipo = $sql->fetch();
-
-    if ($tipo[0] == 1) {
-        include './components/header_adm.php';
-    } else {
-        include './components/header.php';
-    }
+    include './components/header2.php';
+  
     ?>
 
     <!-- FILTRO DESKTOP -->
