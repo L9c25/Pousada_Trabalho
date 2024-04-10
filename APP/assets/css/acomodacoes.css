@@ -10,7 +10,7 @@
   --main-bg-color: #ffffff;
   --second-bg-color: white;
   --opaca-bg-color: #dbddff;
-  --dark-bg-color:#0a0427;
+  --dark-bg-color: #0a0427;
 }
 
 #id_user {
@@ -18,56 +18,57 @@
 }
 
 a {
-    padding: 0;
-  }
-  
-  ul {
-    padding: 0px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Geologica", sans-serif;;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-    padding: 0px;
-  }
-  
-  h1,
-  h2 {
-    font-weight: 400;
-    font-family: "Geologica", sans-serif;
-    letter-spacing: -2px;
-  }
+  padding: 0;
+}
 
-  /*FILTRO DE RESERVA*/
+ul {
+  padding: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Geologica", sans-serif;
+  ;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0px;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  font-family: "Geologica", sans-serif;
+  letter-spacing: -2px;
+}
+
+/*FILTRO DE RESERVA*/
 
 @media screen and (max-width: 1300px) {
 
-    .form-reserva {
-      width: 100%;
-      height: 130px;
-      border-radius: none;
-      flex-wrap: wrap;
-    }
-  
-    .filtro-box>label {
-      padding-right: 0px;
-      font-size: .8em;
-    }
+  .form-reserva {
+    width: 100%;
+    height: 130px;
+    border-radius: none;
+    flex-wrap: wrap;
+  }
 
-    .titulo-reservas {
-      margin-top: 110px;
-    }
+  .filtro-box>label {
+    padding-right: 0px;
+    font-size: .8em;
+  }
 
-    .input-btn {
-        width: 90px;
-    }
+  .titulo-reservas {
+    margin-top: 110px;
+  }
+
+  .input-btn {
+    width: 90px;
+  }
 }
 
 #formulario-container,
@@ -150,250 +151,176 @@ a {
 }
 
 .input-datepicker {
-    display: flex;
+  display: flex;
 }
 
-.input-btn{
-    font-size: 16px;
-    color: #FFF;
-    padding: 8px 16px;
-    background-color: var(--dark-bg-color);
-    border: none;
-    border-radius: 12px;
-    border-style: none;
-    outline:none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+.input-btn {
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: var(--dark-bg-color);
+  border: none;
+  border-radius: 12px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+/*Inicio da pagina mobile*/
 
-  /*HEADER DA PAGINA*/
+#seção-acomodacoes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
 
-#header-mobile {
-    display: none;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    background-color: var(--main-bg-color);
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
-  }
+.acomodacoes-container {
+  display: flex;
+  width: min(90%, 1200px);
+}
 
-  .nav-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 40px;
-    padding-left: 40px;
-    font-size: 20px;
-    font-weight: 100;
-    position: absolute;
-    top: 10px;
-    z-index: 100;
-  }
+.filtro-acomodacao {
+  display: flex;
+  width: 40%;
+  height: 50%;
+  padding: 30px;
+  color: #FFF;
+  margin-right: 40px;
+  flex-direction: column;
+  background-color: var(--dark-bg-color);
+  border-radius: 20px;
+  border: 1px solid var(--dark-bg-color);
+}
 
-  .fa-circle-chevron-left {
-    margin-right: 30px;
-    font-size: 1.5em;
-  }
-  
-  .nav-link {
-    padding-right: 20px;
-  }
-  
-  .menu-content {
-    height: 100%;
-  }
-  
-  .nav-link:hover,
-  .nav-link-last:hover {
-    color: rgb(221, 221, 221);
-  }
-  
-  .logo-header {
-    display: flex;
-    background-image: url(../imagens/logo.png);
-    width: 50px;
-    height: 50px;
-    background-position: center;
-    background-size: cover;
-    margin-left: 20px;
-    z-index: 101;
-  }
-  
-  .btns{
-    margin-right: 20px;
-    z-index: 101;
-  }
+.form-acomodacao {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
 
-  /*Inicio da pagina mobile*/
+.container-check-1,
+.container-check-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-  #seção-acomodacoes {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 40px;
-  }
+}
 
-  .acomodacoes-container {
-    display: flex;
-    width: min(90%, 1200px);
-  }
+.check-box {
+  padding-bottom: 20px;
+  font-size: 1.3em;
+  color: var(--dark-bg-color);
+}
 
-  .filtro-acomodacao {
-    display: flex;
-    width: 40%;
-    height: 50%;
-    padding: 30px;
-    color: #FFF;
-    margin-right: 40px;
-    flex-direction: column;
-    background-color: var(--dark-bg-color);
-    border-radius: 20px;
-    border: 1px solid var(--dark-bg-color);
-  }
+input[type="checkbox"] {
+  /* Estilos do input */
+  margin-right: 5px;
+  /* Adiciona um espaço entre o input e o texto */
+  background-color: #2a074e;
+}
 
-  .form-acomodacao {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-  }
+.check-box {
+  color: white;
+}
 
-  .container-check-1, .container-check-2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
-  }
+.btn-filtro {
+  border-radius: 20px;
+  background-color: var(--opaca-bg-color);
+  border: none;
+  height: 40px;
+  transition: all ease-in-out .2s;
+  cursor: pointer;
+}
 
-  .check-box {
-    padding-bottom: 20px;
-    font-size: 1.3em;
-    color: var(--dark-bg-color);
-  }
+.btn-filtro:hover {
+  background-color: #6ea1ff;
+  color: white;
+}
 
-  input[type="checkbox"] {
-    /* Estilos do input */
-    margin-right: 5px; /* Adiciona um espaço entre o input e o texto */
-    background-color: #2a074e;
-  }
+.cx-checkbox {
+  background-color: var(--second-bg-color);
+}
 
-  .check-box {
-    color: white;
-  }
+/* card das acomodações */
+.scrollable-div {
+  display: grid;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 10px;
+  border: none;
+  gap: 1em;
+}
+.scrollable-div::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: var(--dark-bg-color);
+  border-radius: 5px;
+}
+.scrollable-div::-webkit-scrollbar-track {
+  background-color: rgb(235, 235, 235);
+}
 
-  .btn-filtro {
-    border-radius: 20px;
-    background-color: var(--opaca-bg-color);
-    border: none;
-    height: 40px;
-    transition: all ease-in-out .2s;
-    cursor: pointer;
-  }
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: var(--dark-bg-color);
+  height: 220px;
+}
 
-  .btn-filtro:hover {
-    background-color: #6ea1ff;
-    color: white;
-  }
+.img-card {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid var(--dark-bg-color);
+  box-shadow: 9px 0px 17px -10px rgba(0, 0, 0, 0.2);
+}
 
-  .cx-checkbox{
-    background-color: var(--second-bg-color);
-  }
+.txt-box-card-acomodacao {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px;
+  border: 1px solid var(--dark-bg-color);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 
-  /* card das acomodações */
+}
 
-  .scrollable-div {
-    display: grid;
-    max-height: 70vh; /* Altura máxima da div */
-    overflow-y: auto; /* Habilita a rolagem vertical */
-    border: 1px solid #ccc; /* Adiciona uma borda para visualização */
-    padding: 10px; /* Adiciona um espaço interno */
-    border: none;
-    gap: 1em;
-  }
+.acomodacao-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 28px;
+}
 
-  .scrollable-div::-webkit-scrollbar {
-    width: 10px; /* largura da scrollbar */
-  }
-  
-  /* Estilizando o polegar da scrollbar */
-  .scrollable-div::-webkit-scrollbar-thumb {
-    background-color: var(--dark-bg-color); /* cor do polegar */
-    border-radius: 5px; /* borda arredondada */
-  }
-  
-  /* Estilizando a área de fundo da scrollbar */
-  .scrollable-div::-webkit-scrollbar-track {
-    background-color: rgb(235, 235, 235); /* cor de fundo */
-  }
+.desc-card-acomodacao {
+  font-size: .5em;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  font-size: .6em;
+}
 
-  .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    color: var(--dark-bg-color);
-    height: 220px;
-  }
-
-  .img-card {
-    display: flex;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40%;
-    height: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border: 1px solid var(--dark-bg-color);
-    box-shadow: 9px 0px 17px -10px rgba(0,0,0,0.2);
-  }
-
-  .txt-box-card-acomodacao {
-    display: flex;
-    width: 60%;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10px;
-    border: 1px solid var(--dark-bg-color);
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-
-  }
-
-  .acomodacao-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 28px;
-  }
-
-  .desc-card-acomodacao {
-    font-size: .5em;
-    margin-bottom: 10px;
-    margin-top: 8px;
-    font-size: .6em;
-  }
-
-  .valor-acomodacao {
-    font-size: 1.5em;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
-
+.valor-acomodacao {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}

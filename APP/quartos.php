@@ -34,37 +34,41 @@ if ($intervalo == 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Import icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Sweetalert2 -->
     <link rel="stylesheet" href="assets\Sweetalert2\sweetalert2.min.css">
-
-    <!-- CSS By me -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
     <link rel="stylesheet" href="assets\datepicker\css\bootstrap-datepicker.min.css">
+    <!-- CSS By me -->
+    <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/acomodacoes.css">
     <link rel="stylesheet" href="assets/css/acomodacoes850px.css">
-
+    <link rel="stylesheet" href="assets/css/footer.css">
     <title>Acomodações</title>
 </head>
 
 <body>
-    <header id="header-desktop">
-        <picture class="logo-header"></picture>
-        <nav class="nav-header" id="desktop">
-            <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
-        </nav>
-        </nav>
-    </header>
+    
+<?php
+    // Verificação se o Usuario é um administrador
+    $id = $_SESSION["id"];
 
-    <header id="header-mobile" class="header-mobile">
-        <picture class="logo-header"></picture>
-        <a href="index.php"><i class="fa-solid fa-circle-chevron-left" style="color: #0a0427;"></i></a>
-    </header>
+    $dao = new daoMysql($pdo);
+    $sql = $pdo->query("SELECT tipo 
+                                From usuario
+                                where id = $id;");
+    $tipo = $sql->fetch();
+
+    if ($tipo[0] == 1) {
+        include './components/header_adm.php';
+    } else {
+        include './components/header.php';
+    }
+    ?>
 
     <!-- FILTRO DESKTOP -->
     <div class="filtro-reserva">
@@ -114,9 +118,9 @@ if ($intervalo == 0) {
                 <h2>Reserva de Hotel</h2>
 
                 <div class="input-daterange" id="datepicker">
-                    <input class="input-btn" type="text" value="<?php echo $_POST["start"] ?>" name="start"
+                    <input id="mbCheckInDatePicker" class="input-btn input-btn-mobile" type="text" value="<?php echo $_POST["start"] ?>" name="start"
                         placeholder="CHEK-IN" autocomplete="off" value="" readonly style="margin-right: 0.4em;" />
-                    <input class="input-btn" type="text" value="<?php echo $_POST['end'] ?>" name="end"
+                    <input id="mbCheckOutDatePicker" class="input-btn input-btn-mobile" type="text" value="<?php echo $_POST['end'] ?>" name="end"
                         placeholder="CHEK-OUT" autocomplete="off" value="" readonly />
                 </div>
 
@@ -132,6 +136,8 @@ if ($intervalo == 0) {
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
+
+                <input class="btn-reserva-mobile" type="submit" value="Reservar">
 
             </form>
         </div>
@@ -201,12 +207,7 @@ if ($intervalo == 0) {
                                 <?php echo $val ?> por
                                 <?php echo $intervalo ?> noite
 
-                                <button class="btn btn-success reservar" value="<?php echo $apt->getId(); ?>">
-
-                                    ID-
-                                    <?php echo $apt->getId(); ?>
-
-                                </button>
+                                <button class="btn btn-success reservar" value="<?php echo $apt->getId(); ?>">Reservar</button>
                             </R1>
                         </div>
                     </div>
@@ -235,9 +236,14 @@ if ($intervalo == 0) {
         
     </script>
     <script src="assets/js/script.js"></script>
-
-    <Script src="assets\js\reservar.js"></Script>
+    <!-- Script para o a realização de uma reserva-->
+    <Script src="assets/js/reservar.js"></Script>
+    <!-- script para a vizualisação da reserva -->
+    <script src="assets\js\viewReserva.js"></script>
+    <!-- Script de configuraçoes do Datepicker -->
     <script src="assets/js/myScrow_myDatepicker.js"></script>
 </body>
+
+<?php include './components/footer.php' ?>
 
 </html>

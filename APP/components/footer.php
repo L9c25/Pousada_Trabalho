@@ -39,8 +39,8 @@
         <div class="codigo-promo">
             <h2>Possui algum código promocional?</h2>
             <form class="box-cod"action="processar_codigo.php" method="post">
-                <input  class="input-promo"type="text" id="codigo_promocional" name="codigo_promocional" placeholder="Insira aqui"><br><br>
-                <input class="btn-reservar" id="btn-promo" type="submit" value="Enviar">
+                <input  class="input-promo"type="text" id="codigo_promocional" name="codigo_promocional" placeholder="Insira aqui"><br>
+                <input id="btn-promo" type="submit" value="Enviar">
             </form>
         </div>
         

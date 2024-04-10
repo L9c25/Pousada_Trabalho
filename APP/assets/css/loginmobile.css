@@ -19,7 +19,9 @@
         width: 100%;
         flex-direction: row;
     }
-}
+    input[type="submit"] {
+        
+    }
 
 @media (min-width: 576px) {
     #background {

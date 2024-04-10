@@ -1,12 +1,12 @@
 <header id="header-desktop">
 	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
-		<a href="#inicio" class="nav-link">Inicio</a>
+		<a href="index.php" class="nav-link">Home</a>
 		<a href="#footer" class="nav-link">localização</a>
 		<a href="#promocao" class="nav-link">promoções</a>
 		<p class="nav-link" id="icon-login">minha reserva</p>
 		<!-- link exclusiva para adms -->
-		<a href="test_CMD.php" class="nav-link-last" id="adm">CMD</a>
+		<a href="test_CMD.php" class="nav-link-last" id="adm">Painel</a>
 	</nav>
 	<span class="btns">
 		<span class="user_name" style="color: black;">Olá !
@@ -28,14 +28,14 @@
 			<a href="#footer" class="nav-link">localização</a>
 			<a href="" class="nav-link">promoções</a>
 			<p class="nav-link" id="icon-login">minha reserva</p>
-			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i
-					class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
+			<button class="nav-link" onclick="toggleForm()" style="width: 100%;"><i
+					class="fa-solid fa-calendar-days" style="padding-right: 10px; font-size: 1.3em;"></i>agendamento</button>
 			<!-- link exclusiva para adms -->
-			<a href="test_CMD.php" class="nav-link" id="adm">CMD</a>
+			<a href="test_CMD.php" class="nav-link" id="adm">painel</a>
 
 			<a href="" class="nav-link" id="nav-link-last">
+				<i class="fa-solid fa-user" style="padding-right: 10px;"></i>
 				<?= $_SESSION['username']; ?>
-				<i class="fa-solid fa-user" style="padding-left: 10px;"></i>
 			</a>
 		</div>
 		<a href="logout.php" class="nav-link-logout"><i class="fa-solid fa-arrow-right-from-bracket"

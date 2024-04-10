@@ -1,14 +1,10 @@
-@media screen and (max-width: 1005px) and (min-width: 801px) {
-    .user_name {
-        display: none;
-    }
-}
 @media screen and (max-width: 850px) and (min-width: 0px) {
 
 
-    body{
+    body {
         overflow-x: hidden;
     }
+
     .slide-container {
         z-index: 9;
         color: #0056b3;
@@ -22,114 +18,6 @@
         width: 90%;
     }
 
-    #header-desktop {
-        display: none;
-    }
-
-    #header-mobile {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 70px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 2px 4px 11px -1px rgba(0, 0, 0, 0.51);
-        z-index: 1000;
-    }
-
-    .btn-reserva-mobile {
-        background-color: var(--main-bg-color);
-    }
-
-    .overlay-header {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        height: 1000vh;
-        width: 200%;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.4s ease;
-        z-index: 999;
-        background: rgba(3, 3, 3, 0.295);
-    }
-
-    .nav-header {
-        flex-direction: column;
-    }
-
-    #header-mobile.open~.overlay-header {
-        opacity: 1;
-        left: 260px;
-        pointer-events: auto;
-    }
-
-    .menu-icon {
-        margin-right: 20px;
-        font-size: 1.7em;
-    }
-
-    .logo-header {
-        margin-left: 20px;
-    }
-
-    .nav-header {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        height: 100vh;
-        width: 260px;
-        z-index: 1000;
-        padding: 20px 16px;
-        background-color: #fff;
-        box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s ease;
-    }
-
-    .nav-link-logout {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-        border-radius: 15px;
-        color: #000000;
-        width: 100%;
-        height: 60px;
-    }
-
-    #header-mobile.open .nav-header {
-        left: 0;
-    }
-
-    .menu-content {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    .nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: normal;
-        font-size: 1em;
-        border: 1px solid var(--dark-bg-color);
-        border-radius: 15px;
-        color: var(--dark-bg-color);
-        background-color: white;
-        width: 100%;
-        height: 60px;
-        margin-top: 20px;
-        margin-right: 0px;
-    }
-
-    #nav-link-last {
-        align-self: flex-end;
-    }
-
     .titulo-reservas {
         display: flex;
         align-self: flex-start;
@@ -139,11 +27,6 @@
         font-size: 2em;
         justify-content: flex-start;
         text-align: left;
-    }
-
-    .user_name {
-        margin-right: 1em;
-        color: black;
     }
 
     main {
@@ -160,7 +43,7 @@
         width: 100%;
     }
 
-    #input-btn-mobile {
+    .input-btn-mobile {
         width: 50%;
     }
 
@@ -175,9 +58,7 @@
         z-index: 9999;
     }
 
-    .codigo-promo {
-        margin-left: 0px;
-    }
+
 
     #formulario-container {
         display: none;
@@ -244,39 +125,6 @@
         width: 100%;
     }
 
-    .rodape {
-        align-items: center;
-        flex-direction: column-reverse;
-    }
-
-    .links-rodape {
-        font-size: .9em;
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .box-links-rodape {
-        padding: 0px;
-    }
-
-    .container-links {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .container-links-1,
-    .container-links-2 {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .mapa-rodape {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
     /*sobre-nos*/
 
     .bckg-sobre-nos {
@@ -284,7 +132,7 @@
         height: auto;
         width: 100%;
         border-radius: 0px;
-      }
+    }
 
     .img-sobre-nos {
         width: 100%;
@@ -295,7 +143,7 @@
     .img-txt-box {
         display: none;
     }
-    
+
     .txt-box-sobre-nos {
         height: 200px;
         justify-content: center;
@@ -318,20 +166,20 @@
         background-image: url(../imagens/arrow-down.png);
     }
 
-    .txt-box-sobre-nos > p {
+    .txt-box-sobre-nos>p {
         font-size: .9em;
         margin-bottom: 0px;
     }
 
     #cardapio {
         flex-direction: column;
-      }
+    }
 
-      .arrow-left {
+    .arrow-left {
         display: none;
-      }
+    }
 
-      .box-cards-rating {
+    .box-cards-rating {
         flex-direction: column;
         width: 90%;
         padding: 20px 0px;
@@ -347,50 +195,13 @@
     .title-rating {
         font-size: 3em;
         margin-left: 20px;
-      }
-
-      .card-acomodacao {
-        height: 360px;
-        flex-direction: column;
     }
+
 
     .img-card {
         height: 70%;
         width: 100%;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 0px;
-    }
-
-    .txt-box-card-acomodacao {
-        width: 100%;
-        height: auto;
-        font-size: 1.2vh;
-        padding: 20px 10px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 20px;
-    }
-
-    .valor-acomodacao {
-        display: flex;
-        padding: 0px;
-        font-size: 2em;
-    }
-
-    .acomodacao-title {
-        font-size: 2.3em;
-        margin: 0px;
-    }
-
-    .btn-success {
-        display: flex;
-        height: 20px;
-        align-items: center;
-    }
-
-    .desc-card-acomodacao {
-        font-size: 1em;
-        font-style: italic;
-        font-weight: lighter;
-        margin-bottom: 15px;
     }
 }
