@@ -1,6 +1,6 @@
 <footer id="footer">
     <div class="rodape">
-    <a href="#inicio"><i class="fa-regular fa-circle-up" id="up-btn"></i></a>
+        <a href="#inicio"><i class="fa-regular fa-circle-up" id="up-btn"></i></a>
         <ol class="links-rodape">
 
             <div class="container-links">

@@ -1,3 +1,12 @@
+#up-btn{
+	position: fixed;
+	bottom: 0px;
+	right: 0;
+	margin: 0 20px 20px 0;
+	font-size: 50px !important;
+	color: rgba(168, 133, 220, 0.826);
+}
+
 footer {
 	display: flex;
 	align-items: center;
@@ -217,13 +226,5 @@ footer {
 	.mapa-rodape {
 		width: 100%;
 		margin-bottom: 40px;
-	}
-
-	#up-btn{
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		font-size: 200px !important;
-		color: black;
 	}
 }
