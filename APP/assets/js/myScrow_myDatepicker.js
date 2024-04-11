@@ -1,6 +1,6 @@
 // $('.input-daterange').datepicker({
 //     language: "pt-BR",
-    
+
 //     autoclose: true,
 //     format: "yyyy/mm/dd",
 //     startDate: '-0d',
@@ -80,19 +80,37 @@ $(document).ready(function () {
 
 
     $('#up-btn').hide() // esconde o botao quando a page é carregada
-    $(window).scroll(function() {
+    
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 260) { // distancia que tem que rolar antes de aparecer
             $('#up-btn').fadeIn(250);
         } else {
             $('#up-btn').fadeOut(250);
         }
-        });
-        // manda pro topo
-        $('#up-btn').click(function(event) {
+    });
+    // manda pro topo
+    $('#up-btn').click(function (event) {
         event.preventDefault();
-        $('html, body').animate({scrollTop: 0}, 0);
-        });
+        $('html, body').animate({ scrollTop: 0 }, 0);
+    });
+    
 
+
+     $(".modal-desktop").css({top: "-150%"}); //iniciando o modal acima do header
+     $("#menu-guest").click(function() {
+         $(".modal-desktop")
+         .animate({top: "0"}, {queue: false} , 500 ) // animaçao quando  o icon é clicado/// queue fakse faz tudo rodar ao mesmo tempo
+         .animate({opacity: 1}, 650);
+         
+         $(".nm-fade").fadeOut()
+     });
+     $(".close-modal").click(function() { 
+        $(".modal-desktop")
+        .animate({top: "-100%"}, {queue: false}, 500)
+        .animate({opacity: 0}, 200);
+        
+        $(".nm-fade").fadeIn()
+    });
 });
 
 ScrollReveal().reveal('#img-1', {
@@ -170,6 +188,6 @@ ScrollReveal().reveal('#text-empresa', {
     easing: 'cubic-bezier(.3,-0.01,.22,1)'
 });
 
-ScrollReveal().reveal('.card-rating', { interval: 200});
+ScrollReveal().reveal('.card-rating', { interval: 200 });
 
 

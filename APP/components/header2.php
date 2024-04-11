@@ -26,8 +26,8 @@
 				<i class="fa-solid fa-user" style="padding-left: 10px;"></i>
 			</a>
 		</div>
-		<a href="logout.php" class="nav-link-logout">Logout<i class="fa fa-chevron-left"
-				style="color: #ff3434; margin-left: 10px;"></i>
+		<a href="logout.php" class="nav-link-logout"><i class="fa-solid fa-arrow-right-from-bracket"
+				style="color: #000000; margin-right: 10px;"></i>Logout
 		</a>
 	</nav>
 	<i class="fa-solid fa-bars menu-icon"></i>

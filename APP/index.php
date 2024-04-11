@@ -3,12 +3,12 @@
 session_start();
 
 // Verifica se a variável de sessão está definida
-if (!isset($_SESSION['username'])) {
-    // Redireciona o usuário para a página de login ou outra página de sua escolha
-    header("Location: login.php");
-    // Termina o script para garantir que o redirecionamento funcione corretamente
-    exit();
-}
+// if (!isset($_SESSION['username'])) {
+// Redireciona o usuário para a página de login ou outra página de sua escolha
+// header("Location: login.php");
+// Termina o script para garantir que o redirecionamento funcione corretamente
+// exit();
+// }
 
 // Incluir arquivo de conexão com o banco
 require_once "./config/connect.php";
@@ -56,20 +56,27 @@ require_once "./controllers/aptController.php"
 
 <body>
     <?php
-    // Verificação se o Usuario é um administrador
-    $id = $_SESSION["id"];
+    // Verificação se o Usuario é um administrador/user/guest
+    
+    if (isset($_SESSION["id"])) {
+        $id = $_SESSION["id"];
 
-    $dao = new daoMysql($pdo);
-    $sql = $pdo->query("SELECT tipo 
+        $dao = new daoMysql($pdo);
+        $sql = $pdo->query("SELECT tipo 
                                 From usuario
                                 where id = $id;");
-    $tipo = $sql->fetch();
+        $tipo = $sql->fetch();
 
-    if ($tipo[0] == 1) {
-        include './components/header_adm.php';
-    } else {
-        include './components/header.php';
+        if ($tipo[0] == 1) {
+            include './components/header_adm.php';
+        } else {
+            include './components/header.php';
+        }
+    } else{
+        include './components/headerGuest.php';
     }
+
+
     ?>
 
     <section class="overlay-header"></section>
