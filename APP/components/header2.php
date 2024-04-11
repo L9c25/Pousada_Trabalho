@@ -3,10 +3,9 @@
 	<nav class="nav-header" id="desktop">
 	</nav>
 	<span class="btns">
-		<span class="user_name">Olá !
+		<span class="fs-5">Olá !
 			<span id="name"><?= $_SESSION['username']; ?></span>
 		</span>
-		<i class="fa-regular fa-user">
 			<a href="logout.php" class="logout">
 				<i class="fa-solid fa-arrow-right-from-bracket"></i>
 				Sair
