@@ -76,6 +76,23 @@ $(document).ready(function () {
         clearBtn: true,
         startDate: '+1d' // Começa com uma data mínima de +1 dia a partir de hoje por padrão
     });
+
+
+
+    $('#up-btn').hide() // esconde o botao quando a page é carregada
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 260) { // distancia que tem que rolar antes de aparecer
+            $('#up-btn').fadeIn(250);
+        } else {
+            $('#up-btn').fadeOut(250);
+        }
+        });
+        // manda pro topo
+        $('#up-btn').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 0);
+        });
+
 });
 
 ScrollReveal().reveal('#img-1', {

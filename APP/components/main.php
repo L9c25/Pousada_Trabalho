@@ -1,10 +1,15 @@
 <!-- INICIO DA PAGINA -->
+
 <main id="inicio">
     <div class="txt-box-main">
         <h1 id="nome-empresa">TWO DOORS</h1>
-        <p id="text-empresa">Descubra o paraíso em nossa Pousada, onde o luxo encontra a beleza natural. Estamos ansiosos para recebê-los e compartilhar a magia deste lugar especial. Seja para uma escapada romântica, uma aventura solitária ou um retiro familiar, a Two-Dors é o seu destino para criar lembranças que durarão uma vida inteira.</p>
+        <p id="text-empresa">Descubra o paraíso em nossa Pousada, onde o luxo encontra a beleza natural. Estamos
+            ansiosos para recebê-los e compartilhar a magia deste lugar especial. Seja para uma escapada romântica, uma
+            aventura solitária ou um retiro familiar, a Two-Dors é o seu destino para criar lembranças que durarão uma
+            vida inteira.</p>
     </div>
 </main>
+
 
 <!-- FILTRO DESKTOP -->
 
@@ -12,8 +17,10 @@
     <form action="quartos.php" method="post" class="form-reserva">
 
         <div class="input-daterange">
-            <input class="input-btn" id="CheckInDatePicker" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" required />
-            <input class="input-btn" id="CheckOutDatePicker" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
+            <input class="input-btn" id="CheckInDatePicker" type="text" value="" name="start" placeholder="CHEK-IN"
+                autocomplete="off" required />
+            <input class="input-btn" id="CheckOutDatePicker" type="text" value="" name="end" placeholder="CHEK-OUT"
+                autocomplete="off" required />
         </div>
 
         <span class="space"></span>
@@ -56,9 +63,10 @@
             <h2>Reserva de Hotel</h2>
 
             <div class="input-daterange" id="datepicker-mobile">
-                <input class="input-btn input-btn-mobile" id="mbCheckInDatePicker" type="text" name="start" autocomplete="off" placeholder="CHEK-IN" required   
-                    style="margin-right: 0.4em;" /> 
-                <input class="input-btn input-btn-mobile" id="mbCheckOutDatePicker" type="text" name="end" autocomplete="off" placeholder="CHEK-OUT" required/>
+                <input class="input-btn input-btn-mobile" id="mbCheckInDatePicker" type="text" name="start"
+                    autocomplete="off" placeholder="CHEK-IN" required style="margin-right: 0.4em;" />
+                <input class="input-btn input-btn-mobile" id="mbCheckOutDatePicker" type="text" name="end"
+                    autocomplete="off" placeholder="CHEK-OUT" required />
             </div>
 
             <label for="num_adultos">Adultos</label>
@@ -82,7 +90,8 @@
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-acomodacoes"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+    <h2 class="titulo-reservas" id="titulo-acomodacoes"><i class="fa-solid fa-star"
+            style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
         em promoção</h2>
 </div>
 
@@ -110,9 +119,9 @@
 
                         <span class="icons">
                             <i class="fa-solid fa-wifi"></i>
-                            <p style="margin-right: 15px; margin-left: 5px;">wifi</p> 
+                            <p style="margin-right: 15px; margin-left: 5px;">wifi</p>
                             <i class="fa-solid fa-umbrella-beach"></i>
-                            <p style="margin-left: 5px;">vista para praia</p> 
+                            <p style="margin-left: 5px;">vista para praia</p>
                         </span>
 
                         <div class="txt-price-diaria">
@@ -145,8 +154,9 @@
 </div>
 
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-circle-info" style="padding-right: 10px;"></i>SOBRE A TWO-DOORS</h2>
-</div> 
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-circle-info"
+            style="padding-right: 10px;"></i>SOBRE A TWO-DOORS</h2>
+</div>
 
 <section class="sobre-nos" id="sobre-nos">
     <div class="bckg-sobre-nos">
@@ -158,8 +168,10 @@
 
             <picture class="img-txt-box" id="img-txt-box"></picture>
             <h2>Nossa história</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque? Voluptatum odit at corrupti.</p>
-        
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi
+                beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque?
+                Voluptatum odit at corrupti.</p>
+
         </div>
     </div>
 </section>
@@ -173,7 +185,9 @@
         <div class="txt-box-sobre-nos" id="txt-box-cardapio">
             <picture class="img-txt-box" id="img-txt-cardapio"></picture>
             <h2>Nosso Cardápio</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque? Voluptatum odit at corrupti.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi
+                beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque?
+                Voluptatum odit at corrupti.</p>
         </div>
     </div>
 </section>
@@ -181,7 +195,8 @@
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-camera-retro" style="padding-right: 10px;"></i>Galeria de Fotos</h2>
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-camera-retro"
+            style="padding-right: 10px;"></i>Galeria de Fotos</h2>
 </div>
 
 <section class="galeria-container">
@@ -203,45 +218,48 @@
 
 <div class="container-rating">
     <h2 class="title-rating">Avaliações dos Usuários</h2>
-        <div class="box-cards-rating">
-            <div class="card-rating">
-                <div class="card-content-rating">
-                    <div class="card-user-bar">
-                        <img class="user-img" src="./assets/img/user-3.jpg" alt="Usuário 1">
-                        <p><strong>João Silva</strong></p>
-                    </div>
-                    <div class="card-text">
-                        <p>A pousada é maravilhosa! Fiquei encantado com o atendimento e as instalações. Com certeza voltarei!</p>
-                    </div>
+    <div class="box-cards-rating">
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-3.jpg" alt="Usuário 1">
+                    <p><strong>João Silva</strong></p>
                 </div>
-                <div class="rating">★★★★★</div>
-            </div>
-            <div class="card-rating">
-                <div class="card-content-rating">
-                    <div class="card-user-bar">
-                        <img class="user-img" src="./assets/img/user-2.jpg" alt="Usuário 2">
-                        <p><strong>Maria Santos</strong></p>
-                    </div>
-                    <div class="card-text">
-                        <p>Excelente estadia! O café da manhã é delicioso e a localização é perfeita para quem quer relaxar.</p>
-                    </div>
+                <div class="card-text">
+                    <p>A pousada é maravilhosa! Fiquei encantado com o atendimento e as instalações. Com certeza
+                        voltarei!</p>
                 </div>
-                <div class="rating">★★★★☆</div>
             </div>
-            <div class="card-rating">
-                <div class="card-content-rating">
-                    <div class="card-user-bar">
-                        <img class="user-img" src="./assets/img/user-1.jpg" alt="Usuário 3">
-                        <p><strong>Carla Oliveira</strong></p>
-                    </div>
-                    <div class="card-text">
-                        <p>Recomendo a todos! A equipe é muito atenciosa e prestativa, me senti em casa durante toda a estadia.</p>
-                    </div>
+            <div class="rating">★★★★★</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-2.jpg" alt="Usuário 2">
+                    <p><strong>Maria Santos</strong></p>
                 </div>
-                <div class="rating">★★★★★</div>
+                <div class="card-text">
+                    <p>Excelente estadia! O café da manhã é delicioso e a localização é perfeita para quem quer relaxar.
+                    </p>
+                </div>
             </div>
+            <div class="rating">★★★★☆</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-1.jpg" alt="Usuário 3">
+                    <p><strong>Carla Oliveira</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>Recomendo a todos! A equipe é muito atenciosa e prestativa, me senti em casa durante toda a
+                        estadia.</p>
+                </div>
+            </div>
+            <div class="rating">★★★★★</div>
         </div>
     </div>
+</div>
 
 
 <!-- Swiper JS -->
