@@ -162,15 +162,15 @@
     <div class="bckg-sobre-nos">
         <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
         <span class="arrow-right" id="arrow"></span>
-        <span class="arrow-bottom" id="arrow"></span>
+        <span class="arrow-bottom1" id="arrow"></span>
 
         <div class="txt-box-sobre-nos" id="txt-box-sobre-nos">
 
             <picture class="img-txt-box" id="img-txt-box"></picture>
             <h2>Nossa história</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi
-                beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque?
-                Voluptatum odit at corrupti.</p>
+            <p>
+            A Pousada Two-Dors nasceu do sonho de dois amigos apaixonados pela beleza natural e tranquilidade do litoral. Inaugurada em 2010, na costa pitoresca de uma praia paradisíaca, a pousada rapidamente se tornou um refúgio para aqueles que buscam escapar do tumulto da vida urbana e mergulhar em um ambiente de serenidade e beleza natural. Com um nome que simboliza a abertura para novas experiências e a passagem para a tranquilidade, a Two-Dors oferece uma experiência única de hospedagem,
+            </p>
 
         </div>
     </div>
@@ -180,14 +180,14 @@
     <div class="bckg-sobre-nos" id="cardapio">
         <picture class="img-sobre-nos" id="img-cardapio"></picture>
         <span class="arrow-left" id="arrow"></span>
-        <span class="arrow-bottom" id="arrow"></span>
+        <span class="arrow-bottom2" id="arrow"></span>
 
         <div class="txt-box-sobre-nos" id="txt-box-cardapio">
             <picture class="img-txt-box" id="img-txt-cardapio"></picture>
             <h2>Nosso Cardápio</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus error consequatur numquam quibusdam nisi
-                beatae rerum nostrum, magnam aspernatur repellendus sit totam laudantium officiis doloremque neque?
-                Voluptatum odit at corrupti.</p>
+            <p>
+                O cardápio da Pousada Two-Dors é uma celebração dos sabores locais, cuidadosamente preparado para complementar a experiência paradisíaca da estadia. Inspirado pela rica biodiversidade marinha e terrestre que envolve a região, oferecemos uma seleção de pratos que destacam ingredientes frescos e sazonais.
+            </p>
         </div>
     </div>
 </section>

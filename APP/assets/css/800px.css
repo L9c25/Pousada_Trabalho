@@ -145,7 +145,6 @@
     }
 
     .txt-box-sobre-nos {
-        height: 200px;
         justify-content: center;
         width: 100%;
         padding: 0px 10px 0px 20px;
@@ -160,11 +159,6 @@
         justify-self: center;
     }
 
-    .arrow-bottom {
-        display: flex;
-        bottom: 29%;
-        background-image: url(../img/arrow-down.png);
-    }
 
     .txt-box-sobre-nos>p {
         font-size: .9em;
@@ -203,5 +197,34 @@
         width: 100%;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 0px;
+    }
+
+    #txt-box-cardapio{
+        height: 250px;
+    }
+
+
+    #txt-box-sobre-nos
+    {
+        padding: 30px 10px;
+        height: auto;
+    }
+
+
+    .arrow-bottom1{
+        position: relative;
+        right: 36%;
+        bottom: 38%;
+    }
+    .arrow-bottom2{
+        right: 36%;
+       
+        bottom: 44%;
+    }
+
+    .arrow-bottom2, .arrow-bottom1 {
+        display: flex;
+        left: 40%;
+        background-image: url(../img/arrow-down.png);
     }
 }

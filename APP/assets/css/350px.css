@@ -109,21 +109,36 @@
     }
 
 
-    .txt-box-sobre-nos {
-        height: 250px;
+    #txt-box-sobre-nos {
+        height: 450px;
         align-items: center;
         justify-content: center;
         width: 100%;
         padding-top: 0px;
     }
 
-    #arrow {
-        right: 36%;
+    #txt-box-cardapio{
+        height: 350px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 0px;
     }
 
-    .arrow-bottom {
+    .arrow-bottom1{
+        position: relative;
+        right: 36%;
+        bottom: 48%;
+    }
+    .arrow-bottom2{
+        right: 36%;
+       
+        bottom: 44%;
+    }
+
+    .arrow-bottom2, .arrow-bottom1 {
         display: flex;
-        bottom: 35%;
+        left: 40%;
         background-image: url(../img/arrow-down.png);
     }
 
