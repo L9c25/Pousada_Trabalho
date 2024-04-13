@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare uma declaração de inserção
-        $sql = "INSERT INTO usuario (username, senha, data) VALUES (:username, :senha, :data)";
+        $sql = "INSERT INTO usuario (username, senha, tipo, data) VALUES (:username, :senha, 0, :data)";
          
         if($stmt = $pdo->prepare($sql)){
             // Vincule as variáveis à instrução preparada como parâmetros
@@ -103,36 +103,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
 
-
+    
     <link rel="stylesheet" href="assets/css/loginmobile.css">
     <link rel="stylesheet" href="assets/css/loginDesktop.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
 </head>
 <body>
     <main>
             <div class="container">
                 <h2>Cadastro</h2>
                 <p>Por favor, preencha este formulário para criar uma conta.</p>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <div class="form-group">
+                <form id="Myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="form-group w-100">
                         <label>Nome de usuário</label>
                         <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group w-100">
                         <label>Senha</label>
                         <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $senha; ?>">
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group w-100">
                         <label>Confirme a senha</label>
                         <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                         <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                     </div>
-                    <div class="form-group d-inline" id="btn-group">
+                    <div class="form-group w-100" id="btn-group">
                         <input type="submit" class="btn btn-primary" value="Criar Conta">
                         <input type="reset" class="btn btn-secondary ml-2" value="Apagar Dados">
                     </div>

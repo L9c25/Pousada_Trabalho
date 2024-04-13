@@ -7,13 +7,15 @@ $(function () {
 			confirmButtonColor: '#0a0427',
 
 			html: `
-				<div class="card_input">
-				<label for="swal-input1">Numero do cartao</label>
-				<input id="swal-input1" class="swal2-input" name="inp_1">
-				</div>
-				<div class="card_input">
-				<label for="swal-input2">CVV</label>
-				<input id="swal-input2" class="swal2-input" name="inp_2">
+				<div class="d-grid">
+					<div class="card_input d-flex justify-content-between align-items-center">
+						<label for="swal-input1" class="ml-5">Numero</label>
+						<input id="swal-input1" class="swal2-input" name="inp_1">
+					</div>
+					<div class="card_input d-flex justify-content-between align-items-center">
+						<label for="swal-input2">CVV</label>
+						<input id="swal-input2" class="swal2-input" name="inp_2">
+					</div>
 				</div>
 				`,
 			customClass: {
@@ -24,9 +26,6 @@ $(function () {
 
 		// Obtém o valor do botão clicado
 		var ID = $(this).val();
-		// Obtém o valor do user id
-		var U_ID = $("#id_user").val();
-
 
 		var start = $(".start").val()
 		var end = $(".end").val()
@@ -39,7 +38,6 @@ $(function () {
 				url: "reservar.php",
 				data: {
 					"A_id": ID,
-					"U_id": U_ID,
 					"start": start,
 					"end": end,
 					"adult": adult,

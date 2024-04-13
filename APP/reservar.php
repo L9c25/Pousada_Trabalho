@@ -1,8 +1,9 @@
 <?php
 require_once "./controllers/aptController.php";
+session_start();
 
 // Definindo Variaves da reserva
-$u_id = $_POST['U_id'];
+$u_id = $_SESSION['id'];
 $a_id = $_POST['A_id'];
 $s_date = date_create($_POST['start']);
 $e_date = date_create($_POST['end']);
@@ -31,7 +32,7 @@ foreach ($dados as $apt):
     <?php $val = calc($intervalo, $apt->getPreco()) ?>
 
     <div class="card">
-        <picture class="img-card" style="background-image: url(./assets/imagens/<?php echo $apt->getImg1() ?>.jpg);">
+        <picture class="img-card" style="background-image: url(./assets/img/<?php echo $apt->getImg1() ?>.jpg);">
         </picture>
         <div class="txt-box-card-acomodacao">
             <h2 class="acomodacao-title">

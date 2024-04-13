@@ -1,19 +1,26 @@
 <!-- INICIO DA PAGINA -->
+
 <main id="inicio">
     <div class="txt-box-main">
-        <h1>TWO DOORS</h1>
-        <p>"TWO DOORS" é sua escapada ideal numa praia idílica, oferecendo uma combinação de tranquilidade e conforto luxuoso. Situada à beira-mar, a pousada proporciona uma experiência única, com quartos confortáveis e vistas espetaculares. Ideal para românticos, aventureiros ou famílias, promete uma estadia relaxante com todas as comodidades modernas, envolvida pela beleza natural deslumbrante. Descubra a paz ao som das ondas e crie memórias inesquecíveis.</p>
+        <h1 id="nome-empresa">TWO DOORS</h1>
+        <p id="text-empresa">Descubra o paraíso em nossa Pousada, onde o luxo encontra a beleza natural. Estamos
+            ansiosos para recebê-los e compartilhar a magia deste lugar especial. Seja para uma escapada romântica, uma
+            aventura solitária ou um retiro familiar, a Two-Dors é o seu destino para criar lembranças que durarão uma
+            vida inteira.</p>
     </div>
 </main>
 
+
 <!-- FILTRO DESKTOP -->
 
-<div class="filtro-reserva">
+<div class="filtro-reserva" id="promocao">
     <form action="quartos.php" method="post" class="form-reserva">
 
-        <div class="input-daterange" id="datepicker">
-            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" autocomplete="off" outl required />
-            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" autocomplete="off" required />
+        <div class="input-daterange">
+            <input class="input-btn" id="CheckInDatePicker" type="text" value="" name="start" placeholder="CHEK-IN"
+                autocomplete="off" required />
+            <input class="input-btn" id="CheckOutDatePicker" type="text" value="" name="end" placeholder="CHEK-OUT"
+                autocomplete="off" required />
         </div>
 
         <span class="space"></span>
@@ -56,9 +63,10 @@
             <h2>Reserva de Hotel</h2>
 
             <div class="input-daterange" id="datepicker-mobile">
-                <input class="input-btn" id="input-btn-mobile" type="text" name="start" autocomplete="off" placeholder="CHEK-IN" required   
-                    style="margin-right: 0.4em;" /> 
-                <input class="input-btn" id="input-btn-mobile" type="text" name="end" autocomplete="off" placeholder="CHEK-OUT" required/>
+                <input class="input-btn input-btn-mobile" id="mbCheckInDatePicker" type="text" name="start"
+                    autocomplete="off" placeholder="CHEK-IN" required style="margin-right: 0.4em;" />
+                <input class="input-btn input-btn-mobile" id="mbCheckOutDatePicker" type="text" name="end"
+                    autocomplete="off" placeholder="CHEK-OUT" required />
             </div>
 
             <label for="num_adultos">Adultos</label>
@@ -81,8 +89,11 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas" id="promocao"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
-    em promoção</h2>
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-acomodacoes"><i class="fa-solid fa-star"
+            style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+        em promoção</h2>
+</div>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -97,7 +108,7 @@
                 ?>
                 <div class="card swiper-slide" id="card">
                     <div class="image-content">
-                        <img class="overlay" src="./assets/imagens/<?php echo $apt->getImg1() ?>.jpg"></img>
+                        <img class="overlay" src="./assets/img/<?php echo $apt->getImg1() ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
@@ -105,8 +116,13 @@
                                 <?php echo $apt->getNome() ?>
                             </a>
                         </div>
-                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i
-                                class="fa-solid fa-umbrella-beach"></i></span>
+
+                        <span class="icons">
+                            <i class="fa-solid fa-wifi"></i>
+                            <p style="margin-right: 15px; margin-left: 5px;">wifi</p>
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <p style="margin-left: 5px;">vista para praia</p>
+                        </span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
@@ -137,17 +153,53 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-circle-info"
+            style="padding-right: 10px;"></i>SOBRE A TWO-DOORS</h2>
+</div>
 
+<section class="sobre-nos" id="sobre-nos">
+    <div class="bckg-sobre-nos">
+        <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
+        <span class="arrow-right" id="arrow"></span>
+        <span class="arrow-bottom1" id="arrow"></span>
 
-<div class="espacamento"><span></span></div>
+        <div class="txt-box-sobre-nos" id="txt-box-sobre-nos">
+
+            <picture class="img-txt-box" id="img-txt-box"></picture>
+            <h2>Nossa história</h2>
+            <p>
+            A Pousada Two-Dors nasceu do sonho de dois amigos apaixonados pela beleza natural e tranquilidade do litoral. Inaugurada em 2010, na costa pitoresca de uma praia paradisíaca, a pousada rapidamente se tornou um refúgio para aqueles que buscam escapar do tumulto da vida urbana e mergulhar em um ambiente de serenidade e beleza natural. Com um nome que simboliza a abertura para novas experiências e a passagem para a tranquilidade, a Two-Dors oferece uma experiência única de hospedagem,
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="sobre-nos">
+    <div class="bckg-sobre-nos" id="cardapio">
+        <picture class="img-sobre-nos" id="img-cardapio"></picture>
+        <span class="arrow-left" id="arrow"></span>
+        <span class="arrow-bottom2" id="arrow"></span>
+
+        <div class="txt-box-sobre-nos" id="txt-box-cardapio">
+            <picture class="img-txt-box" id="img-txt-cardapio"></picture>
+            <h2>Nosso Cardápio</h2>
+            <p>
+                O cardápio da Pousada Two-Dors é uma celebração dos sabores locais, cuidadosamente preparado para complementar a experiência paradisíaca da estadia. Inspirado pela rica biodiversidade marinha e terrestre que envolve a região, oferecemos uma seleção de pratos que destacam ingredientes frescos e sazonais.
+            </p>
+        </div>
+    </div>
+</section>
+
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
-
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-camera-retro"
+            style="padding-right: 10px;"></i>Galeria de Fotos</h2>
+</div>
 
 <section class="galeria-container">
-    <div class="cx-txt-galeria">
-        <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
-    </div>
     <div class="container-1">
         <picture class="img-maior-1" id="img-1"></picture>
         <div class="container-img-1">
@@ -164,9 +216,51 @@
     </div>
 </section>
 
-<section class="depoimentos">
-    
-</section>
+<div class="container-rating">
+    <h2 class="title-rating">Avaliações dos Usuários</h2>
+    <div class="box-cards-rating">
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-3.jpg" alt="Usuário 1">
+                    <p><strong>João Silva</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>A pousada é maravilhosa! Fiquei encantado com o atendimento e as instalações. Com certeza
+                        voltarei!</p>
+                </div>
+            </div>
+            <div class="rating">★★★★★</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-2.jpg" alt="Usuário 2">
+                    <p><strong>Maria Santos</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>Excelente estadia! O café da manhã é delicioso e a localização é perfeita para quem quer relaxar.
+                    </p>
+                </div>
+            </div>
+            <div class="rating">★★★★☆</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-1.jpg" alt="Usuário 3">
+                    <p><strong>Carla Oliveira</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>Recomendo a todos! A equipe é muito atenciosa e prestativa, me senti em casa durante toda a
+                        estadia.</p>
+                </div>
+            </div>
+            <div class="rating">★★★★★</div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
@@ -181,125 +275,7 @@
 <script src="assets\ScrollReveal\scrollreveal.js"></script>
 <!-- Sweetalert -->
 <script src="assets\Sweetalert2\sweetalert2.all.min.js"></script>
-
-
 <!-- script para a vizualisação da reserva -->
-<script>
-    $("#icon-login").on("click", function () {
-        // definindo o ID com base no value do button
-        var U_ID = $("#id_user").val();
-
-        $.ajax({
-            method: "POST",
-            url: "verifyReserva.php", // test para erro .php -> .pp
-            data: {
-                "U_id": U_ID,
-            }
-        }).done(function (response) {
-            //? Esta função é chamada quando a requisição é concluída com sucesso
-            var resp = response.success;
-            var A_id = response.id;
-
-            if (resp) {
-                //? Possui uma reserva
-                Swal.fire({
-                    title: "<strong>Sua Reservas</strong>",
-                    html: `
-                            <button class="btn btn-danger" id="deletReserva">Delet</button>
-                            <button id="A_id" hiden value=""></button>
-                            
-                        `,
-                    focusConfirm: false,
-                    confirmButtonAriaLabel: "Thumbs up, great!",
-                    didOpen: () => {
-                        // Aqui o SweetAlert já está aberto e podemos manipular seu conteúdo
-                        $("#A_id").val(A_id); // Atribui o valor da variável A_id ao botão
-                    },
-                });
-            } else {
-                //? Ñ possui uma reserva
-                Swal.fire({
-                    title: "<strong>Você não possui reserva</strong>",
-                    html: `You can use <b>bold text</b>,
-                        <a href="#">links</a>,
-                        and other HTML tags
-                        `,
-                    showCloseButton: true,
-                    showCancelButton: true,
-                    focusConfirm: false,
-                    confirmButtonText: `<i class="fa fa-thumbs-up"></i> Great!`,
-                    confirmButtonAriaLabel: "Thumbs up, great!",
-                    cancelButtonText: `<i class="fa fa-thumbs-down"></i> `,
-                    cancelButtonAriaLabel: "Thumbs down"
-                })
-            }
-
-        }).fail(function (jqXHR, textStatus) {
-            //? Tratamento de falha na requisição
-            Swal.fire({
-                title: "Error!",
-                text: "O correu um erro ao tentarmos verificar se você tem uma reserva",
-                icon: "error"
-            });
-        }), "json";
-    })
-</script>
-
-<script>
-    $(document).ready(function () {
-        // Adiciona o manipulador de eventos quando o documento estiver pronto
-        $(document).on('click', '#deletReserva', function () {
-            // Oculta o botão clicado
-            var A_id = $("#A_id").val()
-            // console.log(A_id)
-
-            $.ajax({
-                method: "POST",
-                url: "Delete.php", // test para erro .php -> .pp
-                data: {"A_id": A_id}
-
-            }).done(function (response) {
-                //? Esta função é chamada quando a requisição é concluída com sucesso
-                var resp = response.success;
-
-                // console.log(resp)
-                console.log("ok")
-
-                //? Reserva deletada com suceso
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: "top-end",
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.onmouseenter = Swal.stopTimer;
-                        toast.onmouseleave = Swal.resumeTimer;
-                    }
-                });
-                Toast.fire({
-                    icon: "success",
-                    title: "RESERVADO !"
-                });
-
-
-            }).fail(function (jqXHR, textStatus) {
-                //? Tratamento de falha na requisição
-                console.log("erro")
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: "top-end",
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.onmouseenter = Swal.stopTimer;
-                        toast.onmouseleave = Swal.resumeTimer;
-                    }
-                });
-            });
-        });
-    });
-</script>
-
+<script src="assets\js\viewReserva.js"></script>
+<!-- Script de configuraçoes do Datepicker -->
 <script src="assets/js/myScrow_myDatepicker.js"></script>

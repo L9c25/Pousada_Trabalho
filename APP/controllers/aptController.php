@@ -131,10 +131,11 @@ class daoMysql implements AptDAO
 
 		if ($stmt->rowCount() >= 1) {
 			// O usuario ja possui reserva
-			$sql = $this->pdo->query("SELECT r.id_a ,r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_in, r.chek_out) AS 	intervalo,
-				DATEDIFF(r.chek_out, r.chek_in) * a.preco AS total_preco
+			$sql = $this->pdo->query("SELECT r.id_a ,r.chek_in, r.chek_out, a.nome, a.preco, DATEDIFF(r.chek_out, r.chek_in) AS 	intervalo,
+				DATEDIFF(r.chek_out, r.chek_in) * a.preco AS total_preco, i.d0 AS img
 				FROM reserva r
 				JOIN acomodacao a ON r.id_a = a.id
+				JOIN imagens i ON a.fk_img = i.id
 				WHERE id_u = $id_u");
 
 
@@ -151,6 +152,7 @@ class daoMysql implements AptDAO
 						'total_preco' => $item['total_preco'],
 						'chek_in' => $item['chek_in'],
 						'chek_out' => $item['chek_out'],
+						'img'=> $item['img'],
 					];
 				}
 				return $lista;
