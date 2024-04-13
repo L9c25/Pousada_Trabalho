@@ -1,4 +1,27 @@
-@charset "UTF-8";
+
+::selection {
+    background-color: #dbddff; 
+    color: #ffffff; 
+}
+
+
+p::selection {
+    background-color: #dbddff;
+    color: #ffffff;
+}
+
+
+a{
+	color: #5a5fae;
+    transition: all 0.2s ease;
+
+}
+
+a:hover{
+	color: #1d1060;
+    transition: all 0.2s ease;
+
+}
 
 main {
     display: flex;
@@ -35,3 +58,22 @@ main {
     align-items: center;
     flex-direction: column;
 }
+
+/* Esconde o label quando o input está vazio e mostra o placeholder */
+input:placeholder-shown + label {
+	transform: translateY(-10px);
+    /* Estilos para quando o input está vazio */
+    /* Por exemplo, você pode querer manter o label em cima */
+}
+
+/* Mostra o label normalmente quando o input tem algum valor */
+input:not(:placeholder-shown) + label {
+    /* Estilos para manter o label flutuando acima do input */
+    transform: translateY(-20px); /* Ajuste conforme necessário */
+    /* Adicione outros estilos como tamanho da fonte, cor, etc., conforme necessário */
+}
+
+.form-control{
+    padding: 10px 0 10px 6px;
+}
+

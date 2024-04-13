@@ -1,20 +1,26 @@
 <!-- INICIO DA PAGINA -->
-<main>
+
+<main id="inicio">
     <div class="txt-box-main">
-        <h1>TWO DOORS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error totam esse est eveniet provident dicta quod
-            dignissimos, optio sit sunt debitis eligendi porro. Similique perspiciatis quae et suscipit eaque magni!</p>
+        <h1 id="nome-empresa">TWO DOORS</h1>
+        <p id="text-empresa">Descubra o paraíso em nossa Pousada, onde o luxo encontra a beleza natural. Estamos
+            ansiosos para recebê-los e compartilhar a magia deste lugar especial. Seja para uma escapada romântica, uma
+            aventura solitária ou um retiro familiar, a Two-Dors é o seu destino para criar lembranças que durarão uma
+            vida inteira.</p>
     </div>
 </main>
 
+
 <!-- FILTRO DESKTOP -->
 
-<div class="filtro-reserva">
+<div class="filtro-reserva" id="promocao">
     <form action="quartos.php" method="post" class="form-reserva">
 
-        <div class="input-daterange" id="datepicker">
-            <input class="input-btn" type="text" value="" name="start" placeholder="CHEK-IN" outl required />
-            <input class="input-btn" type="text" value="" name="end" placeholder="CHEK-OUT" required />
+        <div class="input-daterange">
+            <input class="input-btn" id="CheckInDatePicker" type="text" value="" name="start" placeholder="CHEK-IN"
+                autocomplete="off" required />
+            <input class="input-btn" id="CheckOutDatePicker" type="text" value="" name="end" placeholder="CHEK-OUT"
+                autocomplete="off" required />
         </div>
 
         <span class="space"></span>
@@ -27,6 +33,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select><br><br>
+
         </div>
 
         <span class="space"></span>
@@ -56,19 +63,20 @@
             <h2>Reserva de Hotel</h2>
 
             <div class="input-daterange" id="datepicker-mobile">
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="start" placeholder="CHEK-IN"
-                    style="margin-right: 0.4em;" />
-                <input class="input-btn" type="text" value="YYYY/MM/DD" name="end" placeholder="CHEK-OUT" />
+                <input class="input-btn input-btn-mobile" id="mbCheckInDatePicker" type="text" name="start"
+                    autocomplete="off" placeholder="CHEK-IN" required style="margin-right: 0.4em;" />
+                <input class="input-btn input-btn-mobile" id="mbCheckOutDatePicker" type="text" name="end"
+                    autocomplete="off" placeholder="CHEK-OUT" required />
             </div>
 
-            <label for="num_adultos">Número de Adultos (até 2):</label>
-            <select id="num_adultos" name="num_adultos" required>
+            <label for="num_adultos">Adultos</label>
+            <select id="num_adultos" name="num_adultos">
                 <option value="1">1</option>
                 <option value="2">2</option>
             </select>
 
-            <label for="num_criancas">Número de Crianças (até 2):</label>
-            <select id="num_criancas" name="num_criancas" required>
+            <label for="num_criancas">Crianças</label>
+            <select id="num_criancas" name="num_criancas">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -81,8 +89,11 @@
 
 <!-- CARROUSEL DAS ACOMODAÇÕES -->
 
-<h2 class="titulo-reservas"><i class="fa-solid fa-star" style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
-    em promoção</h2>
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-acomodacoes"><i class="fa-solid fa-star"
+            style="font-size: .7em; margin: 0px 10px 0px 0px;"></i>reservas
+        em promoção</h2>
+</div>
 
 <div class="slide-container swiper">
     <div class="slide-content">
@@ -97,7 +108,7 @@
                 ?>
                 <div class="card swiper-slide" id="card">
                     <div class="image-content">
-                        <img class="overlay" src="./assets/imagens/<?php echo $apt->getImg1() ?>.jpg"></img>
+                        <img class="overlay" src="./assets/img/<?php echo $apt->getImg1() ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
@@ -105,14 +116,20 @@
                                 <?php echo $apt->getNome() ?>
                             </a>
                         </div>
-                        <span class="icons"><i class="fa-solid fa-wifi"> </i> <i class="fa-solid fa-umbrella-beach"></i></span>
+
+                        <span class="icons">
+                            <i class="fa-solid fa-wifi"></i>
+                            <p style="margin-right: 15px; margin-left: 5px;">wifi</p>
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <p style="margin-left: 5px;">vista para praia</p>
+                        </span>
 
                         <div class="txt-price-diaria">
                             <p class="valor-original">
                                 <R1>
                                     R$
                                     <?php echo ($apt->getPreco() * 1.1) ?>
-                           </R1>
+                                </R1>
                             </p>
                             <div class="valor-promocional">
                                 <R1>
@@ -124,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-     
+
 
 
             <?php endforeach ?>
@@ -136,17 +153,50 @@
     <div class="swiper-pagination"></div>
 </div>
 
+<div class="cx-txt-galeria">
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-circle-info"
+            style="padding-right: 10px;"></i>SOBRE A TWO-DOORS</h2>
+</div>
 
+<section class="sobre-nos" id="sobre-nos">
+    <div class="bckg-sobre-nos">
+        <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
+        <span class="arrow-right" id="arrow"></span>
+        <span class="arrow-bottom1" id="arrow"></span>
 
-<div class="espacamento"><span></span></div>
+        <div class="txt-box-sobre-nos" id="txt-box-sobre-nos">
+
+            <picture class="img-txt-box" id="img-txt-box"></picture>
+            <h2>Nossa história</h2>
+            <p>
+            A Pousada Two-Dors nasceu do sonho de dois amigos apaixonados pela beleza natural e tranquilidade do litoral. Inaugurada em 2010, na costa pitoresca de uma praia paradisíaca, a pousada rapidamente se tornou um refúgio para aqueles que buscam escapar do tumulto da vida urbana e mergulhar em um ambiente de serenidade e beleza natural. Com um nome que simboliza a abertura para novas experiências e a passagem para a tranquilidade, a Two-Dors oferece uma experiência única de hospedagem,
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="sobre-nos">
+    <div class="bckg-sobre-nos" id="cardapio">
+        <picture class="img-sobre-nos" id="img-cardapio"></picture>
+        <span class="arrow-left" id="arrow"></span>
+        <span class="arrow-bottom2" id="arrow"></span>
+
+        <div class="txt-box-sobre-nos" id="txt-box-cardapio">
+            <picture class="img-txt-box" id="img-txt-cardapio"></picture>
+            <h2>Nosso Cardápio</h2>
+            <p>
+                O cardápio da Pousada Two-Dors é uma celebração dos sabores locais, cuidadosamente preparado para complementar a experiência paradisíaca da estadia. Inspirado pela rica biodiversidade marinha e terrestre que envolve a região, oferecemos uma seleção de pratos que destacam ingredientes frescos e sazonais.
+            </p>
+        </div>
+    </div>
+</section>
+
 
 <!-- GALERIA DE FOTOS DA POUSADA -->
-
 <div class="cx-txt-galeria">
-    <h2 class="titulo-reservas" id="titulo-reservas-2">nossas fotos internas</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia, impedit asperiores, vitae assumenda
-        unde totam voluptate repellendus aut a illum! Nesciunt impedit repellendus eligendi ipsam eius illum minus enim.
-    </p>
+    <h2 class="titulo-reservas" id="titulo-reservas-2"><i class="fa-solid fa-camera-retro"
+            style="padding-right: 10px;"></i>Galeria de Fotos</h2>
 </div>
 
 <section class="galeria-container">
@@ -166,81 +216,66 @@
     </div>
 </section>
 
+<div class="container-rating">
+    <h2 class="title-rating">Avaliações dos Usuários</h2>
+    <div class="box-cards-rating">
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-3.jpg" alt="Usuário 1">
+                    <p><strong>João Silva</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>A pousada é maravilhosa! Fiquei encantado com o atendimento e as instalações. Com certeza
+                        voltarei!</p>
+                </div>
+            </div>
+            <div class="rating">★★★★★</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-2.jpg" alt="Usuário 2">
+                    <p><strong>Maria Santos</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>Excelente estadia! O café da manhã é delicioso e a localização é perfeita para quem quer relaxar.
+                    </p>
+                </div>
+            </div>
+            <div class="rating">★★★★☆</div>
+        </div>
+        <div class="card-rating">
+            <div class="card-content-rating">
+                <div class="card-user-bar">
+                    <img class="user-img" src="./assets/img/user-1.jpg" alt="Usuário 3">
+                    <p><strong>Carla Oliveira</strong></p>
+                </div>
+                <div class="card-text">
+                    <p>Recomendo a todos! A equipe é muito atenciosa e prestativa, me senti em casa durante toda a
+                        estadia.</p>
+                </div>
+            </div>
+            <div class="rating">★★★★★</div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Swiper JS -->
 <script src="assets/js/swiper-bundle.min.js"></script>
 <!-- Jquery -->
 <script src="assets\js\jquery-3.7.1.min.js"></script>
 <!-- Datepicker &  Bootstrap -->
 <script src="assets/datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/bootstra/js/popper.min.js"></script>
+<!-- Script by me -->
+<script src="assets/js/script.js"></script>
+<script src="assets/js/carrousel.js"></script>
 <!-- ScrollReveal -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script>
-    $('.input-daterange').datepicker({
-        language: "pt-BR",
-        clearBtn: true,
-        autoclose: true,
-        format: "yyyy/mm/dd",
-        startDate: '-0d',
-        endDate: '+2m'
-    });
-
-
-    ScrollReveal().reveal('#img-1', {
-        delay: 20,
-        duration: 400,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-2', {
-        delay: 20,
-        duration: 400,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-
-    });
-
-    ScrollReveal().reveal('#img-3', {
-        delay: 20,
-        duration: 410,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-5', {
-        delay: 20,
-        duration: 500,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-6', {
-        delay: 20,
-        duration: 510,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'left',
-        distance: '10px'
-    });
-
-    ScrollReveal().reveal('#img-4', {
-        delay: 20,
-        duration: 510,
-        reset: false,
-        easing: 'cubic-bezier(.25,.1,.64,.96)',
-        origin: 'right',
-        distance: '10px'
-    });
-
-</script>
+<script src="assets\ScrollReveal\scrollreveal.js"></script>
+<!-- Sweetalert -->
+<script src="assets\Sweetalert2\sweetalert2.all.min.js"></script>
+<!-- script para a vizualisação da reserva -->
+<script src="assets\js\viewReserva.js"></script>
+<!-- Script de configuraçoes do Datepicker -->
+<script src="assets/js/myScrow_myDatepicker.js"></script>
