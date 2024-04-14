@@ -92,6 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
     <title>Login</title>
     <link rel="stylesheet" href="assets\bootstrap\css\bootstrap.css">
     <link rel="stylesheet" href="assets\css\loginDesktop.css">

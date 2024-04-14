@@ -1,9 +1,9 @@
 <header id="header-desktop">
 	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
-		<a href="index.php" class="nav-link">Home</a>
-		<a href="#footer" class="nav-link">localização</a>
+		<a href="#inicio" class="nav-link">Sobre nós</a>
 		<a href="#promocao" class="nav-link">promoções</a>
+		<a href="#footer" class="nav-link">localização</a>
 		<p class="nav-link" id="icon-login">minha reserva</p>
 		<!-- link exclusiva para adms -->
 		<a href="test_CMD.php" class="nav-link-last" id="adm">Painel</a>
@@ -24,9 +24,9 @@
 	<picture class="logo-header"  onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
 		<div class="menu-content">
-			<a href="#inicio" class="nav-link">Inicio</a>
-			<a href="#footer" class="nav-link">localização</a>
+			<a href="#inicio" class="nav-link">Sobre nós</a>
 			<a href="#titulo-acomodacoes" class="nav-link">promoções</a>
+			<a href="#footer" class="nav-link">localização</a>
 			<p class="nav-link" id="icon-login">minha reserva</p>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;"><i
 					class="fa-solid fa-calendar-days" style="padding-right: 10px; font-size: 1.3em;"></i>agendamento</button>

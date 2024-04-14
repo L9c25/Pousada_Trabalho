@@ -324,3 +324,7 @@ input[type="checkbox"] {
   width: 100%;
   justify-content: space-between;
 }
+
+#swal2-title{
+  letter-spacing: -1px;
+}

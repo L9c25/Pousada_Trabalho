@@ -1,13 +1,3 @@
-// $('.input-daterange').datepicker({
-//     language: "pt-BR",
-
-//     autoclose: true,
-//     format: "yyyy/mm/dd",
-//     startDate: '-0d',
-//     endDate: '+2m',
-// });
-
-
 // datepicker desktop
 $(document).ready(function () {
     var chekin = document.querySelectorAll('#CheckInDatePicker');
@@ -189,5 +179,3 @@ ScrollReveal().reveal('#text-empresa', {
 });
 
 ScrollReveal().reveal('.card-rating', { interval: 200 });
-
-
