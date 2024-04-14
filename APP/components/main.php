@@ -162,8 +162,7 @@
     <div class="bckg-sobre-nos">
         <picture class="img-sobre-nos" id="img-sobre-nos"></picture>
         <span class="arrow-right" id="arrow"></span>
-        <span class="arrow-bottom1" id="arrow"></span>
-
+                
         <div class="txt-box-sobre-nos" id="txt-box-sobre-nos">
 
             <picture class="img-txt-box" id="img-txt-box"></picture>
@@ -180,7 +179,6 @@
     <div class="bckg-sobre-nos" id="cardapio">
         <picture class="img-sobre-nos" id="img-cardapio"></picture>
         <span class="arrow-left" id="arrow"></span>
-        <span class="arrow-bottom2" id="arrow"></span>
 
         <div class="txt-box-sobre-nos" id="txt-box-cardapio">
             <picture class="img-txt-box" id="img-txt-cardapio"></picture>
