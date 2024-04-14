@@ -55,7 +55,6 @@ $(iconlogin).on("click", function () {
                     </div>
                         `,
 				focusConfirm: false,
-				confirmButtonAriaLabel: "Thumbs up, great!",
 				didOpen: () => {
 					// Aqui o SweetAlert já está aberto e podemos manipular seu conteúdo
 					$("#A_id").val(A_id); // Atribui o valor da variável A_id ao botão
@@ -64,7 +63,7 @@ $(iconlogin).on("click", function () {
 		} else {
 			//? Ñ possui uma reserva
 			Swal.fire({
-				title: "<strong>Você ainda não possui reserva</strong>",
+				title: "<strong>não possui reserva</strong>",
 				showCloseButton: true,
 				showCancelButton: false,
 				focusConfirm: true,
@@ -111,7 +110,7 @@ $(document).ready(function () {
 				toast: true,
 				position: "top-end",
 				showConfirmButton: false,
-				timer: 1800,
+				timer: 1500,
 				timerProgressBar: true,
 				didOpen: (toast) => {
 					toast.onmouseenter = Swal.stopTimer;
@@ -120,7 +119,7 @@ $(document).ready(function () {
 			});
 			Toast.fire({
 				icon: "success",
-				title: "RESERVA DELETADA COM SUCESSO"
+				title: "Reserva Deletada"
 			});
 
 
@@ -131,7 +130,7 @@ $(document).ready(function () {
 				toast: true,
 				position: "top-end",
 				showConfirmButton: false,
-				timer: 3000,
+				timer: 2000,
 				timerProgressBar: true,
 				didOpen: (toast) => {
 					toast.onmouseenter = Swal.stopTimer;

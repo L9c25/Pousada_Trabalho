@@ -1,9 +1,9 @@
 <header id="header-desktop">
 	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header" id="desktop">
-		<a href="#inicio" class="nav-link">Inicio</a>
-		<a href="#footer" class="nav-link">localização</a>
+		<a href="#inicio" class="nav-link">Sobre nós</a>
 		<a href="#promocao" class="nav-link">promoções</a>
+		<a href="#footer" class="nav-link">localização</a>
 	</nav>
 	<span class="btns">
 		
@@ -24,9 +24,9 @@
 	<picture class="logo-header" onclick="location.href='index.php'"></picture>
 	<nav class="nav-header">
 		<div class="menu-content">
-			<a href="#inicio" class="nav-link">Inicio</a>
-			<a href="#footer" class="nav-link">localização</a>
+			<a href="#inicio" class="nav-link">Sobre nós</a>
 			<a href="#titulo-acomodacoes" class="nav-link">promoções</a>
+			<a href="#footer" class="nav-link">localização</a>
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;">agendamento<i
 					class="fa-solid fa-calendar-days" style="padding-left: 10px; font-size: 1.3em;"></i></button>
 			<a href="" class="nav-link" id="nav-link-last">Guest

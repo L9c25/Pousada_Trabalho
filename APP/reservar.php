@@ -31,9 +31,8 @@ foreach ($dados as $apt):
 
     <?php $val = calc($intervalo, $apt->getPreco()) ?>
 
-    <div class="card">
-        <picture class="img-card" style="background-image: url(./assets/img/<?php echo $apt->getImg1() ?>.jpg);">
-        </picture>
+    <div class="card" id="card">
+        <picture class="img-card" style="background-image: url(./assets/img/<?php echo $apt->getImg1() ?>.jpg);"></picture>
         <div class="txt-box-card-acomodacao">
             <h2 class="acomodacao-title">
                 <?php echo $apt->getNome() ?><span
@@ -52,12 +51,7 @@ foreach ($dados as $apt):
                 <?php echo $val ?> por
                 <?php echo $intervalo ?> noite
 
-                <button class="btn btn-success reservar" value="<?php echo $apt->getId(); ?>">
-
-                    ID-
-                    <?php echo $apt->getId(); ?>
-
-                </button>
+                <button class="btn btn-success reservar" value="<?php echo $apt->getId(); ?>">Reservar</button>
             </R1>
         </div>
     </div>

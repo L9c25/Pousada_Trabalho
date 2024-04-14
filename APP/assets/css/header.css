@@ -236,6 +236,7 @@ header {
 
 	.nav-header {
 		flex-direction: column;
+		overflow-y: auto;
 	}
 
 	#header-mobile.open~.overlay-header {

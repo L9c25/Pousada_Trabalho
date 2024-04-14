@@ -22,7 +22,7 @@ require_once "./controllers/aptController.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
     <!-- import carrosel css-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- import icones-->
@@ -51,7 +51,7 @@ require_once "./controllers/aptController.php"
             color: black;
         }
     </style>
-    <title>Hotel Club</title>
+    <title>Two-Dors</title>
 </head>
 
 <body>

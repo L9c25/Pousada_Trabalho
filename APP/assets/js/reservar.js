@@ -62,7 +62,7 @@ $(function () {
 					});
 					Toast.fire({
 						icon: "success",
-						title: "RESERVADO !"
+						title: "Reservado !"
 					});
 					
 			}).fail(function (jqXHR, textStatus) {
@@ -83,6 +83,7 @@ $(function () {
 				Toast.fire({
 					icon: "error",
 					title: "Você ja tem uma reserva"
+					
 				});
 			});
 		})
