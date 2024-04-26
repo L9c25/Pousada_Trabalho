@@ -11,13 +11,14 @@ $(document).ready(function () {
         format: "yyyy/mm/dd",
         startDate: '-0d',
         clearBtn: true,
-        todayBtn: "linked"
+        todayBtn: "linked",
+        minViewMode: 1
     }).on('changeDate', function (e) {
         // A data selecionada no DatePicker de Check-In
         var checkInDate = e.date;
         // Adiciona 1 dia à data de Check-In para definir como a data mínima de Check-Out
         var checkOutMinDate = new Date(checkInDate);
-        checkOutMinDate.setDate(checkOutMinDate.getDate() + 1);
+        checkOutMinDate.setDate(checkOutMinDate.getDate() + 30);
 
         // Atualiza o DatePicker de Check-Out
         $(chekout).datepicker('setStartDate', checkOutMinDate);
@@ -32,7 +33,8 @@ $(document).ready(function () {
         autoclose: true,
         format: "yyyy/mm/dd",
         clearBtn: true,
-        startDate: '+1d' // Começa com uma data mínima de +1 dia a partir de hoje por padrão
+        startDate: '+1d', // Começa com uma data mínima de +1 dia a partir de hoje por padrão
+        minViewMode: 1
     });
 
     //! datepicker mobile
