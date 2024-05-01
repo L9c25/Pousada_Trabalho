@@ -40,6 +40,33 @@ class daoMysql implements AptDAO
 		return $lista;
 	}
 
+	public function listar1($id)
+	{
+		$lista = [];
+
+		$sql = $this->pdo->query("SELECT a.id,a.nome,a.preco,
+								a.descricao,a.disponivel, i.d0 AS img_1
+								FROM acomodacao a
+								JOIN imagens i on a.fk_img = i.id
+								where a.id = $id");
+
+		if ($sql->rowCount() > 0) {
+			$dados = $sql->fetchAll();
+
+			foreach ($dados as $item) {
+				$lista = [
+					'status' => 'success',
+					'id' => $item['id'],
+					'nome' => $item['nome'],
+					'preco' => $item['preco'],
+					'img'=> $item['img_1'],
+					'descricao' => $item['descricao'],
+				];
+			}
+		}
+		return $lista;
+	}
+
 	public function geraJSON()
 	{
 		$sql = $this->pdo->query("SELECT * FROM produto");
@@ -196,6 +223,48 @@ class daoMysql implements AptDAO
 			return false;
 		}
 	}
+
+	public function updateReserva($id, $nome, $desc, $preco)
+	{
+		$this->pdo->beginTransaction();
+		try {
+			// Atualiza a Acomodação
+			$stmt = $this->pdo->prepare("UPDATE acomodacao SET nome = :nome, preco = :preco, descricao = :descr WHERE id = $id");
+			$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+			$stmt->bindParam(':descr', $desc, PDO::PARAM_STR);
+			$stmt->bindParam(':preco', $preco, PDO::PARAM_INT);
+			$stmt->execute();
+
+			// Atualiza a imagem da pousada
+			// $stmt = $this->pdo->prepare("UPDATE acomodacao SET disponivel = '0' WHERE id = :id_a");
+			// $stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
+			// $stmt->execute();
+
+			// Commita as operações caso ambas sejam bem-sucedidas
+			$this->pdo->commit();
+			return true;
+		} catch (Exception $e) {
+			// Rollback nas operações em caso de erro
+			$this->pdo->rollBack();
+			return false;
+		}
+	}
+
+
+	public function deletAcomodacao($id_a)
+{
+	try {
+
+		// Deletar acomodaçao
+		$stmt = $this->pdo->prepare("DELETE FROM acomodacao WHERE id = :id_a");
+		$stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
+		$stmt->execute();
+
+		return true;
+	} catch (Exception $e) {
+		return false;
+	}
+}
 }
 
 

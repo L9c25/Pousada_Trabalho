@@ -103,8 +103,6 @@ $(document).ready(function () {
 			var resp = response.success;
 
 			// console.log(resp)
-			console.log("ok")
-
 			//? Reserva deletada com suceso
 			const Toast = Swal.mixin({
 				toast: true,

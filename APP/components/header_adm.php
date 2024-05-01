@@ -6,7 +6,7 @@
 		<a href="#footer" class="nav-link">localização</a>
 		<p class="nav-link" id="icon-login">minha reserva</p>
 		<!-- link exclusiva para adms -->
-		<a href="test_CMD.php" class="nav-link-last" id="adm">Painel</a>
+		<a href="painel.php" class="nav-link-last" id="adm">Painel</a>
 	</nav>
 	<span class="btns">
 		<span class="user_name" style="color: black;">Olá !
@@ -31,7 +31,7 @@
 			<button class="nav-link" onclick="toggleForm()" style="width: 100%;"><i
 					class="fa-solid fa-calendar-days" style="padding-right: 10px; font-size: 1.3em;"></i>agendamento</button>
 			<!-- link exclusiva para adms -->
-			<a href="" class="nav-link" id="adm">painel</a>
+			<a href="painel.php" class="nav-link" id="adm">painel</a>
 
 			<a href="" class="nav-link" id="nav-link-last">
 				<i class="fa-solid fa-user" style="padding-right: 10px;"></i>
