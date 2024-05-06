@@ -59,7 +59,7 @@ class daoMysql implements AptDAO
 					'id' => $item['id'],
 					'nome' => $item['nome'],
 					'preco' => $item['preco'],
-					'img'=> $item['img_1'],
+					'img' => $item['img_1'],
 					'descricao' => $item['descricao'],
 				];
 			}
@@ -76,6 +76,7 @@ class daoMysql implements AptDAO
 		}
 
 	}
+
 	public function criarReserva($id_a, $id_u, $chek_in, $chek_out, $adult, $kid)
 	{
 		// query
@@ -123,7 +124,7 @@ class daoMysql implements AptDAO
 				echo "Ops! Algo deu errado. Por favor, tente novamente mais tarde.";
 			}
 		} catch (PDOException $e) {
-			die ("Erro na operação: " . $e->getMessage());
+			die("Erro na operação: " . $e->getMessage());
 		} finally {
 			unset($stmt); // Libera a variável $stmt
 		}
@@ -141,7 +142,7 @@ class daoMysql implements AptDAO
 				echo "Ops! Algo deu errado. Por favor, tente novamente mais tarde.";
 			}
 		} catch (PDOException $e) {
-			die ("Erro na operação: " . $e->getMessage());
+			die("Erro na operação: " . $e->getMessage());
 		} finally {
 			unset($stmt); // Libera a variável $stmt
 		}
@@ -179,7 +180,7 @@ class daoMysql implements AptDAO
 						'total_preco' => $item['total_preco'],
 						'chek_in' => $item['chek_in'],
 						'chek_out' => $item['chek_out'],
-						'img'=> $item['img'],
+						'img' => $item['img'],
 					];
 				}
 				return $lista;
@@ -251,20 +252,58 @@ class daoMysql implements AptDAO
 	}
 
 
-	public function deletAcomodacao($id_a)
-{
-	try {
+	public function deletAcomodacao($id_a, $img)
+	{
+		try {
+			// Deletar img
+			$stmt = $this->pdo->prepare("DELETE FROM imagens WHERE d0 = :nome");
+			$stmt->bindParam(':nome', $img, PDO::PARAM_INT);
+			$stmt->execute();
 
-		// Deletar acomodaçao
-		$stmt = $this->pdo->prepare("DELETE FROM acomodacao WHERE id = :id_a");
-		$stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
-		$stmt->execute();
+			// Deletar acomodaçao
+			$stmt = $this->pdo->prepare("DELETE FROM acomodacao WHERE id = :id_a");
+			$stmt->bindParam(':id_a', $id_a, PDO::PARAM_INT);
+			$stmt->execute();
 
-		return true;
-	} catch (Exception $e) {
-		return false;
+			$pasta = "./assets/img/ap/";
+			unlink($pasta . $img);
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
 	}
-}
+
+	public function criarAcomodacao($nome, $descricao, $preco, $img){
+
+		$this->pdo->beginTransaction();
+		try {
+			// Insere a imagem
+			$stmt = $this->pdo->prepare("INSERT INTO imagens (id, d0) VALUES (null, :nomeimg)");
+			$stmt->bindParam(':nomeimg', $img, PDO::PARAM_STR);
+			$stmt->execute();
+
+			// Pega o ID da imagem que acabou de ser inserida
+			$imgId = $this->pdo->lastInsertId();
+
+			// Insere a Acomodação
+			$stmt = $this->pdo->prepare("INSERT INTO acomodacao (nome, preco, descricao, fk_img, disponivel) VALUES (:nome, :preco, :descr, :imgID, 0)");
+
+			$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+			$stmt->bindParam(':preco', $preco, PDO::PARAM_INT);
+			$stmt->bindParam(':descr', $descricao, PDO::PARAM_STR);
+			$stmt->bindParam(':imgID', $imgId, PDO::PARAM_INT); // Use o ID da imagem obtido anteriormente
+			$stmt->execute();
+	
+			// Commita as operações caso ambas sejam bem-sucedidas
+			$this->pdo->commit();
+			return true;
+		} catch (Exception $e) {
+			// Rollback nas operações em caso de erro
+			$this->pdo->rollBack();
+			echo $e;
+			return false;
+		}
+	}
 }
 
 

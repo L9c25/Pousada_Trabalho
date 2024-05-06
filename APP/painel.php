@@ -82,10 +82,11 @@ require_once "./controllers/aptController.php";
 									<label for="checkbox<?php echo $id ?>"></label>
 								</span>
 								<span class="aptID" style="display: none"><?php echo $id ?></span>
+								<span class="aptImg" style="display: none"><?php echo $apt->getImg1() ?></span>
 							</td>
 							<td>
 								<picture class="img-card"
-									style="background-image: url(./assets/img/<?php echo $apt->getImg1() ?>.jpg);">
+									style="background-image: url(./assets/img/ap/<?php echo $apt->getImg1() ?>);">
 								</picture>
 							</td>
 							<td><?php echo $apt->getNome() ?></td>
@@ -129,7 +130,7 @@ require_once "./controllers/aptController.php";
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form>
+				<form enctype="multipart/form-data" method="POST" action="create.php">
 					<div class="modal-header">
 						<h4 class="modal-title">Add Acomodação</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -137,20 +138,24 @@ require_once "./controllers/aptController.php";
 					<div class="modal-body">
 						<div class="form-group">
 							<label>Name</label>
-							<input type="text" class="form-control" required>
+							<input id="addNome" name="nome" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Preço</label>
-							<input type="number" class="form-control" required>
+							<input id="addPreco" name="preco" type="number" step="0.01" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Descriçao</label>
-							<textarea class="form-control" required></textarea>
+							<textarea id="addDesc" name="desc" class="form-control" required></textarea>
+						</div>
+						<div class="form-group">
+							<label>Imagem</label>
+							<input type="file" name="image" id="addImg" class="form-control">
 						</div>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<input type="submit" class="btn btn-success" value="Add">
+						<input type="submit" class="btn btn-success" id="adcionar" value="Add">
 					</div>
 				</form>
 			</div>
@@ -221,7 +226,6 @@ require_once "./controllers/aptController.php";
 		$(document).ready(function (e) {
 			$(".edit").click(function (e) {
 				acomodacaoID = $(this).closest('tr').find(".aptID").text();
-
 				$.ajax({
 					url: 'edit.php',
 					type: 'POST',
@@ -266,48 +270,69 @@ require_once "./controllers/aptController.php";
 						}
 					})
 				})
-
 			});
 
-
-		});
-
-
-
-		$(".delete").click(function (e) {
-			acomodacaoID = $(this).closest('tr').find(".aptID").text();
-			
-			$("#conDelet").click(function (e) {
-				$.ajax({
-					url: 'DeletAcomodacao.php',
-					type: 'POST',
-					data: {
-						acomodacaoID: acomodacaoID
-					},
-					success: function (response) {
-						//? Reserva deletada com suceso
-						const Toast = Swal.mixin({
-							toast: true,
-							position: "top-end",
-							showConfirmButton: false,
-							timer: 1500,
-							timerProgressBar: true,
-							didOpen: (toast) => {
-								toast.onmouseenter = Swal.stopTimer;
-								toast.onmouseleave = Swal.resumeTimer;
-							}
-						});
-						Toast.fire({
-							icon: "success",
-							title: "Acomodação Deletada"
-						});
-					},
-					error: function (xhr, status, error) {
-						console.error(xhr.responseText);
-					}
+			$(".delete").click(function (e) {
+				acomodacaoID = $(this).closest('tr').find(".aptID").text();
+				aptImg = $(this).closest('tr').find(".aptImg").text();
+				$("#conDelet").click(function (e) {
+					$.ajax({
+						url: 'DeletAcomodacao.php',
+						type: 'POST',
+						data: {
+							acomodacaoID: acomodacaoID,
+							img: aptImg
+						},
+						success: function (response) {
+							//? Reserva deletada com suceso
+							const Toast = Swal.mixin({
+								toast: true,
+								position: "top-end",
+								showConfirmButton: false,
+								timer: 1500,
+								timerProgressBar: true,
+								didOpen: (toast) => {
+									toast.onmouseenter = Swal.stopTimer;
+									toast.onmouseleave = Swal.resumeTimer;
+								}
+							});
+							Toast.fire({
+								icon: "success",
+								title: "Acomodação Deletada"
+							});
+						},
+						error: function (xhr, status, error) {
+							console.error(xhr.responseText);
+						}
+					})
 				})
-			})
+			});
+
+			// $("#adcionar").click(function (e) {
+			// 	var nome = $("#addNome").val()
+			// 	var preco = $("#addPreco").val()
+			// 	var desc = $("#addDesc").val()
+			// 	var img = $("#addImg").val()
+
+			// 	$.ajax({
+			// 		url: 'create.php',
+			// 		type: 'POST',
+			// 		data: { nome: nome,
+			// 				preco: preco,
+			// 				desc: desc,
+			// 				arq: img
+			// 		},
+			// 		success: function (response) {
+			// 			alert("Criada com sucesso !");
+			// 		},
+			// 		error: function (xhr, status, error) {
+			// 			console.error(xhr.responseText);
+			// 			alert("ERROR !");
+			// 		}
+			// 	})
+			// })
 		});
+
 
 	</script>
 </body>

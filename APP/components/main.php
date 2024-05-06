@@ -108,7 +108,7 @@
                 ?>
                 <div class="card swiper-slide" id="card">
                     <div class="image-content">
-                        <img class="overlay" src="./assets/img/<?php echo $apt->getImg1() ?>.jpg"></img>
+                        <img class="overlay" src="./assets/img/ap/<?php echo $apt->getImg1() ?>.jpg"></img>
                     </div>
                     <div class="card-content">
                         <div class="box-h1-card">
